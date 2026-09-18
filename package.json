@@ -1,0 +1,25 @@
+{
+  "name": "checktheodds",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Puppeteer scrapers for South African soccer betting odds",
+  "scripts": {
+    "start": "node src/virgin_bets_premier_league_scraper.js",
+    "scrape:virgin-bet": "node src/virgin_bets_premier_league_scraper.js",
+    "scrape:betway": "node src/betway_premier_league_scraper.js",
+    "scrape:play": "node src/play_premier_league_scraper.js",
+    "scrape:hollywoodbets": "node src/hollywoodbets_premier_league_scraper.js",
+    "scrape:betfair-sa": "node src/betfair_sa_premier_league_scraper.js",
+    "scrape:yesplay": "node src/yesplay_premier_league_scraper.js",
+    "scrape:supabets": "node src/supabets_premier_league_scraper.js",
+    "scrape:all": "npm run scrape:virgin-bet && npm run scrape:betway && npm run scrape:play && npm run scrape:hollywoodbets && npm run scrape:betfair-sa && npm run scrape:yesplay && npm run scrape:supabets",
+    "serve": "node src/server.js",
+    "check": "node --check src/database.js && node --check src/server.js && node --check src/virgin_bets_premier_league_scraper.js && node --check src/betway_premier_league_scraper.js && node --check src/play_premier_league_scraper.js && node --check src/hollywoodbets_premier_league_scraper.js && node --check src/betfair_sa_premier_league_scraper.js && node --check src/yesplay_premier_league_scraper.js && node --check src/supabets_premier_league_scraper.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mysql2": "^3.24.4",
+    "puppeteer": "^24.20.0"
+  }
+}

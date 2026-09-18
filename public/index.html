@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compare Premier League odds across South African bookmakers.">
+    <title>Check The Odds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Check The Odds home">
+        <span class="brand-mark">CTO</span>
+        <span>Check The Odds</span>
+      </a>
+      <div class="header-actions">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span id="updated-at">Live prices</span>
+        <button id="refresh-button" class="icon-button" type="button" title="Refresh odds" aria-label="Refresh odds">↻</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="league-bar" aria-labelledby="page-title">
+        <div>
+          <span class="eyebrow">England · Premier League</span>
+          <h1 id="page-title">Win Market</h1>
+        </div>
+        <div class="legend" aria-label="Price key">
+          <span><i class="key best"></i>Best odds</span>
+          <span><i class="key shortening"></i>Shortening</span>
+          <span><i class="key drifting"></i>Drifting</span>
+        </div>
+      </section>
+
+      <section class="fixture-nav" aria-label="Select fixture">
+        <button id="previous-fixture" class="nav-button" type="button" aria-label="Previous fixture">‹</button>
+        <label class="fixture-select-wrap">
+          <span>Fixture</span>
+          <select id="fixture-select" aria-label="Premier League fixture"></select>
+        </label>
+        <button id="next-fixture" class="nav-button" type="button" aria-label="Next fixture">›</button>
+      </section>
+
+      <section id="comparison" class="comparison" aria-live="polite">
+        <div class="status-panel">
+          <span class="loader" aria-hidden="true"></span>
+          <strong>Loading the latest prices</strong>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Odds may change. Select a price to open the bookmaker's full market.
+    </footer>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

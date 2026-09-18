@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+.env
+*.log
+odds.json
+betway_odds.json
+play_odds.json
+hollywoodbets_odds.json
+betfair_sa_odds.json
+yesplay_odds.json
+supabets_odds.json

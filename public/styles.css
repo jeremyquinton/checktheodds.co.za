@@ -1,0 +1,461 @@
+:root {
+  --canvas: #eef0f2;
+  --panel: #f8f9fa;
+  --line: #d9dde1;
+  --ink: #17191c;
+  --muted: #6f757c;
+  --best: #00c878;
+  --best-soft: #e7faf2;
+  --shortening: #dff1fb;
+  --drifting: #f9e4e7;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 260px),
+    var(--canvas);
+  color: var(--ink);
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+button,
+select {
+  font: inherit;
+}
+
+button,
+a,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 62px;
+  padding: 0 24px;
+  background: var(--ink);
+  color: var(--white);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.brand-mark {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 2px solid var(--best);
+  color: var(--best);
+  font-size: 14px;
+}
+
+.header-actions,
+.legend,
+.legend span {
+  display: flex;
+  align-items: center;
+}
+
+.header-actions {
+  gap: 8px;
+  color: #cbd0d5;
+  font-size: 12px;
+}
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--best);
+  box-shadow: 0 0 0 4px rgba(0, 200, 120, 0.12);
+}
+
+.icon-button,
+.nav-button {
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.icon-button {
+  width: 34px;
+  height: 34px;
+  margin-left: 8px;
+  border-color: #43474c;
+  background: #272a2e;
+  color: var(--white);
+  font-size: 21px;
+}
+
+main {
+  width: min(100% - 28px, 1500px);
+  margin: 18px auto 32px;
+}
+
+.league-bar {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 0 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 2px 0 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.legend {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 18px;
+  color: #40454a;
+  font-size: 11px;
+}
+
+.legend span {
+  gap: 6px;
+}
+
+.key {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.key.best {
+  border: 2px solid var(--best);
+  background: var(--white);
+}
+
+.key.shortening {
+  background: #83c9ed;
+}
+
+.key.drifting {
+  background: #eea4ad;
+}
+
+.fixture-nav {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px 0;
+}
+
+.fixture-select-wrap {
+  display: grid;
+  gap: 5px;
+  width: min(520px, calc(100% - 88px));
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.fixture-select-wrap select {
+  width: 100%;
+  height: 42px;
+  padding: 0 38px 0 12px;
+  border: 1px solid #cbd0d5;
+  border-radius: 3px;
+  background: var(--white);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.nav-button {
+  width: 42px;
+  height: 42px;
+  border-radius: 3px;
+  font-size: 27px;
+}
+
+.comparison {
+  min-height: 250px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--panel);
+}
+
+.market-scroll {
+  overflow-x: auto;
+  scrollbar-color: #aeb4ba transparent;
+}
+
+.market-grid {
+  display: grid;
+  grid-template-columns: 220px repeat(var(--bookmaker-count), minmax(112px, 1fr));
+  min-width: calc(220px + var(--bookmaker-count) * 112px);
+}
+
+.fixture-heading {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  min-height: 112px;
+  flex-direction: column;
+  justify-content: end;
+  padding: 16px 14px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.fixture-heading strong {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 23px;
+  line-height: 1.05;
+}
+
+.fixture-heading span {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.bookmaker-head {
+  display: flex;
+  min-height: 112px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 8px 10px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+
+.bookmaker-mark {
+  position: relative;
+  display: grid;
+  min-height: 49px;
+  height: 58px;
+  place-items: center;
+  overflow: hidden;
+  padding: 4px;
+  border-radius: 3px;
+  background: #151719;
+  color: var(--white);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.bookmaker-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44px;
+  height: 78px;
+  object-fit: contain;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.bookmaker-mark.logo-fallback {
+  height: auto;
+  min-height: 49px;
+  padding: 8px 5px;
+  background: var(--bookmaker-color, #202326);
+}
+
+.bookmaker-head small {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.outcome-label {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  min-height: 64px;
+  align-items: center;
+  padding: 0 14px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+  font-weight: 600;
+}
+
+.price-cell {
+  display: grid;
+  min-height: 64px;
+  place-items: center;
+  padding: 7px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.price {
+  display: grid;
+  width: 100%;
+  min-height: 48px;
+  place-items: center;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background: #eceef0;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.price.shortening {
+  background: var(--shortening);
+}
+
+.price.drifting {
+  background: var(--drifting);
+}
+
+.price.best {
+  border-color: var(--best);
+  background: var(--best-soft);
+}
+
+.price:hover,
+.price:focus-visible,
+.icon-button:hover,
+.nav-button:hover {
+  filter: brightness(0.96);
+  outline: none;
+}
+
+.status-panel {
+  display: grid;
+  min-height: 250px;
+  place-items: center;
+  align-content: center;
+  gap: 12px;
+  padding: 32px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.status-panel strong {
+  color: var(--ink);
+}
+
+.status-panel p {
+  max-width: 520px;
+  margin: 0;
+  font-size: 13px;
+}
+
+.loader {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #d7dade;
+  border-top-color: var(--best);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+footer {
+  padding: 0 18px 24px;
+  color: var(--muted);
+  font-size: 10px;
+  text-align: center;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    min-height: 54px;
+    padding: 0 14px;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  .brand-mark {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  #updated-at {
+    display: none;
+  }
+
+  main {
+    width: calc(100% - 16px);
+    margin-top: 14px;
+  }
+
+  .league-bar {
+    align-items: start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .legend {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .market-grid {
+    grid-template-columns: 138px repeat(var(--bookmaker-count), 104px);
+    min-width: calc(138px + var(--bookmaker-count) * 104px);
+  }
+
+  .fixture-heading strong {
+    font-size: 19px;
+  }
+
+  .fixture-heading,
+  .outcome-label {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loader {
+    animation: none;
+  }
+}

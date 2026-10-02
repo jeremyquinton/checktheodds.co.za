@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 import { writeFile } from 'node:fs/promises';
-import { saveScrapeResult } from './database.js';
+import { saveScrapeResult } from '../database.js';
 
 const url = 'https://www.virginbet.co.za/sports/soccer/popular/SBTC1_1/';
 const competitionName = 'Premier League';

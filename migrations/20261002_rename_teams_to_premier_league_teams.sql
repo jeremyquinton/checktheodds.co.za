@@ -1,0 +1,1 @@
+RENAME TABLE teams TO premier_league_teams;

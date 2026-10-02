@@ -1,0 +1,4 @@
+RENAME TABLE injury_scrapes TO premier_league_team_injuries;
+ALTER TABLE premier_league_team_injuries
+  RENAME INDEX ix_injury_scrapes_scraped_at
+  TO ix_premier_league_team_injuries_scraped_at;

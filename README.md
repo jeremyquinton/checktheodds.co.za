@@ -1,7 +1,7 @@
 # Check the Odds
 
 Puppeteer scrapers for Premier League odds from Virgin Bet, Betway, Play.co.za,
-Hollywoodbets, Betfair South Africa, YesPlay, and Supabets.
+Hollywoodbets, Betfair South Africa, YesPlay, Supabets, and Easybet.
 
 ## Run
 
@@ -20,7 +20,14 @@ npm run scrape:hollywoodbets
 npm run scrape:betfair-sa
 npm run scrape:yesplay
 npm run scrape:supabets
+npm run scrape:easybet
+npm run scrape:injuries
+npm run scrape:results
+npm run scrape:match-stats
 ```
+
+Shared Node modules are in `src/js/`, with Premier League scrapers in
+`src/js/premier_league/`. PHP CLI scrapers are in `src/php/premier_league/`.
 
 Run every scraper sequentially:
 
@@ -29,8 +36,65 @@ npm run scrape:all
 ```
 
 Each scraper prints JSON and writes it to `odds.json`, `betway_odds.json`, or
-the bookmaker-specific odds file. Events include their IDs, teams, start times,
-available event URLs, and decimal home/draw/away odds.
+the bookmaker-specific odds file, including `easybet_odds.json`. Events include
+their IDs, teams, start times, available event URLs, and decimal home/draw/away
+odds.
+
+The Premier League injuries scraper writes `premier_league_injuries.json` and
+stores a timestamped snapshot in `premier_league_team_injuries` with team-linked player rows
+in `premier_league_player_injuries`. Team records are stored in `premier_league_teams` so they
+can be linked to fixtures and other Premier League data.
+
+The PHP results scraper uses Guzzle and stores match results in
+`premier_league_matches`, linked to `premier_league_teams` for home and away
+clubs. Install PHP dependencies and apply the schema before running it:
+
+```sh
+composer install
+mysql -u root -p < schema.sql
+npm run scrape:results
+```
+
+Rebuild the latest ten seasons (2017–2026 today) or update only the current
+season:
+
+```sh
+npm run rebuild:results
+npm run update:results
+```
+
+Rebuild covers matchweeks 1–38 and follows the API pagination cursors. Update
+re-fetches all current-season matchweeks and upserts by match ID, so a `PreMatch`
+fixture gains its scores and `FullTime` period after the API reports a result.
+For example, the current data has results through matchweek 5, while matchweek 6
+is stored as `PreMatch` with null scores. To load one season or preview a run
+without writing to MySQL:
+
+```sh
+npm run scrape:results -- --season=2025
+npm run scrape:results -- --season=2025 --dry-run
+```
+
+The match-stats scraper reads stored `external_match_id` values and saves each
+match's home and away metric objects as JSON in
+`premier_league_match_team_stats`. By default it only fetches matches without
+stats yet and skips `PreMatch` fixtures until they have been played. Run it
+after the results scraper, or target one stored match:
+
+```sh
+npm run scrape:match-stats
+npm run scrape:match-stats -- --match-id=2561895
+npm run scrape:match-stats -- --season=2025 --dry-run
+```
+
+Use `--refresh` to fetch again for already stored matches. Match `2645209` from
+the example URL is not currently in the imported 2016–2025 results; load its
+season into `premier_league_matches` before requesting its stats.
+
+For a fixture, `fixture_team_form.sql` returns each team's latest 15 prior
+Premier League matches, xG/xGA where match stats are available, and current- and
+previous-season home/away W-D-L records. Set `@fixture_external_match_id` to the
+fixture's `external_match_id`; set `@form_match_count` to 10–15 as needed.
 
 The Betfair scraper records the best available back price for each `1/X/2`
 selection. Lay prices are not included in the comparison.
@@ -41,6 +105,27 @@ Create the database and tables:
 
 ```sh
 mysql -u root -p < schema.sql
+```
+
+For an existing database that still has a `teams` table, run the one-time
+rename before applying the updated schema:
+
+```sh
+mysql -u root -p checktheodds < migrations/20261002_rename_teams_to_premier_league_teams.sql
+mysql -u root -p < schema.sql
+```
+
+If your database still has the old `injury_scrapes` snapshot table, apply its
+one-time rename as well:
+
+```sh
+mysql -u root -p checktheodds < migrations/20261002_rename_injury_scrapes_to_premier_league_team_injuries.sql
+```
+
+If it still has a `player_injuries` table, apply the child-table rename too:
+
+```sh
+mysql -u root -p checktheodds < migrations/20261002_rename_player_injuries_to_premier_league_player_injuries.sql
 ```
 
 Configure the connection with `MYSQL_URL`, or export the individual values from

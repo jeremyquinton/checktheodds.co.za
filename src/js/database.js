@@ -104,3 +104,53 @@ export async function saveScrapeResult(result) {
     await connection.end();
   }
 }
+
+export async function saveInjuryScrapeResult(result) {
+  if (process.env.SAVE_TO_DB === 'false') {
+    return false;
+  }
+
+  const connection = await mysql.createConnection(getConnectionConfig());
+
+  try {
+    await connection.beginTransaction();
+    const scrapedAt = new Date(result.scrapedAt);
+
+    const [scrapeResult] = await connection.execute(
+      `INSERT INTO premier_league_team_injuries (scraped_at, source_updated_at, source_url)
+       VALUES (?, ?, ?)`,
+      [scrapedAt, result.sourceUpdatedAt, result.sourceUrl],
+    );
+
+    for (const injury of result.injuries) {
+      const teamId = await upsertLookup(connection, 'premier_league_teams', {
+        name: injury.team,
+      });
+
+      await connection.execute(
+        `INSERT INTO premier_league_player_injuries (
+          injury_scrape_id, team_id, player_name, injury, latest_url
+        ) VALUES (?, ?, ?, ?, ?)
+        ON DUPLICATE KEY UPDATE
+          injury = VALUES(injury),
+          latest_url = VALUES(latest_url),
+          id = LAST_INSERT_ID(id)`,
+        [
+          scrapeResult.insertId,
+          teamId,
+          injury.player,
+          injury.injury,
+          injury.latestUrl,
+        ],
+      );
+    }
+
+    await connection.commit();
+    return true;
+  } catch (error) {
+    await connection.rollback();
+    throw error;
+  } finally {
+    await connection.end();
+  }
+}

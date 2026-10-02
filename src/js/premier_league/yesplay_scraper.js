@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 import { writeFile } from 'node:fs/promises';
-import { saveScrapeResult } from './database.js';
+import { saveScrapeResult } from '../database.js';
 
 const url = 'https://yesplay.bet/sports/prematch/soccer/england-premier-league-17';
 const competitionName = 'Premier League';

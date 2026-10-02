@@ -6,7 +6,7 @@ import { getConnectionConfig } from './database.js';
 
 const app = express();
 const port = Number(process.env.PORT ?? 3000);
-const projectDirectory = join(dirname(fileURLToPath(import.meta.url)), '..');
+const projectDirectory = join(dirname(fileURLToPath(import.meta.url)), '../..');
 const publicDirectory = join(projectDirectory, 'public');
 const bookmakerLogos = new Map([
   ['betfair-sa', 'betfair.jpg'],
@@ -19,6 +19,7 @@ const bookmakerLogos = new Map([
 ]);
 
 const teamAliases = new Map([
+  ['afc bournemouth', 'bournemouth'],
   ['brighton and hove albion', 'brighton'],
   ['brighton hove albion', 'brighton'],
   ['coventry', 'coventry city'],
@@ -49,7 +50,7 @@ function getMovement(current, previous) {
   return current > previous ? 'drifting' : 'shortening';
 }
 
-function groupFixtures(rows) {
+function groupFixtures(rows, injuriesByTeam) {
   const fixtures = new Map();
 
   for (const row of rows) {
@@ -96,6 +97,8 @@ function groupFixtures(rows) {
         draw: Math.max(...fixture.bookmakers.map((bookmaker) => bookmaker.odds.draw)),
         away: Math.max(...fixture.bookmakers.map((bookmaker) => bookmaker.odds.away)),
       },
+      homeInjuries: injuriesByTeam.get(normalizeTeam(fixture.homeTeam)) ?? [],
+      awayInjuries: injuriesByTeam.get(normalizeTeam(fixture.awayTeam)) ?? [],
     }))
     .sort((left, right) =>
       right.bookmakers.length - left.bookmakers.length ||
@@ -145,7 +148,46 @@ app.get('/api/fixtures', async (_request, response, next) => {
       ORDER BY matches.home_team, bookmakers.name
     `);
 
-    response.json({ fixtures: groupFixtures(rows) });
+    const [scrapes] = await connection.query(`
+      SELECT id, scraped_at, source_updated_at
+      FROM premier_league_team_injuries
+      ORDER BY scraped_at DESC, id DESC
+      LIMIT 1
+    `);
+    const latestInjuryScrape = scrapes[0] ?? null;
+    const injuriesByTeam = new Map();
+
+    if (latestInjuryScrape) {
+      const [injuryRows] = await connection.execute(
+        `SELECT
+          premier_league_teams.name AS team,
+          premier_league_player_injuries.player_name,
+          premier_league_player_injuries.injury,
+          premier_league_player_injuries.latest_url
+        FROM premier_league_player_injuries
+        JOIN premier_league_teams ON premier_league_teams.id = premier_league_player_injuries.team_id
+        WHERE premier_league_player_injuries.injury_scrape_id = ?
+        ORDER BY premier_league_teams.name, premier_league_player_injuries.player_name`,
+        [latestInjuryScrape.id],
+      );
+
+      for (const row of injuryRows) {
+        const key = normalizeTeam(row.team);
+        const teamInjuries = injuriesByTeam.get(key) ?? [];
+        teamInjuries.push({
+          player: row.player_name,
+          injury: row.injury,
+          latestUrl: row.latest_url,
+        });
+        injuriesByTeam.set(key, teamInjuries);
+      }
+    }
+
+    response.json({
+      fixtures: groupFixtures(rows, injuriesByTeam),
+      injuryScrapedAt: latestInjuryScrape?.scraped_at ?? null,
+      injurySourceUpdatedAt: latestInjuryScrape?.source_updated_at ?? null,
+    });
   } catch (error) {
     next(error);
   } finally {

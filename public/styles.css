@@ -170,6 +170,52 @@ h1 {
   background: #eea4ad;
 }
 
+.fixture-range {
+  display: flex;
+  width: min(100%, 520px);
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 16px auto 0;
+}
+
+.fixture-range-control {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid #cbd0d5;
+  border-radius: 3px;
+  background: #e4e7e9;
+}
+
+.fixture-range-button {
+  min-height: 32px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 2px;
+  background: transparent;
+  color: #4c5258;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.fixture-range-button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.fixture-range-button:focus-visible {
+  outline: 2px solid var(--best);
+  outline-offset: 2px;
+}
+
+.fixture-count {
+  color: var(--muted);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
 .fixture-nav {
   display: flex;
   align-items: end;
@@ -353,6 +399,100 @@ h1 {
   background: var(--best-soft);
 }
 
+.injury-panel {
+  padding: 16px 18px 18px;
+  border-top: 1px solid var(--line);
+  background: var(--white);
+}
+
+.injury-panel-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 10px;
+}
+
+.injury-panel-heading h2 {
+  margin: 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.injury-captured {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+  text-align: right;
+}
+
+.injury-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.injury-team {
+  min-width: 0;
+  border-top: 2px solid #b9c0c6;
+}
+
+.injury-team h3 {
+  margin: 0;
+  padding: 9px 0 4px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 17px;
+}
+
+.injury-empty {
+  margin: 0;
+  padding: 5px 0 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.injury-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.injury-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 42px;
+  padding: 6px 0;
+  border-top: 1px solid #e8eaec;
+}
+
+.injury-details {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  font-size: 12px;
+}
+
+.injury-details strong {
+  overflow-wrap: anywhere;
+}
+
+.injury-details span {
+  color: #a23843;
+  font-size: 11px;
+}
+
+.injury-source {
+  flex: 0 0 auto;
+  color: #23624e;
+  font-size: 10px;
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
 .price:hover,
 .price:focus-visible,
 .icon-button:hover,
@@ -433,6 +573,10 @@ footer {
     gap: 12px;
   }
 
+  .fixture-range {
+    margin-top: 14px;
+  }
+
   .legend {
     justify-content: flex-start;
     gap: 12px;
@@ -451,6 +595,25 @@ footer {
   .outcome-label {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .injury-panel {
+    padding: 14px 12px;
+  }
+
+  .injury-panel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .injury-captured {
+    text-align: left;
+  }
+
+  .injury-columns {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
   }
 }
 

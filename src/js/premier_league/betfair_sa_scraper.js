@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 import { writeFile } from 'node:fs/promises';
-import { saveScrapeResult } from './database.js';
+import { saveScrapeResult } from '../database.js';
 
 const url = 'https://betfairsa.co.za/?route=%2Fcustomer%2Fsport%2F1%2F';
 const competitionName = 'English Premier League';

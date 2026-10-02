@@ -36,6 +36,14 @@
         </div>
       </section>
 
+      <section class="fixture-range" aria-label="Fixture range">
+        <div class="fixture-range-control" role="group" aria-label="Fixtures to show">
+          <button id="next-ten-button" class="fixture-range-button" type="button" aria-pressed="true">Next 10</button>
+          <button id="all-fixtures-button" class="fixture-range-button" type="button" aria-pressed="false">All fixtures</button>
+        </div>
+        <span id="fixture-count" class="fixture-count" aria-live="polite"></span>
+      </section>
+
       <section class="fixture-nav" aria-label="Select fixture">
         <button id="previous-fixture" class="nav-button" type="button" aria-label="Previous fixture">‹</button>
         <label class="fixture-select-wrap">

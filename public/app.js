@@ -3,6 +3,9 @@ const fixtureSelect = document.querySelector('#fixture-select');
 const refreshButton = document.querySelector('#refresh-button');
 const previousButton = document.querySelector('#previous-fixture');
 const nextButton = document.querySelector('#next-fixture');
+const nextTenButton = document.querySelector('#next-ten-button');
+const allFixturesButton = document.querySelector('#all-fixtures-button');
+const fixtureCount = document.querySelector('#fixture-count');
 const updatedAt = document.querySelector('#updated-at');
 
 const bookmakerColors = {
@@ -26,7 +29,11 @@ const bookmakerLogos = new Set([
 ]);
 
 let fixtures = [];
+let visibleFixtures = [];
 let selectedIndex = 0;
+let showAllFixtures = false;
+let injuryScrapedAt = null;
+let injurySourceUpdatedAt = null;
 
 function createElement(tag, className, text) {
   const element = document.createElement(tag);
@@ -46,10 +53,91 @@ function formatPrice(price) {
   return Number(price).toFixed(2);
 }
 
+function getKickoffTimestamp(fixture) {
+  const timestamps = (fixture.startTimes ?? [])
+    .filter((startTime) => /^\d{4}-\d{2}-\d{2}T/.test(startTime))
+    .map((startTime) => Date.parse(startTime))
+    .filter(Number.isFinite);
+
+  return timestamps.length ? Math.min(...timestamps) : Number.POSITIVE_INFINITY;
+}
+
+function renderInjuries(fixture) {
+  const panel = createElement('section', 'injury-panel');
+  const heading = createElement('div', 'injury-panel-heading');
+  const capturedAt = injuryScrapedAt
+    ? new Date(injuryScrapedAt).toLocaleString([], {
+      dateStyle: 'medium',
+      timeStyle: 'short',
+    })
+    : 'No injury snapshot recorded';
+  const sourceNote = injurySourceUpdatedAt
+    ? ` · Source updated ${injurySourceUpdatedAt}`
+    : '';
+
+  heading.append(
+    createElement('h2', null, 'Team injuries'),
+    createElement('p', 'injury-captured', `Captured ${capturedAt}${sourceNote}`),
+  );
+
+  const columns = createElement('div', 'injury-columns');
+  for (const [team, injuries] of [
+    [fixture.homeTeam, fixture.homeInjuries ?? []],
+    [fixture.awayTeam, fixture.awayInjuries ?? []],
+  ]) {
+    const teamSection = createElement('section', 'injury-team');
+    teamSection.append(createElement('h3', null, team));
+
+    if (!injuryScrapedAt || injuries.length === 0) {
+      const emptyMessage = !injuryScrapedAt
+        ? 'Injury data is not available yet.'
+        : 'No reported injuries.';
+      teamSection.append(createElement('p', 'injury-empty', emptyMessage));
+    } else {
+      const list = createElement('ul', 'injury-list');
+      for (const injury of injuries) {
+        const item = createElement('li', 'injury-item');
+        const details = createElement('div', 'injury-details');
+        details.append(
+          createElement('strong', null, injury.player),
+          createElement('span', null, injury.injury),
+        );
+
+        if (injury.latestUrl) {
+          const sourceLink = createElement('a', 'injury-source', 'Club update');
+          sourceLink.href = injury.latestUrl;
+          sourceLink.target = '_blank';
+          sourceLink.rel = 'noopener noreferrer';
+          item.append(details, sourceLink);
+        } else {
+          item.append(details);
+        }
+
+        list.append(item);
+      }
+      teamSection.append(list);
+    }
+
+    columns.append(teamSection);
+  }
+
+  panel.append(heading, columns);
+  return panel;
+}
+
 function renderFixture() {
-  const fixture = fixtures[selectedIndex];
+  const fixture = visibleFixtures[selectedIndex];
   if (!fixture) {
-    renderStatus('No Premier League odds found', 'Run the scrapers to populate MySQL, then refresh this page.');
+    const hasFixtures = fixtures.length > 0;
+    renderStatus(
+      hasFixtures ? 'No upcoming fixtures found' : 'No Premier League odds found',
+      hasFixtures
+        ? 'Choose All Fixtures to review the available markets.'
+        : 'Run the scrapers to populate MySQL, then refresh this page.',
+    );
+    fixtureSelect.replaceChildren();
+    previousButton.disabled = true;
+    nextButton.disabled = true;
     return;
   }
 
@@ -115,18 +203,46 @@ function renderFixture() {
     }
   }
 
-  scroll.append(grid);
+  scroll.append(grid, renderInjuries(fixture));
   comparison.replaceChildren(scroll);
   fixtureSelect.value = String(selectedIndex);
   previousButton.disabled = selectedIndex === 0;
-  nextButton.disabled = selectedIndex === fixtures.length - 1;
+  nextButton.disabled = selectedIndex === visibleFixtures.length - 1;
 
   const timestamps = fixture.bookmakers.map((bookmaker) => new Date(bookmaker.scrapedAt).getTime());
   updatedAt.textContent = `Updated ${new Date(Math.max(...timestamps)).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
 }
 
+function updateFixtureView(includeAll = showAllFixtures) {
+  const selectedFixtureId = visibleFixtures[selectedIndex]?.id;
+  showAllFixtures = includeAll;
+
+  const chronologicalFixtures = [...fixtures].sort(
+    (left, right) => getKickoffTimestamp(left) - getKickoffTimestamp(right),
+  );
+  const upcomingFixtures = chronologicalFixtures.filter(
+    (fixture) => getKickoffTimestamp(fixture) >= Date.now(),
+  );
+  visibleFixtures = showAllFixtures
+    ? chronologicalFixtures
+    : upcomingFixtures.slice(0, 10);
+
+  const previousSelection = visibleFixtures.findIndex(
+    (fixture) => fixture.id === selectedFixtureId,
+  );
+  selectedIndex = previousSelection >= 0 ? previousSelection : 0;
+  nextTenButton.setAttribute('aria-pressed', String(!showAllFixtures));
+  allFixturesButton.setAttribute('aria-pressed', String(showAllFixtures));
+  fixtureCount.textContent = showAllFixtures
+    ? `${visibleFixtures.length} fixtures`
+    : `Next ${visibleFixtures.length} of ${fixtures.length}`;
+
+  populateFixtureSelect();
+  renderFixture();
+}
+
 function populateFixtureSelect() {
-  fixtureSelect.replaceChildren(...fixtures.map((fixture, index) => {
+  fixtureSelect.replaceChildren(...visibleFixtures.map((fixture, index) => {
     const option = createElement('option', null, `${fixture.homeTeam} v ${fixture.awayTeam}`);
     option.value = String(index);
     return option;
@@ -141,9 +257,9 @@ async function loadFixtures() {
     if (!response.ok) throw new Error('API request failed');
     const data = await response.json();
     fixtures = data.fixtures;
-    selectedIndex = Math.min(selectedIndex, Math.max(fixtures.length - 1, 0));
-    populateFixtureSelect();
-    renderFixture();
+    injuryScrapedAt = data.injuryScrapedAt;
+    injurySourceUpdatedAt = data.injurySourceUpdatedAt;
+    updateFixtureView();
   } catch (_error) {
     renderStatus('Could not load the odds', 'Check that MySQL is running and your MYSQL_* connection values are correct.');
   } finally {
@@ -162,9 +278,12 @@ previousButton.addEventListener('click', () => {
 });
 
 nextButton.addEventListener('click', () => {
-  if (selectedIndex < fixtures.length - 1) selectedIndex += 1;
+  if (selectedIndex < visibleFixtures.length - 1) selectedIndex += 1;
   renderFixture();
 });
+
+nextTenButton.addEventListener('click', () => updateFixtureView(false));
+allFixturesButton.addEventListener('click', () => updateFixtureView(true));
 
 refreshButton.addEventListener('click', loadFixtures);
 

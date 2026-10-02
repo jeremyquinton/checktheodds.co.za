@@ -6,6 +6,8 @@ const nextButton = document.querySelector('#next-fixture');
 const nextTenButton = document.querySelector('#next-ten-button');
 const allFixturesButton = document.querySelector('#all-fixtures-button');
 const fixtureCount = document.querySelector('#fixture-count');
+const decimalOddsButton = document.querySelector('#decimal-odds-button');
+const fractionalOddsButton = document.querySelector('#fractional-odds-button');
 const updatedAt = document.querySelector('#updated-at');
 
 const bookmakerColors = {
@@ -32,6 +34,7 @@ let fixtures = [];
 let visibleFixtures = [];
 let selectedIndex = 0;
 let showAllFixtures = false;
+let oddsFormat = 'decimal';
 let injuryScrapedAt = null;
 let injurySourceUpdatedAt = null;
 let formRequestVersion = 0;
@@ -51,16 +54,38 @@ function renderStatus(title, message) {
 }
 
 function formatPrice(price) {
-  return Number(price).toFixed(2);
-}
+  const decimalPrice = Number(price);
+  if (oddsFormat === 'decimal') return decimalPrice.toFixed(2);
 
-function getKickoffTimestamp(fixture) {
-  const timestamps = (fixture.startTimes ?? [])
-    .filter((startTime) => /^\d{4}-\d{2}-\d{2}T/.test(startTime))
-    .map((startTime) => Date.parse(startTime))
-    .filter(Number.isFinite);
+  const payout = decimalPrice - 1;
+  let numerator = 0;
+  let denominator = 1;
+  let smallestError = Number.POSITIVE_INFINITY;
 
-  return timestamps.length ? Math.min(...timestamps) : Number.POSITIVE_INFINITY;
+  for (let candidateDenominator = 1; candidateDenominator <= 100; candidateDenominator += 1) {
+    const candidateNumerator = Math.round(payout * candidateDenominator);
+    if (candidateNumerator < 1) continue;
+    const error = Math.abs(payout - candidateNumerator / candidateDenominator);
+    if (error < smallestError) {
+      numerator = candidateNumerator;
+      denominator = candidateDenominator;
+      smallestError = error;
+    }
+    if (error < 0.000001) break;
+  }
+
+  if (smallestError > 0.005) {
+    numerator = Math.round(payout * 1000);
+    denominator = 1000;
+  }
+
+  let left = numerator;
+  let right = denominator;
+  while (right !== 0) {
+    [left, right] = [right, left % right];
+  }
+
+  return `${numerator / left}/${denominator / left}`;
 }
 
 function renderInjuries(fixture) {
@@ -342,16 +367,21 @@ function renderFixture() {
   updatedAt.textContent = `Updated ${new Date(Math.max(...timestamps)).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
 }
 
+function setOddsFormat(format) {
+  oddsFormat = format;
+  decimalOddsButton.setAttribute('aria-pressed', String(format === 'decimal'));
+  fractionalOddsButton.setAttribute('aria-pressed', String(format === 'fractional'));
+  renderFixture();
+}
+
 function updateFixtureView(includeAll = showAllFixtures) {
   const selectedFixtureId = visibleFixtures[selectedIndex]?.id;
   showAllFixtures = includeAll;
 
   const chronologicalFixtures = [...fixtures].sort(
-    (left, right) => getKickoffTimestamp(left) - getKickoffTimestamp(right),
+    (left, right) => left.kickoffOrder.localeCompare(right.kickoffOrder),
   );
-  const upcomingFixtures = chronologicalFixtures.filter(
-    (fixture) => getKickoffTimestamp(fixture) >= Date.now(),
-  );
+  const upcomingFixtures = chronologicalFixtures;
   visibleFixtures = showAllFixtures
     ? chronologicalFixtures
     : upcomingFixtures.slice(0, 10);
@@ -413,6 +443,8 @@ nextButton.addEventListener('click', () => {
 
 nextTenButton.addEventListener('click', () => updateFixtureView(false));
 allFixturesButton.addEventListener('click', () => updateFixtureView(true));
+decimalOddsButton.addEventListener('click', () => setOddsFormat('decimal'));
+fractionalOddsButton.addEventListener('click', () => setOddsFormat('fractional'));
 
 refreshButton.addEventListener('click', loadFixtures);
 

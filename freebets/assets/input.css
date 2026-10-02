@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@source "../templates/**/*.twig";
+@source "../src/**/*.php";
+
+@theme {
+  --color-forest-950: #082f29;
+  --color-forest-900: #0b4035;
+  --color-forest-800: #145345;
+  --color-fern-100: #edf4e8;
+  --color-lime-300: #d5f36a;
+  --color-lime-400: #c3ea3d;
+  --color-paper: #f7f8f3;
+  --color-ink: #13221f;
+  --color-muted-ink: #64716c;
+  --font-display: "Barlow Condensed", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.offer-hero {
+  background-image:
+    linear-gradient(90deg, rgba(5, 42, 34, 0.98) 0%, rgba(5, 42, 34, 0.86) 45%, rgba(5, 42, 34, 0.1) 100%),
+    url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1800&q=85");
+  background-position: center 55%;
+  background-size: cover;
+}
+
+.offer-card {
+  border: 1px solid #dce2da;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(10, 32, 27, 0.04);
+}
+
+.offer-filter {
+  flex: 0 0 auto;
+  min-height: 34px;
+  border-radius: 3px;
+  padding: 0 11px;
+  color: #42514b;
+  font-size: 10px;
+  font-weight: 600;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+.offer-filter:hover {
+  background: #edf4e8;
+  color: #0b4035;
+}
+
+.offer-filter.is-active {
+  background: #0b4035;
+  color: #fff;
+}
+
+.offer-category-badge {
+  background: #e7f3d0;
+  color: #315713;
+}
+
+.offer-category-badge[data-category="deposit-match"] {
+  background: #dcecf5;
+  color: #20516b;
+}
+
+.offer-category-badge[data-category="no-deposit"] {
+  background: #faeccf;
+  color: #765519;
+}
+
+.offer-card[hidden],
+#offer-empty[hidden] {
+  display: none !important;
+}
+
+.offer-logo-box img {
+  width: 100%;
+  max-width: 150px;
+  height: 62px;
+  max-height: 62px;
+  object-fit: contain;
+}
+
+.offer-detail + .offer-detail {
+  border-left: 1px solid #e4e8e2;
+}
+
+.offer-disclosure[open] summary .chevron {
+  transform: rotate(180deg);
+}
+
+.faq-item + .faq-item {
+  border-top: 1px solid #dfe4dd;
+}
+
+@media (max-width: 640px) {
+  .offer-hero {
+    background-image:
+      linear-gradient(90deg, rgba(5, 42, 34, 0.91) 0%, rgba(5, 42, 34, 0.7) 62%, rgba(5, 42, 34, 0.35) 100%),
+      url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1800&q=85");
+    background-position: 68% center;
+  }
+
+  .offer-detail + .offer-detail {
+    border-left: 0;
+  }
+}

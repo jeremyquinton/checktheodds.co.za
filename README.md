@@ -26,6 +26,16 @@ npm run scrape:results
 npm run scrape:match-stats
 ```
 
+Run the separate Slim free-bets preview and compile its Tailwind stylesheet:
+
+```sh
+npm run freebets:css
+npm run freebets:serve
+```
+
+Open `http://127.0.0.1:8080`. The offer figures are illustrative preview data in
+`freebets/src/Repository/OfferRepository.php`, not live promotions.
+
 Shared Node modules are in `src/js/`, with Premier League scrapers in
 `src/js/premier_league/`. PHP CLI scrapers are in `src/php/premier_league/`.
 
@@ -95,6 +105,25 @@ For a fixture, `fixture_team_form.sql` returns each team's latest 15 prior
 Premier League matches, xG/xGA where match stats are available, and current- and
 previous-season home/away W-D-L records. Set `@fixture_external_match_id` to the
 fixture's `external_match_id`; set `@form_match_count` to 10–15 as needed.
+
+To export an AI-ready JSON context for a canonical fixture ID:
+
+```sh
+npm run fixture:context -- --match-id=2645252 --form-limit=15
+```
+
+The command supports `PreMatch` fixtures; the score remains `null` until results
+are available. For clean JSON output to pass to another tool or model:
+
+```sh
+npm run --silent fixture:context -- --match-id=2645252 --form-limit=15 > match-context.json
+```
+
+The JSON includes the fixture, recent Premier League form, season venue records,
+H2H, available xG/xGA, injuries with per-player source links and snapshot/source
+update timestamps, upcoming Premier League fixtures, and latest 1X2 bookmaker
+odds. Suspensions, lineups, other competitions, and over/under prices are marked
+unavailable because they are not in the current database.
 
 All JavaScript bookmaker scrapers map events to `premier_league_matches` using
 normalized home/away team names from the next two upcoming matchweeks. Shared

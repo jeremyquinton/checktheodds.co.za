@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compare South African bookmaker free bets and welcome offers.">
+    <title>Free Bet Offers | Check The Odds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/app.css">
+    <script src="/assets/freebets.js" defer></script>
+  </head>
+  <body class="bg-paper text-ink antialiased">
+    <header class="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
+      <div class="mx-auto flex min-h-14 max-w-7xl items-center justify-between gap-5 px-4 md:px-7">
+        <a class="flex shrink-0 items-center gap-2.5 text-forest-950 no-underline" href="#top" aria-label="Check The Odds home">
+          <span class="grid size-9 place-items-center rounded-full bg-forest-950 font-display text-xs font-bold text-lime-300">CTO</span>
+          <span class="font-display text-xl font-bold tracking-wide">CHECK THE ODDS</span>
+        </a>
+        <nav class="hidden items-center gap-7 text-xs font-semibold text-slate-700 md:flex" aria-label="Main navigation">
+          <a class="transition hover:text-forest-800" href="{{ oddsAppUrl }}">Best odds</a>
+          <a class="transition hover:text-forest-800" href="#how-it-works">How it works</a>
+          <a class="border-b-2 border-lime-400 py-5 text-forest-950" href="#offers" aria-current="page">Free bets</a>
+          <a class="transition hover:text-forest-800" href="#small-print">Betting sites</a>
+        </nav>
+        <span class="shrink-0 rounded-full bg-fern-100 px-3 py-1.5 text-[11px] font-bold tracking-wide text-forest-900">ZA&nbsp; / &nbsp;ZAR</span>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="offer-hero relative isolate min-h-44 overflow-hidden bg-forest-950 text-white md:min-h-48">
+        <div class="mx-auto flex min-h-44 max-w-7xl items-center px-5 py-7 md:min-h-48 md:px-8">
+          <div class="max-w-xl">
+            <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-lime-300">South African bookmaker offers</p>
+            <h1 class="font-display text-4xl font-bold leading-none sm:text-5xl">Find your next free bet.</h1>
+            <p class="mt-2 max-w-lg text-sm text-white/85 sm:text-base">Compare welcome offers and the terms that make the difference.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="mx-auto max-w-7xl px-4 pt-3 md:px-7">
+        <p class="flex items-center gap-2 rounded bg-fern-100 px-3 py-2 text-[11px] text-forest-900" role="note">
+          <span class="grid size-4 shrink-0 place-items-center rounded-full bg-forest-800 text-[10px] font-bold text-white" aria-hidden="true">i</span>
+          Design preview. Offers below are illustrative, not live promotions.
+        </p>
+      </div>
+
+      <section id="offers" class="mx-auto grid max-w-7xl grid-cols-1 gap-4 px-4 py-4 md:px-7 xl:grid-cols-[minmax(0,1fr)_260px] xl:gap-5">
+        <div class="min-w-0">
+          <div class="mb-3 flex flex-col gap-2.5 lg:flex-row lg:items-center lg:justify-between">
+            <div class="offer-filters inline-flex w-fit max-w-full overflow-x-auto rounded border border-slate-300 bg-white p-0.5" role="group" aria-label="Filter offers">
+              <button class="offer-filter is-active" type="button" data-filter="all" aria-pressed="true">All offers</button>
+              <button class="offer-filter" type="button" data-filter="free-bets" aria-pressed="false">Free bets</button>
+              <button class="offer-filter" type="button" data-filter="no-deposit" aria-pressed="false">No deposit</button>
+              <button class="offer-filter" type="button" data-filter="deposit-match" aria-pressed="false">Deposit match</button>
+            </div>
+
+            <div class="flex flex-col gap-2 sm:flex-row">
+              <label class="search-control flex min-h-10 min-w-0 items-center gap-2 rounded border border-slate-300 bg-white px-3 sm:w-56">
+                <span class="text-lg leading-none text-forest-800" aria-hidden="true">⌕</span>
+                <span class="sr-only">Search bookmakers</span>
+                <input id="offer-search" class="min-w-0 flex-1 border-0 bg-transparent text-xs outline-none placeholder:text-slate-400" type="search" placeholder="Search bookmakers" autocomplete="off">
+              </label>
+              <label class="flex min-h-10 items-center gap-2 rounded border border-slate-300 bg-white px-3 text-[10px] font-bold uppercase tracking-wide text-slate-500">
+                <span>Sort</span>
+                <select id="offer-sort" class="min-w-32 border-0 bg-transparent text-xs font-semibold text-ink outline-none" aria-label="Sort offers">
+                  <option value="bonus-desc">Bonus amount</option>
+                  <option value="bonus-asc">Lowest amount</option>
+                  <option value="bookmaker">Bookmaker</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <p id="offer-count" class="mb-2 text-[10px] font-medium text-slate-500" aria-live="polite"></p>
+          <div id="offer-list" class="space-y-2.5">
+            {% for offer in offers %}
+              <article
+                class="offer-card grid grid-cols-1 overflow-hidden sm:grid-cols-[120px_minmax(0,1fr)] lg:grid-cols-[128px_minmax(0,1fr)_132px]"
+                data-offer-card
+                data-category="{{ offer.category }}"
+                data-bookmaker="{{ offer.bookmaker|lower }}"
+                data-bonus="{{ offer.bonusAmount }}"
+                data-search="{{ (offer.bookmaker ~ ' ' ~ offer.headline ~ ' ' ~ offer.description ~ ' ' ~ offer.categoryLabel)|lower }}"
+              >
+                <div class="offer-logo-box flex min-h-20 items-center justify-center border-b border-slate-100 bg-white p-4 sm:min-h-32 sm:border-b-0 sm:border-r">
+                  <img src="{{ offer.logo }}" alt="{{ offer.bookmaker }}" loading="lazy" width="150" height="62">
+                </div>
+                <div class="min-w-0 px-4 py-3 sm:px-4 sm:py-3.5">
+                  <div class="mb-1.5 flex flex-wrap items-center gap-1.5">
+                    <span class="rounded bg-slate-100 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-slate-600">Example offer</span>
+                    <span class="offer-category-badge rounded px-2 py-0.5 text-[9px] font-bold" data-category="{{ offer.category }}">{{ offer.categoryLabel }}</span>
+                  </div>
+                  <h2 class="font-display text-[21px] font-bold leading-tight text-ink">{{ offer.headline }}</h2>
+                  <p class="mt-0.5 text-[11px] text-slate-600">{{ offer.description }}</p>
+                  <dl class="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 sm:grid-cols-4">
+                    <div class="offer-detail min-w-0">
+                      <dt>Minimum deposit</dt>
+                      <dd>{{ offer.minimumDeposit }}</dd>
+                    </div>
+                    <div class="offer-detail min-w-0">
+                      <dt>Wagering</dt>
+                      <dd>{{ offer.wagering }}</dd>
+                    </div>
+                    <div class="offer-detail min-w-0">
+                      <dt>Qualifying odds</dt>
+                      <dd>{{ offer.qualifyingOdds }}</dd>
+                    </div>
+                    <div class="offer-detail min-w-0">
+                      <dt>Valid for</dt>
+                      <dd>{{ offer.validFor }}</dd>
+                    </div>
+                  </dl>
+                  <details class="offer-disclosure mt-2 border-t border-slate-100 pt-2">
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-2 text-[10px] font-semibold text-forest-800">
+                      Offer terms &amp; eligibility
+                      <span class="chevron transition-transform" aria-hidden="true">⌄</span>
+                    </summary>
+                    <ul class="mt-2 list-disc space-y-1 pl-4 text-[10px] leading-relaxed text-slate-600">
+                      {% for term in offer.terms %}
+                        <li>{{ term }}</li>
+                      {% endfor %}
+                    </ul>
+                  </details>
+                </div>
+                <div class="flex items-center justify-between gap-3 border-t border-slate-100 px-4 py-3 sm:col-span-2 sm:justify-end lg:col-span-1 lg:flex-col lg:items-stretch lg:justify-center lg:border-l lg:border-t-0">
+                  <a class="offer-action inline-flex min-h-10 items-center justify-center gap-2 rounded bg-lime-400 px-4 text-xs font-bold text-forest-950 transition hover:bg-lime-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest-800" href="{{ offer.url }}" target="_blank" rel="noopener noreferrer">
+                    Visit site <span aria-hidden="true">→</span>
+                  </a>
+                  <span class="text-right text-[9px] leading-relaxed text-slate-500 lg:text-center">18+ · New-customer terms may apply</span>
+                </div>
+              </article>
+            {% endfor %}
+          </div>
+          <p id="offer-empty" class="hidden rounded border border-dashed border-slate-300 bg-white px-5 py-10 text-center text-sm text-slate-500">No offers match these filters.</p>
+        </div>
+
+        <aside id="small-print" class="space-y-3">
+          <section class="rounded border border-fern-100 bg-fern-100/70 p-4">
+            <p class="text-[9px] font-bold uppercase tracking-[0.18em] text-forest-800">Compare the small print</p>
+            <h2 class="mt-1 font-display text-2xl font-bold leading-none text-forest-950">The details matter.</h2>
+            <p class="mt-2 text-xs leading-relaxed text-slate-700">A bigger bonus can come with tougher terms. Compare the conditions before you choose.</p>
+            <ul class="mt-4 space-y-3.5">
+              <li class="flex gap-3">
+                <span class="grid size-8 shrink-0 place-items-center rounded-full border border-forest-800/20 bg-white font-bold text-forest-800" aria-hidden="true">01</span>
+                <span><strong class="block text-[11px] text-ink">Minimum deposit</strong><span class="text-[10px] leading-relaxed text-slate-600">The amount required to qualify.</span></span>
+              </li>
+              <li class="flex gap-3">
+                <span class="grid size-8 shrink-0 place-items-center rounded-full border border-forest-800/20 bg-white font-bold text-forest-800" aria-hidden="true">02</span>
+                <span><strong class="block text-[11px] text-ink">Wagering requirements</strong><span class="text-[10px] leading-relaxed text-slate-600">How many times the bonus must be played.</span></span>
+              </li>
+              <li class="flex gap-3">
+                <span class="grid size-8 shrink-0 place-items-center rounded-full border border-forest-800/20 bg-white font-bold text-forest-800" aria-hidden="true">03</span>
+                <span><strong class="block text-[11px] text-ink">Qualifying odds</strong><span class="text-[10px] leading-relaxed text-slate-600">The minimum odds your bets must meet.</span></span>
+              </li>
+              <li class="flex gap-3">
+                <span class="grid size-8 shrink-0 place-items-center rounded-full border border-forest-800/20 bg-white font-bold text-forest-800" aria-hidden="true">04</span>
+                <span><strong class="block text-[11px] text-ink">Expiry period</strong><span class="text-[10px] leading-relaxed text-slate-600">How long you have to use the offer.</span></span>
+              </li>
+            </ul>
+          </section>
+          <section class="relative isolate overflow-hidden rounded bg-forest-950 px-4 py-4 text-white">
+            <div class="absolute inset-0 -z-10 opacity-30 [background-image:radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-forest-800 via-forest-950 to-forest-950"></div>
+            <p class="text-[9px] font-bold uppercase tracking-[0.18em] text-lime-300">A quick reminder</p>
+            <p class="mt-2 font-display text-xl font-bold">Check the terms first.</p>
+            <p class="mt-1 text-[11px] leading-relaxed text-white/75">Offers are illustrative in this preview. Always confirm live terms directly with the bookmaker.</p>
+          </section>
+        </aside>
+      </section>
+
+      <section id="how-it-works" class="mx-auto max-w-7xl px-4 pb-8 pt-3 md:px-7">
+        <div class="border-t border-slate-200 pt-5">
+          <p class="text-[9px] font-bold uppercase tracking-[0.18em] text-forest-800">A simple checklist</p>
+          <h2 class="mt-1 font-display text-3xl font-bold leading-none text-ink">How free bets work</h2>
+          <div class="mt-4 grid gap-4 md:grid-cols-3 md:divide-x md:divide-slate-200">
+            <article class="flex gap-3 md:pr-5">
+              <span class="grid size-9 shrink-0 place-items-center rounded-full border border-slate-300 bg-white font-display text-lg font-bold text-forest-800">1</span>
+              <div><h3 class="text-xs font-bold">Compare the terms</h3><p class="mt-1 text-[11px] leading-relaxed text-slate-600">Look at bonus amount, wagering requirements, and expiry.</p></div>
+            </article>
+            <article class="flex gap-3 md:px-5">
+              <span class="grid size-9 shrink-0 place-items-center rounded-full border border-slate-300 bg-white font-display text-lg font-bold text-forest-800">2</span>
+              <div><h3 class="text-xs font-bold">Check eligibility</h3><p class="mt-1 text-[11px] leading-relaxed text-slate-600">Make sure the offer applies to your account and location.</p></div>
+            </article>
+            <article class="flex gap-3 md:pl-5">
+              <span class="grid size-9 shrink-0 place-items-center rounded-full border border-slate-300 bg-white font-display text-lg font-bold text-forest-800">3</span>
+              <div><h3 class="text-xs font-bold">Read the bookmaker terms</h3><p class="mt-1 text-[11px] leading-relaxed text-slate-600">Confirm the current offer on the bookmaker's own site.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 pb-8 md:px-7">
+        <h2 class="mb-2 font-display text-2xl font-bold text-ink">Free bets, explained</h2>
+        <div class="overflow-hidden rounded border border-slate-200 bg-white">
+          <details class="faq-item px-4 py-3">
+            <summary class="cursor-pointer text-xs font-semibold">Do I need to make a deposit?</summary>
+            <p class="mt-2 max-w-3xl text-[11px] leading-relaxed text-slate-600">It depends on the offer. Check the minimum deposit and eligibility terms before signing up.</p>
+          </details>
+          <details class="faq-item px-4 py-3">
+            <summary class="cursor-pointer text-xs font-semibold">Can I withdraw a free bet?</summary>
+            <p class="mt-2 max-w-3xl text-[11px] leading-relaxed text-slate-600">Free-bet stakes and winnings may be treated differently. The bookmaker's current terms explain what can be withdrawn.</p>
+          </details>
+          <details class="faq-item px-4 py-3">
+            <summary class="cursor-pointer text-xs font-semibold">What are wagering requirements?</summary>
+            <p class="mt-2 max-w-3xl text-[11px] leading-relaxed text-slate-600">They describe how many times qualifying bonus funds must be wagered before withdrawal.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-forest-950 text-white">
+      <div class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-4 text-[10px] text-white/70 sm:flex-row sm:items-center sm:justify-between md:px-7">
+        <span class="font-display text-base font-bold tracking-wide text-white">CHECK THE ODDS</span>
+        <nav class="flex flex-wrap gap-x-4 gap-y-2" aria-label="Footer navigation">
+          <a class="hover:text-lime-300" href="#how-it-works">How we compare</a>
+          <a class="hover:text-lime-300" href="#small-print">Responsible gambling</a>
+        </nav>
+        <span>18+ · Play responsibly. Terms apply.</span>
+      </div>
+    </footer>
+  </body>
+</html>

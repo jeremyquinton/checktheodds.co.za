@@ -1,5 +1,13 @@
 {
+    "autoload": {
+        "psr-4": {
+            "CheckTheOdds\\FreeBets\\": "freebets/src/"
+        }
+    },
     "require": {
-        "guzzlehttp/guzzle": "^7.0"
+        "guzzlehttp/guzzle": "^7.0",
+        "slim/slim": "^4.0",
+        "slim/psr7": "^1.6",
+        "twig/twig": "^3.0"
     }
 }

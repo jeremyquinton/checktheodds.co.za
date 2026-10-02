@@ -1,0 +1,822 @@
+
+> checktheodds@1.0.0 fixture:context
+> node src/js/premier_league/match_context.js --match-id=2444521 --form-limit=15
+
+{
+  "generatedAt": "2026-10-02T11:46:35.093Z",
+  "dataScope": {
+    "results": "Premier League only",
+    "statsProvider": "Premier League API v3",
+    "formLimit": 15,
+    "homeAwayRecords": "Current fixture season to date and previous season"
+  },
+  "fixture": {
+    "matchId": "2444521",
+    "season": 2024,
+    "matchweek": 6,
+    "competition": "Premier League",
+    "kickoff": "2024-09-28 15:00:00",
+    "timezone": "Europe/London",
+    "period": "FullTime",
+    "venue": "Emirates Stadium, London",
+    "attendance": 60323,
+    "homeTeam": "Arsenal",
+    "awayTeam": "Leicester City",
+    "score": {
+      "home": 4,
+      "away": 2
+    }
+  },
+  "teams": [
+    {
+      "name": "Arsenal",
+      "recentForm": [
+        {
+          "matchId": "2444516",
+          "date": "2024-09-22 16:30:00",
+          "season": 2024,
+          "matchweek": 5,
+          "competition": "Premier League",
+          "opponent": "Manchester City",
+          "venue": "Away",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "result": "D",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2444508",
+          "date": "2024-09-15 14:00:00",
+          "season": 2024,
+          "matchweek": 4,
+          "competition": "Premier League",
+          "opponent": "Tottenham Hotspur",
+          "venue": "Away",
+          "goalsFor": 1,
+          "goalsAgainst": 0,
+          "result": "W",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2444490",
+          "date": "2024-08-31 12:30:00",
+          "season": 2024,
+          "matchweek": 3,
+          "competition": "Premier League",
+          "opponent": "Brighton and Hove Albion",
+          "venue": "Home",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "result": "D",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2444481",
+          "date": "2024-08-24 17:30:00",
+          "season": 2024,
+          "matchweek": 2,
+          "competition": "Premier League",
+          "opponent": "Aston Villa",
+          "venue": "Away",
+          "goalsFor": 2,
+          "goalsAgainst": 0,
+          "result": "W",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2444471",
+          "date": "2024-08-17 15:00:00",
+          "season": 2024,
+          "matchweek": 1,
+          "competition": "Premier League",
+          "opponent": "Wolverhampton Wanderers",
+          "venue": "Home",
+          "goalsFor": 2,
+          "goalsAgainst": 0,
+          "result": "W",
+          "xg": 1.237,
+          "xga": 0.47
+        },
+        {
+          "matchId": "2367908",
+          "date": "2024-05-19 16:00:00",
+          "season": 2023,
+          "matchweek": 38,
+          "competition": "Premier League",
+          "opponent": "Everton",
+          "venue": "Home",
+          "goalsFor": 2,
+          "goalsAgainst": 1,
+          "result": "W",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2367902",
+          "date": "2024-05-12 16:30:00",
+          "season": 2023,
+          "matchweek": 37,
+          "competition": "Premier League",
+          "opponent": "Manchester United",
+          "venue": "Away",
+          "goalsFor": 1,
+          "goalsAgainst": 0,
+          "result": "W",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2367888",
+          "date": "2024-05-04 12:30:00",
+          "season": 2023,
+          "matchweek": 36,
+          "competition": "Premier League",
+          "opponent": "Bournemouth",
+          "venue": "Home",
+          "goalsFor": 3,
+          "goalsAgainst": 0,
+          "result": "W",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2367885",
+          "date": "2024-04-28 14:00:00",
+          "season": 2023,
+          "matchweek": 35,
+          "competition": "Premier League",
+          "opponent": "Tottenham Hotspur",
+          "venue": "Away",
+          "goalsFor": 3,
+          "goalsAgainst": 2,
+          "result": "W",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2367818",
+          "date": "2024-04-23 20:00:00",
+          "season": 2023,
+          "matchweek": 29,
+          "competition": "Premier League",
+          "opponent": "Chelsea",
+          "venue": "Home",
+          "goalsFor": 5,
+          "goalsAgainst": 0,
+          "result": "W",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2367877",
+          "date": "2024-04-20 19:30:00",
+          "season": 2023,
+          "matchweek": 34,
+          "competition": "Premier League",
+          "opponent": "Wolverhampton Wanderers",
+          "venue": "Away",
+          "goalsFor": 2,
+          "goalsAgainst": 0,
+          "result": "W",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2367859",
+          "date": "2024-04-14 16:30:00",
+          "season": 2023,
+          "matchweek": 33,
+          "competition": "Premier League",
+          "opponent": "Aston Villa",
+          "venue": "Home",
+          "goalsFor": 0,
+          "goalsAgainst": 2,
+          "result": "L",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2367849",
+          "date": "2024-04-06 17:30:00",
+          "season": 2023,
+          "matchweek": 32,
+          "competition": "Premier League",
+          "opponent": "Brighton and Hove Albion",
+          "venue": "Away",
+          "goalsFor": 3,
+          "goalsAgainst": 0,
+          "result": "W",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2367839",
+          "date": "2024-04-03 19:30:00",
+          "season": 2023,
+          "matchweek": 31,
+          "competition": "Premier League",
+          "opponent": "Luton Town",
+          "venue": "Home",
+          "goalsFor": 2,
+          "goalsAgainst": 0,
+          "result": "W",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2367833",
+          "date": "2024-03-31 16:30:00",
+          "season": 2023,
+          "matchweek": 30,
+          "competition": "Premier League",
+          "opponent": "Manchester City",
+          "venue": "Away",
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "result": "D",
+          "xg": null,
+          "xga": null
+        }
+      ],
+      "summary": {
+        "played": 15,
+        "wins": 11,
+        "draws": 3,
+        "losses": 1,
+        "goalsFor": 29,
+        "goalsAgainst": 8,
+        "averageGoalsFor": 1.93,
+        "averageGoalsAgainst": 0.53,
+        "xgMatches": 1,
+        "averageXg": 1.24,
+        "averageXga": 0.47
+      },
+      "venueRecords": {
+        "currentSeason": {
+          "home": {
+            "played": 2,
+            "wins": 1,
+            "draws": 1,
+            "losses": 0,
+            "goalsFor": 3,
+            "goalsAgainst": 1,
+            "averageGoalsFor": 1.5,
+            "averageGoalsAgainst": 0.5
+          },
+          "away": {
+            "played": 3,
+            "wins": 2,
+            "draws": 1,
+            "losses": 0,
+            "goalsFor": 5,
+            "goalsAgainst": 2,
+            "averageGoalsFor": 1.67,
+            "averageGoalsAgainst": 0.67
+          }
+        },
+        "previousSeason": {
+          "home": {
+            "played": 19,
+            "wins": 15,
+            "draws": 2,
+            "losses": 2,
+            "goalsFor": 48,
+            "goalsAgainst": 16,
+            "averageGoalsFor": 2.53,
+            "averageGoalsAgainst": 0.84
+          },
+          "away": {
+            "played": 19,
+            "wins": 13,
+            "draws": 3,
+            "losses": 3,
+            "goalsFor": 43,
+            "goalsAgainst": 13,
+            "averageGoalsFor": 2.26,
+            "averageGoalsAgainst": 0.68
+          }
+        }
+      },
+      "previousMatch": {
+        "matchId": "2444516",
+        "date": "2024-09-22 16:30:00",
+        "season": 2024,
+        "matchweek": 5,
+        "competition": "Premier League",
+        "opponent": "Manchester City",
+        "venue": "Away",
+        "goalsFor": 2,
+        "goalsAgainst": 2,
+        "result": "D",
+        "xg": null,
+        "xga": null
+      },
+      "upcomingPremierLeagueFixtures": [
+        {
+          "matchId": "2645245",
+          "date": "2026-10-10T10:30:00.000Z",
+          "season": 2026,
+          "matchweek": 6,
+          "competition": "Premier League",
+          "opponent": "Leeds United",
+          "venue": "Home"
+        },
+        {
+          "matchId": "2645263",
+          "date": "2026-10-18T14:30:00.000Z",
+          "season": 2026,
+          "matchweek": 7,
+          "competition": "Premier League",
+          "opponent": "Nottingham Forest",
+          "venue": "Away"
+        },
+        {
+          "matchId": "2645265",
+          "date": "2026-10-24T13:00:00.000Z",
+          "season": 2026,
+          "matchweek": 8,
+          "competition": "Premier League",
+          "opponent": "Everton",
+          "venue": "Home"
+        },
+        {
+          "matchId": "2645281",
+          "date": "2026-11-01T14:30:00.000Z",
+          "season": 2026,
+          "matchweek": 9,
+          "competition": "Premier League",
+          "opponent": "Liverpool",
+          "venue": "Away"
+        },
+        {
+          "matchId": "2645285",
+          "date": "2026-11-07T13:00:00.000Z",
+          "season": 2026,
+          "matchweek": 10,
+          "competition": "Premier League",
+          "opponent": "Hull City",
+          "venue": "Home"
+        }
+      ],
+      "injuries": [
+        {
+          "team": "Arsenal",
+          "player": "Ben White",
+          "injury": "Knock",
+          "sourceUrl": "https://www.arsenal.com/news/artetas-update-on-white-timber-and-mosquera-aDA8j0E5EtdA"
+        },
+        {
+          "team": "Arsenal",
+          "player": "Cristhian Mosquera",
+          "injury": "Muscle",
+          "sourceUrl": "https://www.arsenal.com/news/artetas-update-on-white-timber-and-mosquera-aDA8j0E5EtdA"
+        },
+        {
+          "team": "Arsenal",
+          "player": "Kai Havertz",
+          "injury": "Hamstring",
+          "sourceUrl": "https://www.arsenal.com/news/tzolis-scores-for-greece-as-odegaard-shines-a20O07e2juvT"
+        },
+        {
+          "team": "Arsenal",
+          "player": "William Saliba",
+          "injury": "Back",
+          "sourceUrl": "https://www.arsenal.com/news/artetas-update-on-white-timber-and-mosquera-aDA8j0E5EtdA"
+        }
+      ],
+      "suspensions": {
+        "available": false,
+        "items": null
+      },
+      "likelyStartingLineup": {
+        "available": false,
+        "players": null
+      }
+    },
+    {
+      "name": "Leicester City",
+      "recentForm": [
+        {
+          "matchId": "2444514",
+          "date": "2024-09-21 15:00:00",
+          "season": 2024,
+          "matchweek": 5,
+          "competition": "Premier League",
+          "opponent": "Everton",
+          "venue": "Home",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "result": "D",
+          "xg": 0.662,
+          "xga": 1.103
+        },
+        {
+          "matchId": "2444503",
+          "date": "2024-09-14 15:00:00",
+          "season": 2024,
+          "matchweek": 4,
+          "competition": "Premier League",
+          "opponent": "Crystal Palace",
+          "venue": "Away",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "result": "D",
+          "xg": 1.226,
+          "xga": 2.546
+        },
+        {
+          "matchId": "2444495",
+          "date": "2024-08-31 15:00:00",
+          "season": 2024,
+          "matchweek": 3,
+          "competition": "Premier League",
+          "opponent": "Aston Villa",
+          "venue": "Home",
+          "goalsFor": 1,
+          "goalsAgainst": 2,
+          "result": "L",
+          "xg": 0.45,
+          "xga": 1.55
+        },
+        {
+          "matchId": "2444484",
+          "date": "2024-08-24 15:00:00",
+          "season": 2024,
+          "matchweek": 2,
+          "competition": "Premier League",
+          "opponent": "Fulham",
+          "venue": "Away",
+          "goalsFor": 1,
+          "goalsAgainst": 2,
+          "result": "L",
+          "xg": 0.608,
+          "xga": 1.777
+        },
+        {
+          "matchId": "2444479",
+          "date": "2024-08-19 20:00:00",
+          "season": 2024,
+          "matchweek": 1,
+          "competition": "Premier League",
+          "opponent": "Tottenham Hotspur",
+          "venue": "Home",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "result": "D",
+          "xg": 1.045,
+          "xga": 1.176
+        },
+        {
+          "matchId": "2293187",
+          "date": "2023-05-28 16:30:00",
+          "season": 2022,
+          "matchweek": 38,
+          "competition": "Premier League",
+          "opponent": "West Ham United",
+          "venue": "Home",
+          "goalsFor": 2,
+          "goalsAgainst": 1,
+          "result": "W",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2293175",
+          "date": "2023-05-22 20:00:00",
+          "season": 2022,
+          "matchweek": 37,
+          "competition": "Premier League",
+          "opponent": "Newcastle United",
+          "venue": "Away",
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "result": "D",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2293167",
+          "date": "2023-05-15 20:00:00",
+          "season": 2022,
+          "matchweek": 36,
+          "competition": "Premier League",
+          "opponent": "Liverpool",
+          "venue": "Home",
+          "goalsFor": 0,
+          "goalsAgainst": 3,
+          "result": "L",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2293152",
+          "date": "2023-05-08 15:00:00",
+          "season": 2022,
+          "matchweek": 35,
+          "competition": "Premier League",
+          "opponent": "Fulham",
+          "venue": "Away",
+          "goalsFor": 3,
+          "goalsAgainst": 5,
+          "result": "L",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2293146",
+          "date": "2023-05-01 20:00:00",
+          "season": 2022,
+          "matchweek": 34,
+          "competition": "Premier League",
+          "opponent": "Everton",
+          "venue": "Home",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "result": "D",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2293132",
+          "date": "2023-04-25 20:00:00",
+          "season": 2022,
+          "matchweek": 33,
+          "competition": "Premier League",
+          "opponent": "Leeds United",
+          "venue": "Away",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "result": "D",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2293126",
+          "date": "2023-04-22 15:00:00",
+          "season": 2022,
+          "matchweek": 32,
+          "competition": "Premier League",
+          "opponent": "Wolverhampton Wanderers",
+          "venue": "Home",
+          "goalsFor": 2,
+          "goalsAgainst": 1,
+          "result": "W",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2293114",
+          "date": "2023-04-15 17:30:00",
+          "season": 2022,
+          "matchweek": 31,
+          "competition": "Premier League",
+          "opponent": "Manchester City",
+          "venue": "Away",
+          "goalsFor": 1,
+          "goalsAgainst": 3,
+          "result": "L",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2293104",
+          "date": "2023-04-08 15:00:00",
+          "season": 2022,
+          "matchweek": 30,
+          "competition": "Premier League",
+          "opponent": "Bournemouth",
+          "venue": "Home",
+          "goalsFor": 0,
+          "goalsAgainst": 1,
+          "result": "L",
+          "xg": null,
+          "xga": null
+        },
+        {
+          "matchId": "2292875",
+          "date": "2023-04-04 19:45:00",
+          "season": 2022,
+          "matchweek": 7,
+          "competition": "Premier League",
+          "opponent": "Aston Villa",
+          "venue": "Home",
+          "goalsFor": 1,
+          "goalsAgainst": 2,
+          "result": "L",
+          "xg": null,
+          "xga": null
+        }
+      ],
+      "summary": {
+        "played": 15,
+        "wins": 2,
+        "draws": 6,
+        "losses": 7,
+        "goalsFor": 18,
+        "goalsAgainst": 27,
+        "averageGoalsFor": 1.2,
+        "averageGoalsAgainst": 1.8,
+        "xgMatches": 5,
+        "averageXg": 0.8,
+        "averageXga": 1.63
+      },
+      "venueRecords": {
+        "currentSeason": {
+          "home": {
+            "played": 3,
+            "wins": 0,
+            "draws": 2,
+            "losses": 1,
+            "goalsFor": 3,
+            "goalsAgainst": 4,
+            "averageGoalsFor": 1,
+            "averageGoalsAgainst": 1.33
+          },
+          "away": {
+            "played": 2,
+            "wins": 0,
+            "draws": 1,
+            "losses": 1,
+            "goalsFor": 3,
+            "goalsAgainst": 4,
+            "averageGoalsFor": 1.5,
+            "averageGoalsAgainst": 2
+          }
+        },
+        "previousSeason": {
+          "home": {
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "goalsFor": 0,
+            "goalsAgainst": 0,
+            "averageGoalsFor": null,
+            "averageGoalsAgainst": null
+          },
+          "away": {
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "goalsFor": 0,
+            "goalsAgainst": 0,
+            "averageGoalsFor": null,
+            "averageGoalsAgainst": null
+          }
+        }
+      },
+      "previousMatch": {
+        "matchId": "2444514",
+        "date": "2024-09-21 15:00:00",
+        "season": 2024,
+        "matchweek": 5,
+        "competition": "Premier League",
+        "opponent": "Everton",
+        "venue": "Home",
+        "goalsFor": 1,
+        "goalsAgainst": 1,
+        "result": "D",
+        "xg": 0.662,
+        "xga": 1.103
+      },
+      "upcomingPremierLeagueFixtures": [],
+      "injuries": [],
+      "suspensions": {
+        "available": false,
+        "items": null
+      },
+      "likelyStartingLineup": {
+        "available": false,
+        "players": null
+      }
+    }
+  ],
+  "headToHead": [
+    {
+      "matchId": "2293055",
+      "date": "2023-02-25 15:00:00",
+      "season": 2022,
+      "matchweek": 25,
+      "homeTeam": "Leicester City",
+      "awayTeam": "Arsenal",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "homeXg": null,
+      "awayXg": null
+    },
+    {
+      "matchId": "2292820",
+      "date": "2022-08-13 15:00:00",
+      "season": 2022,
+      "matchweek": 2,
+      "homeTeam": "Arsenal",
+      "awayTeam": "Leicester City",
+      "homeGoals": 4,
+      "awayGoals": 2,
+      "homeXg": null,
+      "awayXg": null
+    },
+    {
+      "matchId": "2210551",
+      "date": "2022-03-13 16:30:00",
+      "season": 2021,
+      "matchweek": 29,
+      "homeTeam": "Arsenal",
+      "awayTeam": "Leicester City",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "homeXg": null,
+      "awayXg": null
+    },
+    {
+      "matchId": "2210363",
+      "date": "2021-10-30 12:30:00",
+      "season": 2021,
+      "matchweek": 10,
+      "homeTeam": "Leicester City",
+      "awayTeam": "Arsenal",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "homeXg": null,
+      "awayXg": null
+    },
+    {
+      "matchId": "2128540",
+      "date": "2021-02-28 12:00:00",
+      "season": 2020,
+      "matchweek": 26,
+      "homeTeam": "Leicester City",
+      "awayTeam": "Arsenal",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "homeXg": null,
+      "awayXg": null
+    }
+  ],
+  "teamNews": {
+    "capturedAt": "2026-10-02T10:55:34.866Z",
+    "sourceUpdatedAt": "11:23 BST, 2 October 2026.",
+    "sourceUrl": "https://www.premierleague.com/en/latest-player-injuries",
+    "injuriesByTeam": [
+      {
+        "team": "Arsenal",
+        "injuries": [
+          {
+            "team": "Arsenal",
+            "player": "Ben White",
+            "injury": "Knock",
+            "sourceUrl": "https://www.arsenal.com/news/artetas-update-on-white-timber-and-mosquera-aDA8j0E5EtdA"
+          },
+          {
+            "team": "Arsenal",
+            "player": "Cristhian Mosquera",
+            "injury": "Muscle",
+            "sourceUrl": "https://www.arsenal.com/news/artetas-update-on-white-timber-and-mosquera-aDA8j0E5EtdA"
+          },
+          {
+            "team": "Arsenal",
+            "player": "Kai Havertz",
+            "injury": "Hamstring",
+            "sourceUrl": "https://www.arsenal.com/news/tzolis-scores-for-greece-as-odegaard-shines-a20O07e2juvT"
+          },
+          {
+            "team": "Arsenal",
+            "player": "William Saliba",
+            "injury": "Back",
+            "sourceUrl": "https://www.arsenal.com/news/artetas-update-on-white-timber-and-mosquera-aDA8j0E5EtdA"
+          }
+        ]
+      },
+      {
+        "team": "Leicester City",
+        "injuries": []
+      }
+    ],
+    "suspensionsAvailable": false,
+    "startingLineupsAvailable": false
+  },
+  "restAndSchedule": {
+    "upcomingPremierLeagueFixturesOnly": true,
+    "otherCompetitionsAvailable": false
+  },
+  "bookmakerOdds": {
+    "matchResult": [],
+    "overUnder25": {
+      "available": false,
+      "prices": null
+    }
+  },
+  "availability": {
+    "expectedGoalsAvailable": true,
+    "injurySnapshotAvailable": true,
+    "suspensionsAvailable": false,
+    "startingLineupsAvailable": false,
+    "otherCompetitionsAvailable": false,
+    "overUnderOddsAvailable": false
+  }
+}

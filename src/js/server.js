@@ -37,6 +37,7 @@ function groupFixtures(rows, injuriesByTeam) {
       country: row.country,
       homeTeam: row.home_team,
       awayTeam: row.away_team,
+      kickoffOrder: row.kickoff_order,
       startTimes: [],
       bookmakers: [],
     };
@@ -87,10 +88,7 @@ function groupFixtures(rows, injuriesByTeam) {
       homeInjuries: injuriesByTeam.get(normalizeTeam(fixture.homeTeam)) ?? [],
       awayInjuries: injuriesByTeam.get(normalizeTeam(fixture.awayTeam)) ?? [],
     }))
-    .sort((left, right) =>
-      right.bookmakers.length - left.bookmakers.length ||
-      left.homeTeam.localeCompare(right.homeTeam),
-    );
+    .sort((left, right) => left.kickoffOrder.localeCompare(right.kickoffOrder));
 }
 
 app.get('/api/fixtures', async (_request, response, next) => {
@@ -127,6 +125,7 @@ app.get('/api/fixtures', async (_request, response, next) => {
         'England' AS country,
         home_team.name AS home_team,
         away_team.name AS away_team,
+        DATE_FORMAT(matches.kickoff, '%Y-%m-%d %H:%i:%s') AS kickoff_order,
         DATE_FORMAT(matches.kickoff, '%d/%m %H:%i') AS start_time_raw,
         ranked_odds.market_url,
         ranked_odds.scraped_at,
@@ -143,6 +142,14 @@ app.get('/api/fixtures', async (_request, response, next) => {
       JOIN premier_league_teams away_team ON away_team.id = matches.away_team_id
       JOIN bookmakers ON bookmakers.id = ranked_odds.bookmaker_id
       WHERE ranked_odds.position = 1
+        AND matches.period = 'PreMatch'
+        AND DATE(matches.kickoff) >= UTC_DATE()
+        AND matches.season = (
+          SELECT MAX(season)
+          FROM premier_league_matches
+          WHERE period = 'PreMatch'
+        )
+      ORDER BY matches.kickoff, matches.id
     `);
 
     const [scrapes] = await connection.query(`

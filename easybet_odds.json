@@ -4,7 +4,7 @@
   "sport": "Soccer",
   "country": "England",
   "competition": "Premier League",
-  "scrapedAt": "2026-10-02T12:14:15.465Z",
+  "scrapedAt": "2026-10-02T15:14:00.852Z",
   "sourceUrl": "https://easybet.co.za/sports/match/football/england/premier-league",
   "events": [
     {
@@ -14,7 +14,7 @@
       "startTime": "10 Oct, 13:30",
       "odds": {
         "home": 1.41,
-        "draw": 4.8,
+        "draw": 4.7,
         "away": 7
       },
       "url": "https://easybet.co.za/sports/match/football/england/premier-league/arsenal-fc-leeds-united-1774"
@@ -50,8 +50,8 @@
       "startTime": "10 Oct, 16:00",
       "odds": {
         "home": 2.7,
-        "draw": 3.45,
-        "away": 2.49
+        "draw": 3.5,
+        "away": 2.48
       },
       "url": "https://easybet.co.za/sports/match/football/england/premier-league/ipswich-town-fulham-fc-1020"
     },
@@ -122,8 +122,8 @@
       "startTime": "12 Oct, 21:00",
       "odds": {
         "home": 3.2,
-        "draw": 3.55,
-        "away": 2.16
+        "draw": 3.6,
+        "away": 2.14
       },
       "url": "https://easybet.co.za/sports/match/football/england/premier-league/coventry-city-newcastle-united-1453"
     },

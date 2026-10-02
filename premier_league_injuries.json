@@ -1,6 +1,6 @@
 {
-  "scrapedAt": "2026-10-02T09:45:40.254Z",
-  "sourceUpdatedAt": "16:50 BST, 1 October 2026.",
+  "scrapedAt": "2026-10-02T10:55:34.866Z",
+  "sourceUpdatedAt": "11:23 BST, 2 October 2026.",
   "sourceUrl": "https://www.premierleague.com/en/latest-player-injuries",
   "injuries": [
     {
@@ -368,12 +368,6 @@
       "player": "Nico O'Reilly",
       "injury": "Not specified",
       "latestUrl": "https://www.bbc.co.uk/sport/football/articles/c6kg0gkjngzmo"
-    },
-    {
-      "team": "Manchester United",
-      "player": "Bruno Fernandes",
-      "injury": "Not specified",
-      "latestUrl": "https://www.manutd.com/en/news/latest-on-dorgu-and-fernandes-fitness-28-sep-2026"
     },
     {
       "team": "Manchester United",

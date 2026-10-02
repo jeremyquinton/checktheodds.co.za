@@ -6,7 +6,6 @@ const url = 'https://betfairsa.co.za/?route=%2Fcustomer%2Fsport%2F1%2F';
 const competitionName = 'English Premier League';
 const competitionId = '10932509';
 const headless = process.env.HEADLESS !== 'false';
-
 const browser = await puppeteer.launch({
   headless,
   defaultViewport: { width: 1440, height: 1000 },

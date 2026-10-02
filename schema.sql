@@ -35,42 +35,6 @@ CREATE TABLE IF NOT EXISTS premier_league_teams (
   UNIQUE KEY uq_premier_league_teams_name (name)
 ) ENGINE=InnoDB;
 
-CREATE TABLE IF NOT EXISTS matches (
-  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  bookmaker_id BIGINT UNSIGNED NOT NULL,
-  competition_id BIGINT UNSIGNED NOT NULL,
-  external_event_id VARCHAR(128) NOT NULL,
-  home_team VARCHAR(128) NOT NULL,
-  away_team VARCHAR(128) NOT NULL,
-  start_time_raw VARCHAR(64) NULL,
-  market_url VARCHAR(2048) NULL,
-  source_url VARCHAR(2048) NOT NULL,
-  first_seen_at DATETIME(3) NOT NULL,
-  last_seen_at DATETIME(3) NOT NULL,
-  PRIMARY KEY (id),
-  UNIQUE KEY uq_matches_bookmaker_event (bookmaker_id, external_event_id),
-  KEY ix_matches_competition (competition_id),
-  CONSTRAINT fk_matches_bookmaker
-    FOREIGN KEY (bookmaker_id) REFERENCES bookmakers (id),
-  CONSTRAINT fk_matches_competition
-    FOREIGN KEY (competition_id) REFERENCES competitions (id)
-) ENGINE=InnoDB;
-
-CREATE TABLE IF NOT EXISTS odds_snapshots (
-  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  match_id BIGINT UNSIGNED NOT NULL,
-  scraped_at DATETIME(3) NOT NULL,
-  home_odds DECIMAL(10, 3) NULL,
-  draw_odds DECIMAL(10, 3) NULL,
-  away_odds DECIMAL(10, 3) NULL,
-  PRIMARY KEY (id),
-  UNIQUE KEY uq_odds_match_scrape (match_id, scraped_at),
-  KEY ix_odds_scraped_at (scraped_at),
-  CONSTRAINT fk_odds_match
-    FOREIGN KEY (match_id) REFERENCES matches (id)
-    ON DELETE CASCADE
-) ENGINE=InnoDB;
-
 CREATE TABLE IF NOT EXISTS premier_league_team_injuries (
   id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   scraped_at DATETIME(3) NOT NULL,
@@ -131,19 +95,25 @@ CREATE TABLE IF NOT EXISTS premier_league_matches (
     FOREIGN KEY (away_team_id) REFERENCES premier_league_teams (id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE IF NOT EXISTS premier_league_match_team_stats (
+CREATE TABLE IF NOT EXISTS premier_league_odds_snapshots (
   id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   premier_league_match_id BIGINT UNSIGNED NOT NULL,
-  team_id BIGINT UNSIGNED NOT NULL,
-  side ENUM('Home', 'Away') NOT NULL,
-  stats JSON NOT NULL,
+  bookmaker_id BIGINT UNSIGNED NOT NULL,
+  bookmaker_event_id VARCHAR(128) NOT NULL,
   scraped_at DATETIME(3) NOT NULL,
+  home_odds DECIMAL(10, 3) NULL,
+  draw_odds DECIMAL(10, 3) NULL,
+  away_odds DECIMAL(10, 3) NULL,
+  market_url VARCHAR(2048) NULL,
+  source_url VARCHAR(2048) NOT NULL,
   PRIMARY KEY (id),
-  UNIQUE KEY uq_pl_match_team_stats_side (premier_league_match_id, side),
-  KEY ix_pl_match_team_stats_team (team_id, scraped_at),
-  CONSTRAINT fk_pl_match_team_stats_match
+  UNIQUE KEY uq_pl_odds_match_bookmaker_scraped (
+    premier_league_match_id, bookmaker_id, scraped_at
+  ),
+  KEY ix_pl_odds_bookmaker_scraped (bookmaker_id, scraped_at),
+  CONSTRAINT fk_pl_odds_match
     FOREIGN KEY (premier_league_match_id) REFERENCES premier_league_matches (id)
     ON DELETE CASCADE,
-  CONSTRAINT fk_pl_match_team_stats_team
-    FOREIGN KEY (team_id) REFERENCES premier_league_teams (id)
+  CONSTRAINT fk_pl_odds_bookmaker
+    FOREIGN KEY (bookmaker_id) REFERENCES bookmakers (id)
 ) ENGINE=InnoDB;

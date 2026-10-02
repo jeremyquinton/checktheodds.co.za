@@ -34,6 +34,7 @@ let selectedIndex = 0;
 let showAllFixtures = false;
 let injuryScrapedAt = null;
 let injurySourceUpdatedAt = null;
+let formRequestVersion = 0;
 
 function createElement(tag, className, text) {
   const element = document.createElement(tag);
@@ -125,6 +126,131 @@ function renderInjuries(fixture) {
   return panel;
 }
 
+function formatFormDate(value) {
+  return new Date(value).toLocaleDateString([], {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
+}
+
+function formatXg(xg, xga) {
+  const expectedGoals = xg == null ? 'n/a' : Number(xg).toFixed(2);
+  const expectedGoalsAgainst = xga == null ? 'n/a' : Number(xga).toFixed(2);
+  return `xG ${expectedGoals} · xGA ${expectedGoalsAgainst}`;
+}
+
+function formatRecord(record) {
+  return `${record.wins}-${record.draws}-${record.losses}`;
+}
+
+function renderFormPlaceholder(message) {
+  const panel = createElement('section', 'form-panel');
+  panel.setAttribute('aria-live', 'polite');
+  panel.append(
+    createElement('h2', null, 'Recent form & head-to-head'),
+    createElement('p', 'form-message', message),
+  );
+  return panel;
+}
+
+function renderHeadToHead(matches) {
+  const section = createElement('section', 'head-to-head-section');
+  section.append(createElement('h3', null, 'Head-to-head'));
+
+  if (matches.length === 0) {
+    section.append(createElement('p', 'form-message', 'No previous Premier League meetings in these seasons.'));
+    return section;
+  }
+
+  const list = createElement('ol', 'head-to-head-list');
+  for (const match of matches) {
+    const row = createElement('li', 'head-to-head-row');
+    const main = createElement('div', 'head-to-head-main');
+    main.append(
+      createElement('time', null, formatFormDate(match.date)),
+      createElement('strong', null, `${match.homeTeam} ${match.homeGoals} - ${match.awayGoals} ${match.awayTeam}`),
+    );
+    row.append(main, createElement('span', 'form-match-metrics', formatXg(match.homeXg, match.awayXg)));
+    list.append(row);
+  }
+
+  section.append(list);
+  return section;
+}
+
+function renderTeamForm(team) {
+  const section = createElement('section', 'team-form-section');
+  const heading = createElement('div', 'team-form-heading');
+  const headingText = createElement('div', null);
+  headingText.append(
+    createElement('h3', null, team.name),
+    createElement(
+      'p',
+      'team-form-records',
+      `Current H ${formatRecord(team.records.current.Home)} · A ${formatRecord(team.records.current.Away)}  |  Previous H ${formatRecord(team.records.previous.Home)} · A ${formatRecord(team.records.previous.Away)}`,
+    ),
+  );
+  heading.append(headingText, createElement('span', 'team-form-count', 'Last 10'));
+  section.append(heading);
+
+  if (team.matches.length === 0) {
+    section.append(createElement('p', 'form-message', 'No completed league matches found.'));
+    return section;
+  }
+
+  const list = createElement('ol', 'recent-form-list');
+  for (const match of team.matches) {
+    const row = createElement('li', `recent-form-row result-${match.result.toLowerCase()}`);
+    const main = createElement('div', 'recent-form-main');
+    const venue = match.venue === 'Home' ? 'H' : 'A';
+    main.append(
+      createElement('time', null, formatFormDate(match.date)),
+      createElement('span', 'recent-form-opponent', `${venue} vs ${match.opponent}`),
+      createElement('strong', 'recent-form-score', `${match.goals}-${match.opponentGoals}`),
+      createElement('span', 'form-result', match.result),
+    );
+    row.append(main, createElement('span', 'form-match-metrics', formatXg(match.xg, match.xga)));
+    list.append(row);
+  }
+
+  section.append(list);
+  return section;
+}
+
+function renderFixtureForm(data) {
+  const panel = createElement('section', 'form-panel');
+  panel.setAttribute('aria-live', 'polite');
+  const heading = createElement('div', 'form-panel-heading');
+  heading.append(
+    createElement('h2', null, 'Recent form & head-to-head'),
+    createElement('p', null, `Before ${formatFormDate(data.fixture.kickoff)}`),
+  );
+
+  const columns = createElement('div', 'team-form-columns');
+  columns.append(renderTeamForm(data.home), renderTeamForm(data.away));
+  panel.append(heading, renderHeadToHead(data.headToHead), columns);
+  return panel;
+}
+
+async function loadFixtureForm(fixture, placeholder, requestVersion) {
+  const query = new URLSearchParams({
+    homeTeam: fixture.homeTeam,
+    awayTeam: fixture.awayTeam,
+  });
+
+  try {
+    const response = await fetch(`/api/fixture-form?${query}`);
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error ?? 'Could not load fixture form.');
+    if (requestVersion !== formRequestVersion) return;
+    placeholder.replaceWith(renderFixtureForm(data));
+  } catch (error) {
+    if (requestVersion !== formRequestVersion) return;
+    placeholder.replaceWith(renderFormPlaceholder(error.message));
+  }
+}
+
 function renderFixture() {
   const fixture = visibleFixtures[selectedIndex];
   if (!fixture) {
@@ -203,8 +329,11 @@ function renderFixture() {
     }
   }
 
-  scroll.append(grid, renderInjuries(fixture));
+  const formPlaceholder = renderFormPlaceholder('Loading recent form...');
+  scroll.append(grid, formPlaceholder, renderInjuries(fixture));
   comparison.replaceChildren(scroll);
+  const requestVersion = ++formRequestVersion;
+  loadFixtureForm(fixture, formPlaceholder, requestVersion);
   fixtureSelect.value = String(selectedIndex);
   previousButton.disabled = selectedIndex === 0;
   nextButton.disabled = selectedIndex === visibleFixtures.length - 1;

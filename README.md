@@ -96,8 +96,14 @@ Premier League matches, xG/xGA where match stats are available, and current- and
 previous-season home/away W-D-L records. Set `@fixture_external_match_id` to the
 fixture's `external_match_id`; set `@form_match_count` to 10–15 as needed.
 
-The Betfair scraper records the best available back price for each `1/X/2`
-selection. Lay prices are not included in the comparison.
+All JavaScript bookmaker scrapers map events to `premier_league_matches` using
+normalized home/away team names from the next two upcoming matchweeks. Shared
+aliases cover bookmaker short names such as `Coventry` and `Man Utd`. The
+bookmaker kickoff must also be within three hours of the canonical kickoff to
+allow for timezone differences. Unmatched or ambiguous events are logged with
+the reason and nearest fixture candidates. Odds are stored in
+`premier_league_odds_snapshots`. Betfair records the best available back price for each `1/X/2`
+selection; lay prices are not included.
 
 ## MySQL
 
@@ -105,6 +111,16 @@ Create the database and tables:
 
 ```sh
 mysql -u root -p < schema.sql
+```
+
+For an existing database moving off the legacy odds tables, apply the schema,
+then run the one-time migration. It clears existing odds snapshots and drops
+`matches` and `odds_snapshots` while preserving canonical results, stats, and
+team data. Rebuild bookmaker odds afterward:
+
+```sh
+mysql -u root -p checktheodds < migrations/20261002_drop_legacy_odds_tables.sql
+npm run scrape:all
 ```
 
 For an existing database that still has a `teams` table, run the one-time
@@ -132,8 +148,10 @@ Configure the connection with `MYSQL_URL`, or export the individual values from
 `.env.example`: `MYSQL_HOST`, `MYSQL_PORT`, `MYSQL_USER`, `MYSQL_PASSWORD`, and
 `MYSQL_DATABASE`. Environment files are not loaded automatically.
 
-Each scraper upserts its bookmaker, competition, and matches, then adds a new
-row to `odds_snapshots` for every event. To run without a database temporarily:
+JavaScript bookmaker scrapers match upcoming events to
+`premier_league_matches` and add snapshots to `premier_league_odds_snapshots`.
+The PHP results scraper maintains canonical fixtures. To run a bookmaker
+scraper without database writes temporarily:
 
 ```sh
 SAVE_TO_DB=false npm run scrape:betway

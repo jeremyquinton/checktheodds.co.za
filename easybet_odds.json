@@ -4,7 +4,7 @@
   "sport": "Soccer",
   "country": "England",
   "competition": "Premier League",
-  "scrapedAt": "2026-10-02T07:40:00.030Z",
+  "scrapedAt": "2026-10-02T10:55:29.939Z",
   "sourceUrl": "https://easybet.co.za/sports/match/football/england/premier-league",
   "events": [
     {
@@ -13,9 +13,9 @@
       "awayTeam": "Leeds United",
       "startTime": "10 Oct, 13:30",
       "odds": {
-        "home": 1.4,
+        "home": 1.41,
         "draw": 4.8,
-        "away": 7.2
+        "away": 7
       },
       "url": "https://easybet.co.za/sports/match/football/england/premier-league/arsenal-fc-leeds-united-1774"
     },
@@ -217,7 +217,7 @@
       "awayTeam": "Sunderland AFC",
       "startTime": "18 Oct, 15:00",
       "odds": {
-        "home": 2.01,
+        "home": 2.02,
         "draw": 3.55,
         "away": 3.55
       },

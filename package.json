@@ -8,10 +8,12 @@
     "start": "node src/js/premier_league/virgin_bets_scraper.js",
     "scrape:virgin-bet": "node src/js/premier_league/virgin_bets_scraper.js",
     "scrape:betway": "node src/js/premier_league/betway_scraper.js",
+    "scrape:10bet": "node src/js/premier_league/10bet_scraper.js",
     "scrape:play": "node src/js/premier_league/play_scraper.js",
     "scrape:hollywoodbets": "node src/js/premier_league/hollywoodbets_scraper.js",
     "scrape:betfair-sa": "node src/js/premier_league/betfair_sa_scraper.js",
     "scrape:yesplay": "node src/js/premier_league/yesplay_scraper.js",
+    "scrape:yesplay-promotions": "node src/js/promotions/yesplay_promotions_scraper.js",
     "scrape:supabets": "node src/js/premier_league/supabets_scraper.js",
     "scrape:easybet": "node src/js/premier_league/easybet_scraper.js",
     "scrape:injuries": "node src/js/premier_league/injuries_scraper.js",
@@ -23,9 +25,9 @@
     "freebets:css": "tailwindcss -i freebets/assets/input.css -o freebets/public/assets/app.css",
     "freebets:css:watch": "tailwindcss -i freebets/assets/input.css -o freebets/public/assets/app.css --watch",
     "freebets:serve": "php -S 127.0.0.1:8080 -t freebets/public freebets/public/router.php",
-    "scrape:all": "npm run scrape:virgin-bet && npm run scrape:betway && npm run scrape:play && npm run scrape:hollywoodbets && npm run scrape:betfair-sa && npm run scrape:yesplay && npm run scrape:supabets && npm run scrape:easybet && npm run scrape:injuries",
+    "scrape:all": "npm run scrape:virgin-bet && npm run scrape:betway && npm run scrape:10bet && npm run scrape:play && npm run scrape:hollywoodbets && npm run scrape:betfair-sa && npm run scrape:yesplay && npm run scrape:supabets && npm run scrape:easybet && npm run scrape:injuries",
     "serve": "node src/js/server.js",
-    "check": "node --check src/js/database.js && node --check src/js/server.js && node --check src/js/premier_league/virgin_bets_scraper.js && node --check src/js/premier_league/betway_scraper.js && node --check src/js/premier_league/play_scraper.js && node --check src/js/premier_league/hollywoodbets_scraper.js && node --check src/js/premier_league/betfair_sa_scraper.js && node --check src/js/premier_league/yesplay_scraper.js && node --check src/js/premier_league/supabets_scraper.js && node --check src/js/premier_league/easybet_scraper.js && node --check src/js/premier_league/injuries_scraper.js && node --check src/js/premier_league/match_context.js && php -l src/php/premier_league/results_scraper.php && php -l src/php/premier_league/match_team_stats_scraper.php && php -l freebets/public/index.php && php -l freebets/public/router.php && php -l freebets/src/Controller/FreeBetsController.php && php -l freebets/src/Repository/OfferRepository.php"
+    "check": "node --check src/js/database.js && node --check src/js/server.js && node --check src/js/premier_league/virgin_bets_scraper.js && node --check src/js/premier_league/betway_scraper.js && node --check src/js/premier_league/10bet_scraper.js && node --check src/js/premier_league/play_scraper.js && node --check src/js/premier_league/hollywoodbets_scraper.js && node --check src/js/premier_league/betfair_sa_scraper.js && node --check src/js/premier_league/yesplay_scraper.js && node --check src/js/premier_league/supabets_scraper.js && node --check src/js/premier_league/easybet_scraper.js && node --check src/js/premier_league/injuries_scraper.js && node --check src/js/premier_league/match_context.js && php -l src/php/premier_league/results_scraper.php && php -l src/php/premier_league/match_team_stats_scraper.php && php -l freebets/public/index.php && php -l freebets/public/router.php && php -l freebets/src/Database/ConnectionFactory.php && php -l freebets/src/Controller/FreeBetsController.php && php -l freebets/src/Controller/AdminController.php && php -l freebets/src/Repository/OfferRepository.php && php -l freebets/src/Repository/SubscriberRepository.php"
   },
   "dependencies": {
     "express": "^5.2.1",

@@ -19,6 +19,7 @@ npm run scrape:play
 npm run scrape:hollywoodbets
 npm run scrape:betfair-sa
 npm run scrape:yesplay
+npm run scrape:yesplay-promotions
 npm run scrape:supabets
 npm run scrape:easybet
 npm run scrape:injuries
@@ -26,15 +27,42 @@ npm run scrape:results
 npm run scrape:match-stats
 ```
 
-Run the separate Slim free-bets preview and compile its Tailwind stylesheet:
+Run the separate Slim-based Bethunter free-bets app and compile its Tailwind stylesheet:
 
 ```sh
 npm run freebets:css
 npm run freebets:serve
 ```
 
-Open `http://127.0.0.1:8080`. The offer figures are illustrative preview data in
-`freebets/src/Repository/OfferRepository.php`, not live promotions.
+Open `http://127.0.0.1:8080`. The PHP entry point is
+`freebets/public/index.php`; the built-in server uses
+`freebets/public/router.php`. Offers are stored in `free_bet_offers` and can be
+managed at `http://127.0.0.1:8080/admin/login`. Seeded offers are illustrative,
+not live promotions. New offers default to illustrative until an admin marks
+them as verified.
+
+Set up the admin password with a PHP-generated password hash; never put the
+plaintext password in configuration:
+
+```sh
+read -s "ADMIN_PASSWORD?Admin password: "
+export ADMIN_PASSWORD
+export FREEBETS_ADMIN_PASSWORD_HASH="$(php -r 'echo password_hash(getenv("ADMIN_PASSWORD"), PASSWORD_DEFAULT);')"
+unset ADMIN_PASSWORD
+npm run freebets:serve
+```
+
+Configure MySQL with the existing `MYSQL_*` variables or `MYSQL_URL`, then apply
+`schema.sql` to create the offer table and its clearly marked example rows.
+Environment files are not loaded automatically.
+
+The YesPlay promotions scraper reads the full public promotion catalog, writes
+`yesplay_promotions.json`, and syncs current cards to `bookmaker_promotions`.
+Apply `migrations/20261002_create_bookmaker_promotions.sql` before syncing. Use
+`npm run scrape:yesplay-promotions -- --dry-run` to write JSON without changing
+the database. Failed or empty scrapes leave the existing active promotions
+untouched; the free-bet comparison table remains separate until offers are
+reviewed and labeled.
 
 Shared Node modules are in `src/js/`, with Premier League scrapers in
 `src/js/premier_league/`. PHP CLI scrapers are in `src/php/premier_league/`.

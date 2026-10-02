@@ -1,0 +1,43 @@
+{% extends 'admin/base.twig' %}
+
+{% block title %}Offer manager{% endblock %}
+
+{% block content %}
+  <div class="flex flex-wrap items-end justify-between gap-4">
+    <div>
+      <p class="text-[10px] font-bold uppercase tracking-[0.16em] text-forest-800">Bethunter</p>
+      <h1 class="mt-1 font-display text-3xl font-bold">Free-bet offers</h1>
+    </div>
+    <a class="inline-flex min-h-10 items-center rounded bg-lime-400 px-4 text-xs font-bold text-forest-950 hover:bg-lime-300" href="/admin/offers/new">Add offer <span class="ml-2" aria-hidden="true">+</span></a>
+  </div>
+
+  <p class="mt-3 text-xs text-slate-600">Only active offers appear publicly. Illustrative entries are visibly labeled.</p>
+
+  <div class="mt-5 overflow-x-auto rounded border border-slate-200 bg-white">
+    <table class="w-full min-w-[700px] border-collapse text-left text-xs">
+      <thead class="bg-forest-950 text-white">
+        <tr><th class="px-3 py-3">Bookmaker / offer</th><th class="px-3 py-3">Type</th><th class="px-3 py-3">Bonus</th><th class="px-3 py-3">Status</th><th class="px-3 py-3">Updated</th><th class="px-3 py-3 text-right">Actions</th></tr>
+      </thead>
+      <tbody>
+        {% for offer in offers %}
+          <tr class="border-t border-slate-100">
+            <td class="px-3 py-3"><strong class="block">{{ offer.bookmaker_name }}</strong><span class="text-slate-600">{{ offer.headline }}</span>{% if offer.isExample %}<span class="ml-2 rounded bg-amber-100 px-1.5 py-0.5 text-[9px] font-bold uppercase text-amber-900">Example</span>{% endif %}</td>
+            <td class="px-3 py-3">{{ offer.categoryLabel }}</td>
+            <td class="px-3 py-3">{{ offer.bonusAmount ? offer.currency ~ ' ' ~ offer.bonusAmount|number_format(0) : '—' }}</td>
+            <td class="px-3 py-3"><span class="rounded px-2 py-1 text-[10px] font-bold {{ offer.is_active ? 'bg-emerald-100 text-emerald-900' : 'bg-slate-100 text-slate-600' }}">{{ offer.is_active ? 'Active' : 'Inactive' }}</span></td>
+            <td class="px-3 py-3 text-slate-600">{{ offer.updated_at|date('j M Y') }}</td>
+            <td class="px-3 py-3 text-right">
+              <a class="font-semibold text-forest-800 hover:underline" href="/admin/offers/{{ offer.id }}/edit">Edit</a>
+              <form class="ml-3 inline" method="post" action="/admin/offers/{{ offer.id }}/delete" onsubmit="return confirm('Delete this offer?')">
+                <input type="hidden" name="_csrf" value="{{ csrf }}">
+                <button class="font-semibold text-rose-700 hover:underline" type="submit">Delete</button>
+              </form>
+            </td>
+          </tr>
+        {% else %}
+          <tr><td class="px-3 py-8 text-center text-slate-500" colspan="6">No offers yet. Add one to get started.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

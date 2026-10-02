@@ -1,0 +1,80 @@
+{
+  "bookmaker": "YesPlay",
+  "bookmakerSlug": "yesplay",
+  "sourceUrl": "https://yesplay.bet/promotions",
+  "scrapedAt": "2026-10-02T14:50:00.000Z",
+  "promotions": [
+    {
+      "offerKey": "yesplay-all-products-100-deposit-bonus",
+      "productCategory": "ALL PRODUCTS",
+      "title": "100% Deposit Bonus",
+      "subtitle": "Up to R3,000.00",
+      "bodyText": "3 steps to your 100% Deposit Bonus:",
+      "steps": ["Sign up and accept the bonus", "Make a deposit from R20.00", "Get 100% deposit bonus up to R3,000.00"],
+      "details": [{"label": "Deposit from", "value": "R20.00"}, {"label": "Duration", "value": "7 days"}],
+      "imageUrl": "https://cdn.yesplay.bet/uploads/YP_All_Aboard_220x480_s_BR_30q_I_cd292245e3.png",
+      "actionLabel": "Sign Up",
+      "actionUrl": "https://yesplay.bet/sign-in"
+    },
+    {
+      "offerKey": "yesplay-slots-hot-hot-braai",
+      "productCategory": "SLOTS",
+      "title": "Hot Hot Braai",
+      "subtitle": "Habanero",
+      "bodyText": "3 steps to Win Your Share of R1,000,000:",
+      "steps": ["Sign up or login", "Earn Points to Climb the leaderboard", "Secure a Top 15,000 Spot!"],
+      "details": [{"label": "Bet from", "value": "R1.00"}, {"label": "Expiry", "value": "10 hours"}],
+      "imageUrl": "https://cdn.yesplay.bet/uploads/Promo_4_Hot_Hot_Braai_480x220_544c8efcf1.png",
+      "actionLabel": "Sign up",
+      "actionUrl": "https://yesplay.bet/sign-in"
+    },
+    {
+      "offerKey": "yesplay-slots-amber-vault",
+      "productCategory": "SLOTS",
+      "title": "Amber Vault",
+      "subtitle": "Habanero",
+      "bodyText": "3 steps to Win Your Share of R1,560,000:",
+      "steps": ["Sign up or login", "Play Habanero slots for the daily Jackpot trigger", "Spin between 8pm to 10pm"],
+      "details": [{"label": "Bet from", "value": "R1.00"}, {"label": "Expiry", "value": "29 days"}],
+      "imageUrl": "https://cdn.yesplay.bet/uploads/Promo5_A_Amber_Vault_480x220_0a7011612f.png",
+      "actionLabel": "Sign up",
+      "actionUrl": "https://yesplay.bet/sign-in"
+    },
+    {
+      "offerKey": "yesplay-casino-games-reel-showdown",
+      "productCategory": "CASINO GAMES",
+      "title": "Reel Showdown",
+      "subtitle": "Evolution",
+      "bodyText": "3 steps to Win Your Share of R500,000:",
+      "steps": ["Sign up or login", "Wager R50 on Red Tiger Slots & Game Shows", "Win 1 of 250 Cash Prizes of R2,000!"],
+      "details": [{"label": "Wager / Ticket", "value": "R50.00"}, {"label": "Expiry", "value": "8 days"}],
+      "imageUrl": "https://cdn.yesplay.bet/uploads/Evolution_Reel_Showdown_Africa_73fd4a3f23.png",
+      "actionLabel": "Sign up",
+      "actionUrl": "https://yesplay.bet/sign-in"
+    },
+    {
+      "offerKey": "yesplay-slots-drops-and-wins",
+      "productCategory": "SLOTS",
+      "title": "Drops and Wins",
+      "subtitle": "Pragmatic Play",
+      "bodyText": "3 steps to win in Spin Gifts:",
+      "steps": ["Sign up or login", "Play Qualifying slots", "Spin the wheel. Win up to 100 Bonus Spins!"],
+      "details": [{"label": "Bet from", "value": "R3.00"}, {"label": "Expiry", "value": "152 days"}],
+      "imageUrl": "https://cdn.yesplay.bet/uploads/Drops_and_Wins_Pragmatic_Play_480x220png_0f6ada0baa.png",
+      "actionLabel": "Sign up",
+      "actionUrl": "https://yesplay.bet/sign-in"
+    },
+    {
+      "offerKey": "yesplay-lucky-numbers-10-cashback",
+      "productCategory": "LUCKY NUMBERS",
+      "title": "10% Cashback",
+      "subtitle": "Loyalty Bonus",
+      "bodyText": "3 steps to your cashback:",
+      "steps": ["Sign up or login", "Play Yesplay lucky numbers", "Get back 10% of your losses next Monday"],
+      "details": [{"label": "Bet from", "value": "R5.00"}, {"label": "Last Draw", "value": "23 Dec"}],
+      "imageUrl": "https://cdn.yesplay.bet/uploads/YP_Dreams_220x480_b293d86e28_0f47d0f28b.png",
+      "actionLabel": "Sign up",
+      "actionUrl": "https://yesplay.bet/sign-in"
+    }
+  ]
+}

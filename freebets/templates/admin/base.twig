@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Offer manager{% endblock %} | Bethunter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/app.css">
+  </head>
+  <body class="min-h-screen bg-paper font-sans text-ink antialiased">
+    <header class="border-b border-slate-200 bg-white">
+      <div class="mx-auto flex min-h-14 max-w-5xl items-center justify-between gap-4 px-4 md:px-7">
+        <a class="font-display text-xl font-bold tracking-wide text-forest-950" href="/">BETHUNTER <span class="font-sans text-[10px] font-semibold tracking-normal text-slate-500">OFFER MANAGER</span></a>
+        <div class="flex items-center gap-4 text-xs font-semibold">
+          <a class="text-forest-800 hover:underline" href="/">View offers</a>
+          {% if authenticated|default(false) %}
+            <form method="post" action="/admin/logout">
+              <input type="hidden" name="_csrf" value="{{ csrf }}">
+              <button class="text-slate-600 hover:text-forest-950" type="submit">Sign out</button>
+            </form>
+          {% endif %}
+        </div>
+      </div>
+    </header>
+    <main class="mx-auto max-w-5xl px-4 py-8 md:px-7">
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>

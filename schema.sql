@@ -117,3 +117,102 @@ CREATE TABLE IF NOT EXISTS premier_league_odds_snapshots (
   CONSTRAINT fk_pl_odds_bookmaker
     FOREIGN KEY (bookmaker_id) REFERENCES bookmakers (id)
 ) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS free_bet_offers (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  slug VARCHAR(120) NOT NULL,
+  bookmaker_name VARCHAR(128) NOT NULL,
+  category VARCHAR(32) NOT NULL,
+  headline VARCHAR(255) NOT NULL,
+  description VARCHAR(500) NOT NULL,
+  bonus_amount DECIMAL(10, 2) NULL,
+  currency CHAR(3) NOT NULL DEFAULT 'ZAR',
+  minimum_deposit VARCHAR(80) NOT NULL,
+  wagering_requirements VARCHAR(120) NOT NULL,
+  qualifying_odds DECIMAL(8, 2) NULL,
+  valid_for VARCHAR(80) NOT NULL,
+  offer_url VARCHAR(2048) NOT NULL,
+  terms_text TEXT NOT NULL,
+  is_active TINYINT(1) NOT NULL DEFAULT 1,
+  is_example TINYINT(1) NOT NULL DEFAULT 1,
+  verified_at DATETIME(3) NULL,
+  created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3)
+    ON UPDATE CURRENT_TIMESTAMP(3),
+  PRIMARY KEY (id),
+  UNIQUE KEY uq_free_bet_offers_slug (slug),
+  KEY ix_free_bet_offers_active_category (is_active, category),
+  KEY ix_free_bet_offers_bonus_amount (bonus_amount)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS bookmaker_promotions (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  bookmaker_slug VARCHAR(64) NOT NULL,
+  offer_key VARCHAR(180) NOT NULL,
+  product_category VARCHAR(128) NOT NULL,
+  title VARCHAR(255) NOT NULL,
+  subtitle VARCHAR(255) NULL,
+  body_text TEXT NULL,
+  steps JSON NOT NULL,
+  details JSON NOT NULL,
+  image_url VARCHAR(2048) NULL,
+  action_label VARCHAR(80) NULL,
+  action_url VARCHAR(2048) NOT NULL,
+  source_url VARCHAR(2048) NOT NULL,
+  is_active TINYINT(1) NOT NULL DEFAULT 1,
+  scraped_at DATETIME(3) NOT NULL,
+  first_seen_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  last_seen_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3)
+    ON UPDATE CURRENT_TIMESTAMP(3),
+  PRIMARY KEY (id),
+  UNIQUE KEY uq_bookmaker_promotions_offer (bookmaker_slug, offer_key),
+  KEY ix_bookmaker_promotions_active (bookmaker_slug, is_active)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS free_bet_email_subscribers (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  email VARCHAR(254) NOT NULL,
+  consented_at DATETIME(3) NOT NULL,
+  is_active TINYINT(1) NOT NULL DEFAULT 1,
+  created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3)
+    ON UPDATE CURRENT_TIMESTAMP(3),
+  PRIMARY KEY (id),
+  UNIQUE KEY uq_free_bet_email_subscribers_email (email)
+) ENGINE=InnoDB;
+
+INSERT IGNORE INTO free_bet_offers (
+  slug, bookmaker_name, category, headline, description, bonus_amount, currency,
+  minimum_deposit, wagering_requirements, qualifying_odds, valid_for, offer_url,
+  terms_text, is_active, is_example
+) VALUES
+  (
+    'hollywoodbets-free-bet', 'Hollywoodbets', 'free-bets', 'R250 in free bets',
+    'Example welcome offer for new customers.', 250, 'ZAR', 'R100', '3x bonus',
+    1.80, '7 days', 'https://www.hollywoodbets.net/',
+    'Illustrative terms only; verify the live offer with the bookmaker.\nExample eligibility: new customers aged 18+ in South Africa.\nExample qualifying minimum odds: 1.80.',
+    1, 1
+  ),
+  (
+    'betway-deposit-match', 'Betway', 'deposit-match', 'Up to R1,000 deposit match',
+    'Example welcome offer for new customers.', 1000, 'ZAR', 'R100', '5x bonus',
+    1.50, '14 days', 'https://www.betway.co.za/',
+    'Illustrative terms only; verify the live offer with the bookmaker.\nExample deposit-match cap: R1,000.\nExample qualifying minimum odds: 1.50.',
+    1, 1
+  ),
+  (
+    'play-free-bet', 'Play.co.za', 'free-bets', 'R100 in free bets',
+    'Example free-bet offer for new customers.', 100, 'ZAR', 'R50', '3x bonus',
+    1.80, '7 days', 'https://www.play.co.za/',
+    'Illustrative terms only; verify the live offer with the bookmaker.\nExample eligibility: new customers aged 18+ in South Africa.\nExample qualifying minimum odds: 1.80.',
+    1, 1
+  ),
+  (
+    'supabets-no-deposit', 'Supabets', 'no-deposit', 'R50 no-deposit bonus',
+    'Example no-deposit offer for eligible customers.', 50, 'ZAR', 'No deposit', '10x bonus',
+    2.00, '3 days', 'https://www.supabets.co.za/',
+    'Illustrative terms only; verify the live offer with the bookmaker.\nExample eligibility: one offer per verified customer.\nExample qualifying minimum odds: 2.00.',
+    1, 1
+  );

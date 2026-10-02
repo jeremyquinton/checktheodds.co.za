@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Compare South African bookmaker free bets and welcome offers.">
-    <title>Free Bet Offers | Check The Odds</title>
+    <meta name="description" content="Browse current South African bookmaker promotions and free-bet offers.">
+    <title>Bookmaker Promotions | Bethunter</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,14 +14,14 @@
   <body class="bg-paper text-ink antialiased">
     <header class="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
       <div class="mx-auto flex min-h-14 max-w-7xl items-center justify-between gap-5 px-4 md:px-7">
-        <a class="flex shrink-0 items-center gap-2.5 text-forest-950 no-underline" href="#top" aria-label="Check The Odds home">
-          <span class="grid size-9 place-items-center rounded-full bg-forest-950 font-display text-xs font-bold text-lime-300">CTO</span>
-          <span class="font-display text-xl font-bold tracking-wide">CHECK THE ODDS</span>
+        <a class="flex shrink-0 items-center gap-2.5 text-forest-950 no-underline" href="#top" aria-label="Bethunter home">
+          <span class="grid size-9 place-items-center rounded-full bg-forest-950 font-display text-xs font-bold text-lime-300">BH</span>
+          <span class="font-display text-xl font-bold tracking-wide">BETHUNTER</span>
         </a>
         <nav class="hidden items-center gap-7 text-xs font-semibold text-slate-700 md:flex" aria-label="Main navigation">
           <a class="transition hover:text-forest-800" href="{{ oddsAppUrl }}">Best odds</a>
           <a class="transition hover:text-forest-800" href="#how-it-works">How it works</a>
-          <a class="border-b-2 border-lime-400 py-5 text-forest-950" href="#offers" aria-current="page">Free bets</a>
+          <a class="border-b-2 border-lime-400 py-5 text-forest-950" href="#promotions" aria-current="page">Promotions</a>
           <a class="transition hover:text-forest-800" href="#small-print">Betting sites</a>
         </nav>
         <span class="shrink-0 rounded-full bg-fern-100 px-3 py-1.5 text-[11px] font-bold tracking-wide text-forest-900">ZA&nbsp; / &nbsp;ZAR</span>
@@ -33,8 +33,8 @@
         <div class="mx-auto flex min-h-44 max-w-7xl items-center px-5 py-7 md:min-h-48 md:px-8">
           <div class="max-w-xl">
             <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-lime-300">South African bookmaker offers</p>
-            <h1 class="font-display text-4xl font-bold leading-none sm:text-5xl">Find your next free bet.</h1>
-            <p class="mt-2 max-w-lg text-sm text-white/85 sm:text-base">Compare welcome offers and the terms that make the difference.</p>
+            <h1 class="font-display text-4xl font-bold leading-none sm:text-5xl">Current promotions.</h1>
+            <p class="mt-2 max-w-lg text-sm text-white/85 sm:text-base">Browse live offers and compare the terms that matter.</p>
           </div>
         </div>
       </section>
@@ -42,9 +42,78 @@
       <div class="mx-auto max-w-7xl px-4 pt-3 md:px-7">
         <p class="flex items-center gap-2 rounded bg-fern-100 px-3 py-2 text-[11px] text-forest-900" role="note">
           <span class="grid size-4 shrink-0 place-items-center rounded-full bg-forest-800 text-[10px] font-bold text-white" aria-hidden="true">i</span>
-          Design preview. Offers below are illustrative, not live promotions.
+          {% if previewOnly %}The free-bet comparison entries are illustrative examples, not live offers. Verify current terms with each bookmaker.{% else %}Free-bet comparison entries are marked as examples where applicable. Confirm terms directly with each bookmaker.{% endif %}
         </p>
       </div>
+
+      <section class="mx-auto max-w-7xl px-4 pt-3 md:px-7" aria-labelledby="newsletter-title">
+        <div class="grid gap-4 border-y border-forest-800/15 bg-fern-100 px-4 py-4 sm:grid-cols-[minmax(0,1fr)_minmax(280px,0.9fr)] sm:items-center sm:px-5">
+          <div>
+            <p class="text-[9px] font-bold uppercase tracking-[0.18em] text-forest-800">The shortlist, in your inbox</p>
+            <h2 id="newsletter-title" class="mt-1 font-display text-2xl font-bold leading-none text-forest-950">Get the 5 best offers emailed to you occasionally.</h2>
+            <p class="mt-1 text-[11px] leading-relaxed text-slate-600">A concise roundup of the offers worth a look. No daily noise.</p>
+          </div>
+          <form action="/newsletter/subscribe" method="post" class="min-w-0">
+            {% if newsletterStatus == 'subscribed' %}
+              <p class="mb-2 text-xs font-semibold text-forest-900" role="status">Thanks. Your email is saved for occasional offer updates.</p>
+            {% elseif newsletterStatus == 'invalid' %}
+              <p class="mb-2 text-xs font-semibold text-red-800" role="alert">Enter a valid email and confirm your subscription.</p>
+            {% endif %}
+            <div class="flex flex-col gap-2 sm:flex-row">
+              <label class="sr-only" for="newsletter-email">Email address</label>
+              <input id="newsletter-email" class="min-h-10 min-w-0 flex-1 rounded border border-slate-300 bg-white px-3 text-xs text-ink outline-none placeholder:text-slate-400 focus:border-forest-800 focus:ring-2 focus:ring-forest-800/15" type="email" name="email" placeholder="you@example.com" autocomplete="email" maxlength="254" required>
+              <button class="min-h-10 shrink-0 rounded bg-forest-950 px-4 text-xs font-bold text-white transition hover:bg-forest-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest-800" type="submit">Email me the offers</button>
+            </div>
+            <label class="mt-2 flex cursor-pointer items-start gap-2 text-[10px] leading-relaxed text-slate-600">
+              <input class="mt-0.5 size-3.5 shrink-0 accent-forest-800" type="checkbox" name="consent" value="1" required>
+              <span>I agree to receive occasional free-bet offer emails from Bethunter.</span>
+            </label>
+          </form>
+        </div>
+      </section>
+
+      <section id="promotions" class="mx-auto max-w-7xl px-4 py-5 md:px-7" aria-labelledby="promotions-title">
+        <div class="mb-3 flex flex-wrap items-end justify-between gap-2 border-b border-slate-200 pb-2">
+          <div>
+            <p class="text-[9px] font-bold uppercase tracking-[0.18em] text-slate-500">Latest from the bookmakers</p>
+            <h2 id="promotions-title" class="mt-1 font-display text-2xl font-bold leading-none text-ink">Current promotions</h2>
+          </div>
+          <span class="text-[10px] font-medium text-slate-500">{{ promotions|length }} active</span>
+        </div>
+        {% if promotions %}
+          <div class="promotion-grid">
+            {% for promotion in promotions %}
+              <article class="source-promotion-card source-promotion-card--{{ promotion.bookmaker_slug }}">
+                <div class="source-promotion-card__header">
+                  <div class="min-w-0">
+                    <span class="source-promotion-card__category">{{ promotion.product_category }}</span>
+                    <h3 class="source-promotion-card__title">{{ promotion.title }}</h3>
+                    {% if promotion.subtitle %}<p class="source-promotion-card__subtitle">{{ promotion.subtitle }}</p>{% endif %}
+                  </div>
+                </div>
+                <div class="source-promotion-card__body">
+                  {% if promotion.body_text %}<p class="source-promotion-card__intro">{{ promotion.body_text }}</p>{% endif %}
+                  {% if promotion.steps %}
+                    <ol class="source-promotion-card__steps">
+                      {% for step in promotion.steps %}<li>{{ step }}</li>{% endfor %}
+                    </ol>
+                  {% endif %}
+                  <div class="source-promotion-card__footer">
+                    <dl class="source-promotion-card__details">
+                      {% for detail in promotion.details %}
+                        <div><dt>{{ detail.label }}</dt><dd>{{ detail.value }}</dd></div>
+                      {% endfor %}
+                    </dl>
+                    <a class="source-promotion-card__action" href="{{ promotion.action_url }}" target="_blank" rel="noopener noreferrer">{{ promotion.action_label ?: 'View offer' }}</a>
+                  </div>
+                </div>
+              </article>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p class="border border-dashed border-slate-300 px-4 py-8 text-center text-sm text-slate-500">No current promotions have been imported.</p>
+        {% endif %}
+      </section>
 
       <section id="offers" class="mx-auto grid max-w-7xl grid-cols-1 gap-4 px-4 py-4 md:px-7 xl:grid-cols-[minmax(0,1fr)_260px] xl:gap-5">
         <div class="min-w-0">
@@ -85,11 +154,15 @@
                 data-search="{{ (offer.bookmaker ~ ' ' ~ offer.headline ~ ' ' ~ offer.description ~ ' ' ~ offer.categoryLabel)|lower }}"
               >
                 <div class="offer-logo-box flex min-h-20 items-center justify-center border-b border-slate-100 bg-white p-4 sm:min-h-32 sm:border-b-0 sm:border-r">
-                  <img src="{{ offer.logo }}" alt="{{ offer.bookmaker }}" loading="lazy" width="150" height="62">
+                  {% if offer.logo %}
+                    <img src="{{ offer.logo }}" alt="{{ offer.bookmaker }}" loading="lazy" width="150" height="62">
+                  {% else %}
+                    <span class="text-center font-display text-lg font-bold text-forest-900">{{ offer.bookmaker }}</span>
+                  {% endif %}
                 </div>
                 <div class="min-w-0 px-4 py-3 sm:px-4 sm:py-3.5">
                   <div class="mb-1.5 flex flex-wrap items-center gap-1.5">
-                    <span class="rounded bg-slate-100 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-slate-600">Example offer</span>
+                    <span class="rounded px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide {{ offer.isExample ? 'bg-amber-100 text-amber-900' : 'bg-emerald-100 text-emerald-900' }}">{{ offer.isExample ? 'Example offer' : 'Manually verified' }}</span>
                     <span class="offer-category-badge rounded px-2 py-0.5 text-[9px] font-bold" data-category="{{ offer.category }}">{{ offer.categoryLabel }}</span>
                   </div>
                   <h2 class="font-display text-[21px] font-bold leading-tight text-ink">{{ offer.headline }}</h2>
@@ -164,7 +237,7 @@
             <div class="absolute inset-0 -z-10 opacity-30 [background-image:radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-forest-800 via-forest-950 to-forest-950"></div>
             <p class="text-[9px] font-bold uppercase tracking-[0.18em] text-lime-300">A quick reminder</p>
             <p class="mt-2 font-display text-xl font-bold">Check the terms first.</p>
-            <p class="mt-1 text-[11px] leading-relaxed text-white/75">Offers are illustrative in this preview. Always confirm live terms directly with the bookmaker.</p>
+            <p class="mt-1 text-[11px] leading-relaxed text-white/75">{% if previewOnly %}Offers are illustrative in this preview. Always confirm live terms directly with the bookmaker.{% else %}Offer details can change. Confirm current terms directly with the bookmaker before signing up.{% endif %}</p>
           </section>
         </aside>
       </section>
@@ -211,7 +284,7 @@
 
     <footer class="bg-forest-950 text-white">
       <div class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-4 text-[10px] text-white/70 sm:flex-row sm:items-center sm:justify-between md:px-7">
-        <span class="font-display text-base font-bold tracking-wide text-white">CHECK THE ODDS</span>
+        <span class="font-display text-base font-bold tracking-wide text-white">BETHUNTER</span>
         <nav class="flex flex-wrap gap-x-4 gap-y-2" aria-label="Footer navigation">
           <a class="hover:text-lime-300" href="#how-it-works">How we compare</a>
           <a class="hover:text-lime-300" href="#small-print">Responsible gambling</a>

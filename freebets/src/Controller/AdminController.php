@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace CheckTheOdds\FreeBets\Controller;
 
 use CheckTheOdds\FreeBets\Repository\OfferRepository;
+use CheckTheOdds\FreeBets\Repository\PromotionRepository;
 use InvalidArgumentException;
 use PDOException;
 use Psr\Http\Message\ResponseInterface;
@@ -17,6 +18,7 @@ final class AdminController
     public function __construct(
         private Environment $views,
         private OfferRepository $offers,
+        private PromotionRepository $promotions,
     ) {
     }
 
@@ -72,6 +74,57 @@ final class AdminController
             'offers' => $this->offers->all(),
             'csrf' => $this->csrfToken(),
         ]);
+    }
+
+    public function promotions(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface
+    {
+        return $this->render($response, 'admin/promotions.twig', [
+            'promotions' => $this->promotions->allForAdmin(),
+            'csrf' => $this->csrfToken(),
+        ]);
+    }
+
+    public function editPromotion(ServerRequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
+    {
+        $promotion = $this->promotions->findForAdmin((int) $args['id']);
+        if ($promotion === null) {
+            return $this->render($response->withStatus(404), 'admin/message.twig', [
+                'title' => 'Promotion not found',
+                'message' => 'That scraped promotion no longer exists.',
+            ]);
+        }
+
+        return $this->renderPromotionForm($response, $promotion);
+    }
+
+    public function savePromotion(ServerRequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
+    {
+        $promotionId = (int) $args['id'];
+        $promotion = $this->promotions->findForAdmin($promotionId);
+        if ($promotion === null) {
+            return $this->render($response->withStatus(404), 'admin/message.twig', [
+                'title' => 'Promotion not found',
+                'message' => 'That scraped promotion no longer exists.',
+            ]);
+        }
+
+        $body = $this->body($request);
+        $promotion = array_merge($promotion, $body);
+        $promotion['tags_input'] = (string) ($body['tags'] ?? $promotion['tags_input']);
+
+        if (!$this->validCsrf($body)) {
+            return $this->renderPromotionForm($response->withStatus(400), $promotion, 'The form expired. Please try again.');
+        }
+
+        try {
+            $this->promotions->saveCuration($promotionId, $body);
+            return $this->redirect($response, '/admin/promotions');
+        } catch (InvalidArgumentException $error) {
+            return $this->renderPromotionForm($response->withStatus(422), $promotion, $error->getMessage());
+        } catch (Throwable $error) {
+            error_log($error->getMessage());
+            return $this->renderPromotionForm($response->withStatus(500), $promotion, 'The promotion could not be saved.');
+        }
     }
 
     public function newOffer(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface
@@ -207,6 +260,18 @@ final class AdminController
         $data['authenticated'] = (bool) ($_SESSION['freebets_admin'] ?? false);
         $response->getBody()->write($this->views->render($template, $data));
         return $response->withHeader('Content-Type', 'text/html; charset=utf-8');
+    }
+
+    private function renderPromotionForm(
+        ResponseInterface $response,
+        array $promotion,
+        ?string $error = null,
+    ): ResponseInterface {
+        return $this->render($response, 'admin/promotion-form.twig', [
+            'promotion' => $promotion,
+            'csrf' => $this->csrfToken(),
+            'error' => $error,
+        ]);
     }
 
     private function redirect(ResponseInterface $response, string $location): ResponseInterface

@@ -20,6 +20,7 @@ npm run scrape:hollywoodbets
 npm run scrape:betfair-sa
 npm run scrape:yesplay
 npm run scrape:yesplay-promotions
+npm run scrape:virgin-bet-promotions
 npm run scrape:supabets
 npm run scrape:easybet
 npm run scrape:injuries
@@ -40,6 +41,14 @@ Open `http://127.0.0.1:8080`. The PHP entry point is
 managed at `http://127.0.0.1:8080/admin/login`. Seeded offers are illustrative,
 not live promotions. New offers default to illustrative until an admin marks
 them as verified.
+
+Imported bookmaker promotions are curated separately at
+`http://127.0.0.1:8080/admin/promotions`. Apply
+`migrations/20261016_add_bookmaker_promotion_curation.sql` after creating
+`bookmaker_promotions`. Scraped offers appear as drafts; edit their display
+category, tags, text, image, action, and order before publishing. Scrapers update
+source fields without replacing curation. The public page shows only offers that
+are both active at the source and published by an admin.
 
 Set up the admin password with a PHP-generated password hash; never put the
 plaintext password in configuration:
@@ -63,6 +72,13 @@ Apply `migrations/20261002_create_bookmaker_promotions.sql` before syncing. Use
 the database. Failed or empty scrapes leave the existing active promotions
 untouched; the free-bet comparison table remains separate until offers are
 reviewed and labeled.
+
+The Virgin Bet promotions scraper reads the promotions iframe, imports its offer
+copy and official image URLs, and is previewable with
+`npm run scrape:virgin-bet-promotions -- --dry-run`. A normal run writes
+`virgin_bet_promotions.json` and syncs source offers; imported Virgin Bet offers
+remain unpublished until reviewed in the admin. Confirm the rights for source
+creative before publishing it on the public page.
 
 Shared Node modules are in `src/js/`, with Premier League scrapers in
 `src/js/premier_league/`. PHP CLI scrapers are in `src/php/premier_league/`.

@@ -6,6 +6,35 @@ const url = 'https://easybet.co.za/sports/match/football/england/premier-league'
 const competitionName = 'Premier League';
 const headless = process.env.HEADLESS !== 'false';
 
+function normalizeStartTime(value, scrapedAt) {
+  const absoluteDate = value.match(/\b\d{1,2}\s+[A-Za-z]{3},\s+\d{2}:\d{2}\b/);
+  if (absoluteDate) {
+    return absoluteDate[0];
+  }
+
+  const relativeDate = value.match(/^(Today|Tomorrow)\s+(\d{1,2}):(\d{2})$/i);
+  if (!relativeDate) {
+    return null;
+  }
+
+  const dateParts = Object.fromEntries(
+    new Intl.DateTimeFormat('en-US', {
+      timeZone: 'Africa/Johannesburg',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    }).formatToParts(scrapedAt).map(({ type, value: part }) => [type, part]),
+  );
+  const eventDate = new Date(Date.UTC(
+    Number(dateParts.year),
+    Number(dateParts.month) - 1,
+    Number(dateParts.day) + Number(relativeDate[1].toLowerCase() === 'tomorrow'),
+  ));
+  const pad = (part) => String(part).padStart(2, '0');
+
+  return `${eventDate.getUTCFullYear()}-${pad(eventDate.getUTCMonth() + 1)}-${pad(eventDate.getUTCDate())} ${pad(relativeDate[2])}:${relativeDate[3]}`;
+}
+
 const browser = await puppeteer.launch({
   headless,
   defaultViewport: { width: 1440, height: 1000 },
@@ -35,7 +64,7 @@ try {
     { timeout: 45_000 },
   );
 
-  const events = await sportsbookFrame.evaluate(() =>
+  const scrapedEvents = await sportsbookFrame.evaluate(() =>
     [...document.querySelectorAll('.event-item-container')].flatMap((eventCard) => {
       const eventLink = eventCard.querySelector(
         'a[href*="/match/football/england/premier-league/"]',
@@ -46,8 +75,8 @@ try {
         .map((element) => element.getAttribute('title')?.trim())
         .filter(Boolean);
       const startTime = eventCard
-        .querySelector('.event-info')
-        ?.innerText.match(/\b\d{1,2}\s+[A-Za-z]{3},\s+\d{2}:\d{2}\b/)?.[0];
+        .querySelector('.event-info__time')
+        ?.textContent?.trim();
       const prices = [...eventCard.querySelectorAll('*')]
         .filter((element) => element.children.length === 0)
         .map((element) => element.textContent?.trim())
@@ -74,6 +103,11 @@ try {
       }];
     }),
   );
+  const scrapedAt = new Date();
+  const events = scrapedEvents.flatMap((event) => {
+    const startTime = normalizeStartTime(event.startTime, scrapedAt);
+    return startTime ? [{ ...event, startTime }] : [];
+  });
 
   if (events.length === 0) {
     throw new Error(`No priced ${competitionName} events were found.`);
@@ -85,7 +119,7 @@ try {
     sport: 'Soccer',
     country: 'England',
     competition: competitionName,
-    scrapedAt: new Date().toISOString(),
+    scrapedAt: scrapedAt.toISOString(),
     sourceUrl: page.url(),
     events,
   };

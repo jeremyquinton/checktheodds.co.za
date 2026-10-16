@@ -4,138 +4,18 @@
   "sport": "Soccer",
   "country": "England",
   "competition": "Premier League",
-  "scrapedAt": "2026-10-02T15:13:40.453Z",
+  "scrapedAt": "2026-10-16T12:40:47.243Z",
   "sourceUrl": "https://www.10bet.co.za/sports/football/england-premier-league/",
   "events": [
-    {
-      "eventId": "10bet-arsenal-leeds-10-oct-13-30",
-      "homeTeam": "Arsenal",
-      "awayTeam": "Leeds",
-      "startTime": "10 Oct - 13:30",
-      "odds": {
-        "home": 1.41,
-        "draw": 4.7,
-        "away": 7
-      },
-      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
-    },
-    {
-      "eventId": "10bet-aston-villa-brentford-10-oct-16-00",
-      "homeTeam": "Aston Villa",
-      "awayTeam": "Brentford",
-      "startTime": "10 Oct - 16:00",
-      "odds": {
-        "home": 2.6,
-        "draw": 3.55,
-        "away": 2.55
-      },
-      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
-    },
-    {
-      "eventId": "10bet-chelsea-bournemouth-10-oct-16-00",
-      "homeTeam": "Chelsea",
-      "awayTeam": "Bournemouth",
-      "startTime": "10 Oct - 16:00",
-      "odds": {
-        "home": 1.71,
-        "draw": 4.2,
-        "away": 4.3
-      },
-      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
-    },
-    {
-      "eventId": "10bet-ipswich-fulham-10-oct-16-00",
-      "homeTeam": "Ipswich",
-      "awayTeam": "Fulham",
-      "startTime": "10 Oct - 16:00",
-      "odds": {
-        "home": 2.7,
-        "draw": 3.5,
-        "away": 2.48
-      },
-      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
-    },
-    {
-      "eventId": "10bet-sunderland-brighton-10-oct-16-00",
-      "homeTeam": "Sunderland",
-      "awayTeam": "Brighton",
-      "startTime": "10 Oct - 16:00",
-      "odds": {
-        "home": 2.9,
-        "draw": 3.45,
-        "away": 2.35
-      },
-      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
-    },
-    {
-      "eventId": "10bet-man-utd-tottenham-10-oct-18-30",
-      "homeTeam": "Man Utd",
-      "awayTeam": "Tottenham",
-      "startTime": "10 Oct - 18:30",
-      "odds": {
-        "home": 1.73,
-        "draw": 4.1,
-        "away": 4.2
-      },
-      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
-    },
-    {
-      "eventId": "10bet-crystal-palace-nottingham-forest-11-oct-15-00",
-      "homeTeam": "Crystal Palace",
-      "awayTeam": "Nottingham Forest",
-      "startTime": "11 Oct - 15:00",
-      "odds": {
-        "home": 2.6,
-        "draw": 3.25,
-        "away": 2.7
-      },
-      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
-    },
-    {
-      "eventId": "10bet-hull-city-everton-11-oct-15-00",
-      "homeTeam": "Hull City",
-      "awayTeam": "Everton",
-      "startTime": "11 Oct - 15:00",
-      "odds": {
-        "home": 3.55,
-        "draw": 3.35,
-        "away": 2.08
-      },
-      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
-    },
-    {
-      "eventId": "10bet-liverpool-man-city-11-oct-17-30",
-      "homeTeam": "Liverpool",
-      "awayTeam": "Man City",
-      "startTime": "11 Oct - 17:30",
-      "odds": {
-        "home": 2.55,
-        "draw": 3.65,
-        "away": 2.55
-      },
-      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
-    },
-    {
-      "eventId": "10bet-coventry-newcastle-12-oct-21-00",
-      "homeTeam": "Coventry",
-      "awayTeam": "Newcastle",
-      "startTime": "12 Oct - 21:00",
-      "odds": {
-        "home": 3.2,
-        "draw": 3.6,
-        "away": 2.14
-      },
-      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
-    },
     {
       "eventId": "10bet-everton-chelsea-17-oct-13-30",
       "homeTeam": "Everton",
       "awayTeam": "Chelsea",
       "startTime": "17 Oct - 13:30",
       "odds": {
-        "home": 2.85,
-        "draw": 3.65,
-        "away": 2.3
+        "home": 3.25,
+        "draw": 3.8,
+        "away": 2.18
       },
       "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
     },
@@ -145,9 +25,9 @@
       "awayTeam": "Liverpool",
       "startTime": "17 Oct - 16:00",
       "odds": {
-        "home": 2.75,
-        "draw": 3.7,
-        "away": 2.34
+        "home": 2.5,
+        "draw": 3.75,
+        "away": 2.75
       },
       "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
     },
@@ -157,9 +37,9 @@
       "awayTeam": "Hull City",
       "startTime": "17 Oct - 16:00",
       "odds": {
-        "home": 1.68,
+        "home": 1.74,
         "draw": 4,
-        "away": 4.7
+        "away": 4.8
       },
       "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
     },
@@ -169,9 +49,9 @@
       "awayTeam": "Ipswich",
       "startTime": "17 Oct - 16:00",
       "odds": {
-        "home": 1.23,
-        "draw": 6.8,
-        "away": 10
+        "home": 1.26,
+        "draw": 7,
+        "away": 11
       },
       "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
     },
@@ -181,9 +61,9 @@
       "awayTeam": "Aston Villa",
       "startTime": "17 Oct - 18:30",
       "odds": {
-        "home": 2.06,
+        "home": 2.36,
         "draw": 3.7,
-        "away": 3.3
+        "away": 2.95
       },
       "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
     },
@@ -193,9 +73,9 @@
       "awayTeam": "Sunderland",
       "startTime": "18 Oct - 15:00",
       "odds": {
-        "home": 2.02,
+        "home": 2.16,
         "draw": 3.55,
-        "away": 3.55
+        "away": 3.5
       },
       "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
     },
@@ -205,9 +85,9 @@
       "awayTeam": "Crystal Palace",
       "startTime": "18 Oct - 15:00",
       "odds": {
-        "home": 1.58,
-        "draw": 4.3,
-        "away": 5
+        "home": 1.56,
+        "draw": 4.7,
+        "away": 5.6
       },
       "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
     },
@@ -217,9 +97,9 @@
       "awayTeam": "Man Utd",
       "startTime": "18 Oct - 15:00",
       "odds": {
-        "home": 2.85,
+        "home": 2.43,
         "draw": 3.65,
-        "away": 2.31
+        "away": 2.9
       },
       "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
     },
@@ -229,9 +109,9 @@
       "awayTeam": "Arsenal",
       "startTime": "18 Oct - 17:30",
       "odds": {
-        "home": 5.4,
-        "draw": 3.95,
-        "away": 1.6
+        "home": 5.8,
+        "draw": 4,
+        "away": 1.64
       },
       "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
     },
@@ -241,9 +121,129 @@
       "awayTeam": "Coventry",
       "startTime": "19 Oct - 21:00",
       "odds": {
-        "home": 1.48,
-        "draw": 4.7,
-        "away": 5.8
+        "home": 1.5,
+        "draw": 4.9,
+        "away": 6.4
+      },
+      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
+    },
+    {
+      "eventId": "10bet-ipswich-nottingham-forest-23-oct-21-00",
+      "homeTeam": "Ipswich",
+      "awayTeam": "Nottingham Forest",
+      "startTime": "23 Oct - 21:00",
+      "odds": {
+        "home": 3.05,
+        "draw": 3.45,
+        "away": 2.25
+      },
+      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
+    },
+    {
+      "eventId": "10bet-aston-villa-man-city-24-oct-13-30",
+      "homeTeam": "Aston Villa",
+      "awayTeam": "Man City",
+      "startTime": "24 Oct - 13:30",
+      "odds": {
+        "home": 4.3,
+        "draw": 4,
+        "away": 1.72
+      },
+      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
+    },
+    {
+      "eventId": "10bet-arsenal-everton-24-oct-16-00",
+      "homeTeam": "Arsenal",
+      "awayTeam": "Everton",
+      "startTime": "24 Oct - 16:00",
+      "odds": {
+        "home": 1.37,
+        "draw": 4.8,
+        "away": 8.2
+      },
+      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
+    },
+    {
+      "eventId": "10bet-coventry-fulham-24-oct-16-00",
+      "homeTeam": "Coventry",
+      "awayTeam": "Fulham",
+      "startTime": "24 Oct - 16:00",
+      "odds": {
+        "home": 2.85,
+        "draw": 3.5,
+        "away": 2.35
+      },
+      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
+    },
+    {
+      "eventId": "10bet-chelsea-tottenham-24-oct-18-30",
+      "homeTeam": "Chelsea",
+      "awayTeam": "Tottenham",
+      "startTime": "24 Oct - 18:30",
+      "odds": {
+        "home": 1.82,
+        "draw": 3.95,
+        "away": 3.9
+      },
+      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
+    },
+    {
+      "eventId": "10bet-crystal-palace-newcastle-25-oct-16-00",
+      "homeTeam": "Crystal Palace",
+      "awayTeam": "Newcastle",
+      "startTime": "25 Oct - 16:00",
+      "odds": {
+        "home": 2.65,
+        "draw": 3.55,
+        "away": 2.49
+      },
+      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
+    },
+    {
+      "eventId": "10bet-hull-city-brentford-25-oct-16-00",
+      "homeTeam": "Hull City",
+      "awayTeam": "Brentford",
+      "startTime": "25 Oct - 16:00",
+      "odds": {
+        "home": 4.5,
+        "draw": 3.9,
+        "away": 1.72
+      },
+      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
+    },
+    {
+      "eventId": "10bet-liverpool-brighton-25-oct-16-00",
+      "homeTeam": "Liverpool",
+      "awayTeam": "Brighton",
+      "startTime": "25 Oct - 16:00",
+      "odds": {
+        "home": 2.05,
+        "draw": 3.75,
+        "away": 3.25
+      },
+      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
+    },
+    {
+      "eventId": "10bet-man-utd-bournemouth-25-oct-16-00",
+      "homeTeam": "Man Utd",
+      "awayTeam": "Bournemouth",
+      "startTime": "25 Oct - 16:00",
+      "odds": {
+        "home": 1.79,
+        "draw": 4,
+        "away": 3.95
+      },
+      "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
+    },
+    {
+      "eventId": "10bet-sunderland-leeds-25-oct-18-30",
+      "homeTeam": "Sunderland",
+      "awayTeam": "Leeds",
+      "startTime": "25 Oct - 18:30",
+      "odds": {
+        "home": 2.75,
+        "draw": 3.3,
+        "away": 2.55
       },
       "url": "https://www.10bet.co.za/sports/football/england-premier-league/"
     }

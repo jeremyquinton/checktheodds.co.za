@@ -22,13 +22,15 @@ try {
       const articles = [...document.querySelectorAll('.injury-news__article')];
       const rows = articles.flatMap((article) =>
         [...article.querySelectorAll('.injury-news__table tbody tr')]);
+      const hasPlayer = rows.some((row) => {
+        const player = row.querySelector('th, td')?.textContent?.trim();
+        return player && player !== '-';
+      });
 
-      return articles.length >= 20 && rows.length > 0 && rows.every((row) =>
-        row.querySelector('th, td')?.textContent?.trim() &&
-        row.querySelector('th, td')?.textContent?.trim() !== '-') &&
+      return articles.length >= 20 && rows.length > 0 && hasPlayer &&
         articles.every((article) =>
-        article.querySelector('.injury-news__team-name')?.textContent?.trim() &&
-        article.querySelector('.injury-news__table tbody'));
+          article.querySelector('.injury-news__team-name')?.textContent?.trim() &&
+          article.querySelector('.injury-news__table tbody'));
     },
     { timeout: 45_000 },
   );

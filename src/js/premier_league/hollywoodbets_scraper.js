@@ -90,7 +90,7 @@ try {
     const prices = Object.fromEntries(
       (fullTimeMarket?.markets ?? []).map((market) => [
         market.number,
-        Number(market.odds) + 1,
+        Number(market.odds),
       ]),
     );
 

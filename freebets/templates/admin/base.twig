@@ -15,6 +15,7 @@
         <a class="font-display text-xl font-bold tracking-wide text-forest-950" href="/">BETHUNTER <span class="font-sans text-[10px] font-semibold tracking-normal text-slate-500">OFFER MANAGER</span></a>
         <div class="flex items-center gap-4 text-xs font-semibold">
           <a class="text-forest-800 hover:underline" href="/">View offers</a>
+          {% if authenticated|default(false) %}<a class="text-forest-800 hover:underline" href="/admin/promotions">Scraped promotions</a>{% endif %}
           {% if authenticated|default(false) %}
             <form method="post" action="/admin/logout">
               <input type="hidden" name="_csrf" value="{{ csrf }}">

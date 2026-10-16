@@ -1,0 +1,86 @@
+{% extends 'admin/base.twig' %}
+
+{% block title %}Curate promotion{% endblock %}
+
+{% block content %}
+  <div class="mx-auto max-w-5xl">
+    <a class="text-xs font-semibold text-forest-800 hover:underline" href="/admin/promotions">← All scraped promotions</a>
+    <h1 class="mt-2 font-display text-3xl font-bold">Curate promotion</h1>
+    {% if error %}<p class="mt-3 rounded bg-rose-50 px-3 py-2 text-xs text-rose-800" role="alert">{{ error }}</p>{% endif %}
+
+    <div class="mt-5 grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.8fr)]">
+      <form class="grid content-start gap-4 rounded border border-slate-200 bg-white p-4 sm:grid-cols-2 sm:p-6" method="post" action="/admin/promotions/{{ promotion.id }}/save">
+        <input type="hidden" name="_csrf" value="{{ csrf }}">
+
+        <label class="grid content-start gap-1 text-xs font-semibold" for="display_category">
+          Display category
+          <input class="min-h-10 rounded border border-slate-300 px-3 font-normal outline-none focus:border-forest-700" id="display_category" name="display_category" value="{{ promotion.display_category }}" maxlength="128" required>
+        </label>
+        <label class="grid content-start gap-1 text-xs font-semibold" for="tags">
+          Tags
+          <input class="min-h-10 rounded border border-slate-300 px-3 font-normal outline-none focus:border-forest-700" id="tags" name="tags" value="{{ promotion.tags_input }}" placeholder="Welcome bonus, Deposit match">
+          <span class="font-normal text-slate-500">Separate tags with commas.</span>
+        </label>
+
+        <label class="grid content-start gap-1 text-xs font-semibold sm:col-span-2" for="display_title">
+          Public title <span class="font-normal text-slate-500">Optional; leave blank to use the source title.</span>
+          <input class="min-h-10 rounded border border-slate-300 px-3 font-normal outline-none focus:border-forest-700" id="display_title" name="display_title" value="{{ promotion.display_title }}" maxlength="255" placeholder="{{ promotion.title }}">
+        </label>
+        <label class="grid content-start gap-1 text-xs font-semibold sm:col-span-2" for="display_subtitle">
+          Public subtitle <span class="font-normal text-slate-500">Optional; blank keeps the source subtitle.</span>
+          <input class="min-h-10 rounded border border-slate-300 px-3 font-normal outline-none focus:border-forest-700" id="display_subtitle" name="display_subtitle" value="{{ promotion.display_subtitle }}" maxlength="255" placeholder="{{ promotion.subtitle }}">
+        </label>
+        <label class="grid content-start gap-1 text-xs font-semibold sm:col-span-2" for="display_body_text">
+          Public description <span class="font-normal text-slate-500">Optional; blank keeps the complete source copy.</span>
+          <textarea class="min-h-36 rounded border border-slate-300 p-3 font-normal leading-relaxed outline-none focus:border-forest-700" id="display_body_text" name="display_body_text" maxlength="20000" placeholder="{{ promotion.body_text }}">{{ promotion.display_body_text }}</textarea>
+        </label>
+        <label class="grid content-start gap-1 text-xs font-semibold sm:col-span-2" for="display_image_url">
+          Public image URL <span class="font-normal text-slate-500">Optional override; blank uses the source image.</span>
+          <input class="min-h-10 rounded border border-slate-300 px-3 font-normal outline-none focus:border-forest-700" id="display_image_url" name="display_image_url" type="url" value="{{ promotion.display_image_url }}" placeholder="{{ promotion.image_url }}">
+        </label>
+        <label class="grid content-start gap-1 text-xs font-semibold" for="display_action_label">
+          Button label <span class="font-normal text-slate-500">Optional override.</span>
+          <input class="min-h-10 rounded border border-slate-300 px-3 font-normal outline-none focus:border-forest-700" id="display_action_label" name="display_action_label" value="{{ promotion.display_action_label }}" maxlength="80" placeholder="{{ promotion.action_label }}">
+        </label>
+        <label class="grid content-start gap-1 text-xs font-semibold" for="display_order">
+          Display order
+          <input class="min-h-10 rounded border border-slate-300 px-3 font-normal outline-none focus:border-forest-700" id="display_order" name="display_order" type="number" min="-10000" max="10000" step="1" value="{{ promotion.display_order }}">
+        </label>
+        <label class="grid content-start gap-1 text-xs font-semibold sm:col-span-2" for="display_action_url">
+          Button destination <span class="font-normal text-slate-500">Optional override; blank uses the source link.</span>
+          <input class="min-h-10 rounded border border-slate-300 px-3 font-normal outline-none focus:border-forest-700" id="display_action_url" name="display_action_url" type="url" value="{{ promotion.display_action_url }}" placeholder="{{ promotion.action_url }}">
+        </label>
+
+        <label class="flex items-start gap-2 border-t border-slate-100 pt-4 text-xs font-semibold sm:col-span-2">
+          <input class="mt-0.5 size-4 accent-forest-800" name="is_published" type="checkbox" value="1" {{ promotion.is_published ? 'checked' : '' }}>
+          Publish on the public promotions page
+        </label>
+
+        <div class="flex justify-end gap-3 border-t border-slate-100 pt-4 sm:col-span-2">
+          <a class="inline-flex min-h-10 items-center rounded border border-slate-300 px-4 text-xs font-semibold" href="/admin/promotions">Cancel</a>
+          <button class="min-h-10 rounded bg-forest-900 px-5 text-xs font-bold text-white hover:bg-forest-800" type="submit">Save curation</button>
+        </div>
+      </form>
+
+      <aside class="h-fit rounded border border-slate-200 bg-white p-4">
+        <div class="flex items-start justify-between gap-3">
+          <div>
+            <p class="text-[10px] font-bold uppercase tracking-[0.16em] text-forest-800">Source snapshot</p>
+            <h2 class="mt-1 font-display text-xl font-bold">{{ promotion.bookmaker_name }} · {{ promotion.title }}</h2>
+            <p class="mt-1 text-xs text-slate-600">{{ promotion.product_category }}</p>
+          </div>
+          <span class="rounded px-2 py-1 text-[10px] font-bold {{ promotion.source_is_active ? 'bg-emerald-100 text-emerald-900' : 'bg-slate-100 text-slate-600' }}">{{ promotion.source_is_active ? 'Active' : 'Inactive' }}</span>
+        </div>
+        {% if promotion.image_url %}
+          <img class="admin-promotion-source-image mt-4" src="{{ promotion.image_url }}" alt="Source artwork for {{ promotion.title }}" loading="lazy" width="960" height="360">
+        {% endif %}
+        {% if promotion.body_text %}<p class="mt-3 whitespace-pre-line text-xs leading-relaxed text-slate-700">{{ promotion.body_text }}</p>{% endif %}
+        <dl class="mt-4 grid gap-2 border-t border-slate-100 pt-3 text-xs">
+          <div><dt class="font-semibold text-slate-500">Source category</dt><dd>{{ promotion.product_category }}</dd></div>
+          <div><dt class="font-semibold text-slate-500">Last seen</dt><dd>{{ promotion.last_seen_at|date('j M Y H:i') }}</dd></div>
+          <div><dt class="font-semibold text-slate-500">Source page</dt><dd><a class="break-all text-forest-800 hover:underline" href="{{ promotion.source_url }}" target="_blank" rel="noopener noreferrer">Open source</a></dd></div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+{% endblock %}

@@ -59,6 +59,14 @@ body {
   background: #fff;
 }
 
+.source-promotion-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 8 / 3;
+  background: #f4f4f1;
+  object-fit: cover;
+}
+
 .source-promotion-card__header {
   display: block;
   min-height: 136px;

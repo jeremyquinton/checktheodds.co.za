@@ -42,7 +42,7 @@ $controller = new FreeBetsController(
     $subscribers,
     getenv('ODDS_APP_URL') ?: 'http://localhost:3000',
 );
-$admin = new AdminController($views, $offers);
+$admin = new AdminController($views, $offers, $promotions);
 
 $app->get('/', [$controller, 'index']);
 $app->get('/free-bets', [$controller, 'index']);
@@ -65,6 +65,9 @@ $app->group('/admin', static function (RouteCollectorProxy $group) use ($admin):
     $group->get('/offers/{id:[0-9]+}/edit', [$admin, 'edit']);
     $group->post('/offers/save', [$admin, 'save']);
     $group->post('/offers/{id:[0-9]+}/delete', [$admin, 'delete']);
+    $group->get('/promotions', [$admin, 'promotions']);
+    $group->get('/promotions/{id:[0-9]+}/edit', [$admin, 'editPromotion']);
+    $group->post('/promotions/{id:[0-9]+}/save', [$admin, 'savePromotion']);
     $group->post('/logout', [$admin, 'logout']);
 })->add($requireAdmin);
 

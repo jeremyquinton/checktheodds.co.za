@@ -21,6 +21,7 @@ npm run scrape:betfair-sa
 npm run scrape:yesplay
 npm run scrape:yesplay-promotions
 npm run scrape:virgin-bet-promotions
+npm run scrape:betway-promotions
 npm run scrape:supabets
 npm run scrape:easybet
 npm run scrape:injuries
@@ -79,6 +80,13 @@ copy and official image URLs, and is previewable with
 `virgin_bet_promotions.json` and syncs source offers; imported Virgin Bet offers
 remain unpublished until reviewed in the admin. Confirm the rights for source
 creative before publishing it on the public page.
+
+The Betway promotions scraper reads Betway's structured live promotions feed,
+including descriptions, banner paths, categories, and CTAs. Preview it with
+`npm run scrape:betway-promotions -- --dry-run`; a normal run writes
+`betway_promotions.json` and syncs source offers. It refuses to sync a response
+with fewer than 15 complete promotions to avoid deactivating offers after a
+partial feed response.
 
 Shared Node modules are in `src/js/`, with Premier League scrapers in
 `src/js/premier_league/`. PHP CLI scrapers are in `src/php/premier_league/`.

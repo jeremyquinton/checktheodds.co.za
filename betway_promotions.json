@@ -1,0 +1,633 @@
+{
+  "bookmaker": "Betway",
+  "bookmakerSlug": "betway",
+  "sourceUrl": "https://www.betway.co.za/promotions",
+  "scrapedAt": "2026-10-16T15:00:17.115Z",
+  "promotions": [
+    {
+      "offerKey": "betway-4",
+      "productCategory": "Sport",
+      "title": "Win Boost",
+      "subtitle": null,
+      "bodyText": "Boost your Multi Bet winnings by up to 1000%. For each leg with odds of 1.2 or more added to your Multi Bet betslip, we’ll boost your winnings. The more legs you add, the bigger your boost.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-12-31"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/Promos.gmgamingsystems.com/pdmg/32718_SA_WinBoost_556x276_PromoImage.jpg",
+      "actionLabel": "Register Now",
+      "actionUrl": "https://www.betway.co.za/?register=true"
+    },
+    {
+      "offerKey": "betway-11",
+      "productCategory": "SLOTS",
+      "title": "Jackpot Slots",
+      "subtitle": null,
+      "bodyText": "Jackpot Slots Thu & Fri 7-9pm: Bet R1+ to share R1M in cash prizes!",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-02-28"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/Promos.gmgamingsystems.com/pdmg/Promotions/featured/28150_SA_JackpotSlots_556x276_PromoImage_NewVersion.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/slots/jackpot-slots"
+    },
+    {
+      "offerKey": "betway-12",
+      "productCategory": "Sport",
+      "title": "Bet Saver",
+      "subtitle": null,
+      "bodyText": "Bet Saver is a feature available exclusively on Betway. Bet Saver will calculate a return based on your total odds, your total wager and the number of bets in your Multi Bet. This means that even if you lose multiple picks in your Multi Bet, you may still qualify to get your wager back or more, as a Free Bet.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2026-12-31"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/Promos.gmgamingsystems.com/pdmg/34506_BW_BetSaverArsenal_556x276_PromoImage2.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/sport/?optin=Betsaver&source=PromoPage"
+    },
+    {
+      "offerKey": "betway-13",
+      "productCategory": "Sport",
+      "title": "Bet Influencer",
+      "subtitle": null,
+      "bodyText": "Become a Bet Influencer with Betway. Share your next bet to develop a unique Bet Influencer code, which you can share with your friends. Every bet made using your unique code will earn you 4% of every wager.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2026-12-31"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/Promos.gmgamingsystems.com/pdmg/34487_BW_BetInfluencer_556x276_PromoImage.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/sports"
+    },
+    {
+      "offerKey": "betway-84",
+      "productCategory": "SLOTS",
+      "title": "Drops and Wins",
+      "subtitle": null,
+      "bodyText": "Win from R500m weekly! Play Pragmatic Play games for a chance now.",
+      "steps": [
+        "Play selected Pragmatic Play games daily for a chance at winning daily prize drops"
+      ],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-03-03"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/34416_SA_Drops-Wins2026_556x276_PromoImage.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/slots/drops-and-wins"
+    },
+    {
+      "offerKey": "betway-187",
+      "productCategory": "SLOTS",
+      "title": "Cash Storm",
+      "subtitle": null,
+      "bodyText": "Cash Storm Tues & Sat 9-11pm: Bet R2+ to share R1M cash prizes!",
+      "steps": [
+        "Wager R2+ on Pragmatic Slot Games"
+      ],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2026-10-31"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/36360_Betway-SA-Cash-Storm-Refresh-(August)_556x276_PromoImage_2.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/slots/prize-drop"
+    },
+    {
+      "offerKey": "betway-267",
+      "productCategory": "Other",
+      "title": "Withdrawal Tracker",
+      "subtitle": null,
+      "bodyText": "Regardless of whether you prefer vouchers, Instant Money or EFTs, our new withdrawal tracker lets you track and trace every step your funds take as they make their way to your bank account.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2026-12-31"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/Promos.gmgamingsystems.com/pdmg/Promotions/featured/32194_SA_Withdrawal_Tracker_556x276_PromoImage.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.betway.co.za/promotions"
+    },
+    {
+      "offerKey": "betway-283",
+      "productCategory": "Sport",
+      "title": "Sbonise And Win",
+      "subtitle": null,
+      "bodyText": "Calling on all superfans to come to any Betway Premiership game, and if you are the best dressed fan you could walk away with up to R30,000.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-05-22"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/Promos.gmgamingsystems.com/pdmg/Promotions/featured/Betway_All_Teams_PromoImage_556x276.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/sport/soccer/rsa/betway_premiership"
+    },
+    {
+      "offerKey": "betway-286",
+      "productCategory": "Casino",
+      "title": "Welcome Offer",
+      "subtitle": null,
+      "bodyText": "Score a Welcome Pack when you sign up with Betway, filled with Free Spins, Free Flights and Free Bets, all so you can enjoy the full range of thrills we have in store for you.",
+      "steps": [
+        "You have registered.",
+        "You have claimed your offer."
+      ],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-01-31"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/Promos.gmgamingsystems.com/pdmg/Promotions/featured/32671_SA_WelcomePack_Aviator_556x276_PromoImage.jpg",
+      "actionLabel": "Register Now",
+      "actionUrl": "https://www.betway.co.za/?register=1"
+    },
+    {
+      "offerKey": "betway-344",
+      "productCategory": "SLOTS",
+      "title": "Spinoleague",
+      "subtitle": null,
+      "bodyText": "Win your share of a R240m prize pool from 4 Mar 2026 to 1 Mar 2027.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-03-01"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/34198_Betway_SA_Spinominal_Spinoleague_556x276_PromoImage_1.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/slots/spinoleague"
+    },
+    {
+      "offerKey": "betway-403",
+      "productCategory": "CRASH",
+      "title": "Win Boost on Crash",
+      "subtitle": null,
+      "bodyText": "Get up to a 100% win boost on crash games from 9pm to 11pm.",
+      "steps": [
+        "Crash Win Boost"
+      ],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-02-28"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/32972_SA_CrashWinBoost_NewFeature_556x276_PromoImage_EDIT.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/crash/crash-games"
+    },
+    {
+      "offerKey": "betway-411",
+      "productCategory": "slots",
+      "title": "Mzansi Moolah",
+      "subtitle": null,
+      "bodyText": "Your next spin could unlock a Mzansi Moolah jackpot.",
+      "steps": [
+        "Mzanzi Moolah"
+      ],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-01-31"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/33282_Betway_SA_GamesGlobal_MzansiMoolah_Progressive_556x276_PromoImage.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/slots/mzansi-moolah"
+    },
+    {
+      "offerKey": "betway-1510",
+      "productCategory": "Sport",
+      "title": "Free Bet Club",
+      "subtitle": null,
+      "bodyText": "Join Betway’s Free Bet Club and earn 2 Free Bets every week.",
+      "steps": [
+        "Enter and place bets totalling R250 and you’ll earn 2 Free Bet payouts every week."
+      ],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2026-12-31"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/Promos.gmgamingsystems.com/pdmg/Promotions/featured/36038_SA_FreeBetClub_New_Season_Refresh_556x276_PromoImage_1.jpg",
+      "actionLabel": "Enter",
+      "actionUrl": "https://www.betway.co.za/free-bet-club/?optin=FBCSA26&source=Banner"
+    },
+    {
+      "offerKey": "betway-1571",
+      "productCategory": "Sport",
+      "title": "New Soccer Jackpots",
+      "subtitle": null,
+      "bodyText": "Bet R5+ from 12-3pm on Saturdays to stand to win a share of R300,000.Place a minimum R5 bet on matches between 12pm and 3pm.Max 5 entries per daily Soccer Jackpot. Single and Multi BetsSoccer Jackpot applies to all betting markets (Except Draw No Bet and Outrights)Winners will be selected randomly.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-05-31"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/Promos.gmgamingsystems.com/pdmg/Promotions/featured/36782_SA_SoccerJackpotsNewSeason_556x276_PromoImage_1.jpg",
+      "actionLabel": "Enter",
+      "actionUrl": "https://www.betway.co.za/soccer-jackpot"
+    },
+    {
+      "offerKey": "betway-1607",
+      "productCategory": "SLOTS",
+      "title": "Pragmatic Play Missions",
+      "subtitle": null,
+      "bodyText": "Saturdays 3-5pm: Complete 10 missions for up to 399 Bonus Spins.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-02-28"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/35564_Betway_SA_PragmaticPlay_Missions_556x276_PromoImg_2.png",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/slots/mission-spinpossible"
+    },
+    {
+      "offerKey": "betway-1615",
+      "productCategory": "SLOTS",
+      "title": "Lucky Races",
+      "subtitle": null,
+      "bodyText": "First 7 days monthly: Bet R2+ on 3 Oaks games and share in R2.5 million.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-01-07"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/35919_Betway_SA_3Oaks_Network_Promotion_LuckyRaces_556x276_PromoImage.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/slots/lucky-races"
+    },
+    {
+      "offerKey": "betway-1620",
+      "productCategory": "Casino",
+      "title": "Betway Bucks X Dischem",
+      "subtitle": null,
+      "bodyText": "Betway and Dis-Chem have partnered to bring you even more ways to save.Now you can earn 10% off every Betway Bucks voucher purchase, available only in-store when you use Dis-Chem’s Better Rewards programme.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2026-12-31"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/556x276_PromoImage_1.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.betway.co.za/promotions"
+    },
+    {
+      "offerKey": "betway-1667",
+      "productCategory": "CRASH",
+      "title": "Daily Cashback on Crash",
+      "subtitle": null,
+      "bodyText": "Get 5% Cash Back on crash game losses from 17:00-19:00. Up to R1,000.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-02-28"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/34946_32895_Betway_SA_Crash_Cashback_Daily_Promotion_V4_556x276_PromoImage_2.png",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/crash/all"
+    },
+    {
+      "offerKey": "betway-1668",
+      "productCategory": "SLOTS",
+      "title": "Daily Cashback on Slots",
+      "subtitle": null,
+      "bodyText": "Get 5% Cash Back on slots losses from 17:00-19:00. Up to R1,000.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-02-28"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/32994_Betway_SA_Slots_Cashback_Daily_Promotion_556x276_PromoImage.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/slots/all"
+    },
+    {
+      "offerKey": "betway-1691",
+      "productCategory": "SLOTS",
+      "title": "Global Lucky Rush",
+      "subtitle": null,
+      "bodyText": "Bet on qualifying Playtech games for a chance at R100m in prizes.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-01-17"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/34219_Betway_SA-ROA_Playtech_GlobalLuckyRushLeaderboard_2026_556x276_PromoImage5.png",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/slots/lucky-rush"
+    },
+    {
+      "offerKey": "betway-1713",
+      "productCategory": "Features",
+      "title": "New Casino Experience",
+      "subtitle": null,
+      "bodyText": "Same games, better navigation",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-02-28"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/36678_Betway_SA_NewCasinoLobby_Informative_556x276_promopage_1.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/casino-games"
+    },
+    {
+      "offerKey": "betway-1715",
+      "productCategory": "SLOTS",
+      "title": "Rewards Burst",
+      "subtitle": null,
+      "bodyText": "Bet R2.50+ for a shot at R7.5m monthly + R200k weekly prizes!",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-08-20"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/36289_SA_BetwayRewardsBurst_556x276_PromoImage.png",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/slots/rewards-burst"
+    },
+    {
+      "offerKey": "betway-1725",
+      "productCategory": "Sport",
+      "title": "MN New Season Sports Cross Sell",
+      "subtitle": null,
+      "bodyText": "Place a 3 leg Multi Bet totalling R50 on sport & unlock 5 Bonus Spins daily.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-05-31"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/Promos.gmgamingsystems.com/pdmg/Promotions/featured/36722_MN_CrossSell_Arsenal_556x276_PromoImage_01_SA1_1.jpg",
+      "actionLabel": "Enter",
+      "actionUrl": "https://www.betway.co.za/sport/soccer/?optin=SportsCrossSell"
+    },
+    {
+      "offerKey": "betway-1731",
+      "productCategory": "SLOTS",
+      "title": "GGL Daily Jackpot on Slots",
+      "subtitle": null,
+      "bodyText": "Play Games Global Slot games from 19:00 - 21:00 for a share of R250K daily.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2029-10-29"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/36231_SA_DailyJackpot_GamesGlobalEdition_556x276_PromoImage.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/slots/provider-Games-Global-South-Africa"
+    },
+    {
+      "offerKey": "betway-1737",
+      "productCategory": "CRASH",
+      "title": "Fly and Play, Win Today",
+      "subtitle": null,
+      "bodyText": "Bet on qualifying Aviatrix games to top the Fly and Play, Win Today leaderboard.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2026-11-30"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/36761_BW_SA_Fly_and_Play_Win_Today_556x276_PromoImage.png",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/crash/game/aviatrix?vertical=crash"
+    },
+    {
+      "offerKey": "betway-1740",
+      "productCategory": "SLOTS",
+      "title": "Playtech Mystery Quest",
+      "subtitle": null,
+      "bodyText": "Take on the Playtech Mystery Quest for a share of over R800,000+.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2026-10-31"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/36812_Betway_SA_Playtech_MysteryQuest_2026_556x276_PromoImage.png",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/slots/mystery-quest"
+    },
+    {
+      "offerKey": "betway-1744",
+      "productCategory": "LIVE CASINO",
+      "title": "Crazy Time Leaderboard",
+      "subtitle": null,
+      "bodyText": "Stand to win your share of R50,000 every Friday on Crazy Time.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-02-26"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/37062_Betway_SA_Evolution_CrazyTime_Leaderboard_556x276_PromoImage.png",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/live%20casino/game/crazy-time-evo?vertical=livecasino"
+    },
+    {
+      "offerKey": "betway-1746",
+      "productCategory": "LIVE CASINO",
+      "title": "Roulette Rush Leaderboard",
+      "subtitle": null,
+      "bodyText": "Stand to win your share of R50,000 every Saturday on Roulette.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-02-28"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/37060_SA_EvolutionRouletteRushLeaderboard_556x276_PromoImage.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/live%20casino/roulette-rush"
+    },
+    {
+      "offerKey": "betway-1747",
+      "productCategory": "LIVE CASINO",
+      "title": "Sweet 16 Leaderboard",
+      "subtitle": null,
+      "bodyText": "Stand to win your share of R50,000 every Sunday on Blackjack.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2027-02-28"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/37061_BW_SA_Evolution_Blackjack_Sweet16_Leaderboard_556x276_PromoImage.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/live%20casino/sweet-16"
+    },
+    {
+      "offerKey": "betway-1752",
+      "productCategory": "SLOTS",
+      "title": "Trick or Tada",
+      "subtitle": null,
+      "bodyText": "Bet R2+ on selected slots & stand to win a share of R1.5M in Win Cards",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2026-11-04"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/37223_Betway_SA_Tada_TrickOrTada_Network_556x276_PromoImage.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/slots/trick-or-tada"
+    },
+    {
+      "offerKey": "betway-1767",
+      "productCategory": "Casino",
+      "title": "Daily Reload",
+      "subtitle": null,
+      "bodyText": "Unlock your daily deposit match offer.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2029-09-30"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/BWZA_CS_WEB_NOSP_STAT_BetNow_EN_37266_Betway_MN_DailyDepositMatch_Initiative_556x276_PromoImage.png",
+      "actionLabel": "View Offer",
+      "actionUrl": "https://www.betway.co.za/lobby/casino-games?account=my-gifts"
+    },
+    {
+      "offerKey": "betway-1777",
+      "productCategory": "SLOTS",
+      "title": "October Heat",
+      "subtitle": null,
+      "bodyText": "Bet R2+ on all EGT games and stand to win a share of R3 million.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2026-10-31"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/37021_Betway_SA_EGT_OctoberHeat_Network_556x276_PromoImage.png",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/slots/october-heat"
+    },
+    {
+      "offerKey": "betway-1785",
+      "productCategory": "SLOTS",
+      "title": "Multiplier Mania",
+      "subtitle": null,
+      "bodyText": "Bet R3+ on select games Sundays 3-5pm when 725 multipliers will drop.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2026-12-27"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/37420_Betway_SA_GGL_MultiplierMania_XWins_556x276_PromoImage.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/slots/multiplier-mania"
+    },
+    {
+      "offerKey": "betway-1786",
+      "productCategory": "SLOTS",
+      "title": "Flip 2 Win",
+      "subtitle": null,
+      "bodyText": "Bet R1+ on qualifying games for a chance to win a share of R200k.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2026-12-28"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/37421_BWSA_3Oaks_FlipToWin_556x276_PromoImage.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/slots/provider-3Oaks-Gaming"
+    },
+    {
+      "offerKey": "betway-1787",
+      "productCategory": "SLOTS",
+      "title": "Evolution Daily Jackpot Slots",
+      "subtitle": null,
+      "bodyText": "Play Evolution Slot games from 19:00 - 21:00 for a share of R250K daily.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2029-10-30"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/36230_Betway_SA_DailyJackpotSlots_Evolution_edition_556x276_PromoImage.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/casino-games/provider-Red-Tiger"
+    },
+    {
+      "offerKey": "betway-1788",
+      "productCategory": "SLOTS",
+      "title": "Pragmatic Play Daily Jackpot Slots",
+      "subtitle": null,
+      "bodyText": "Play Pragmatic Play Slot games from 19:00 - 21:00 for a share of R250K daily.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid until",
+          "value": "2029-10-31"
+        }
+      ],
+      "imageUrl": "https://media.betwayafrica.com/medialibraries/content.gmgamingsystems.com/Promotions/36233_Betway_SA_DailyJackpotSlots_PragmaticPlay_edition_556x276_PromoImage_Slots.jpg",
+      "actionLabel": "Bet Now",
+      "actionUrl": "https://www.betway.co.za/lobby/casino-games/provider-Pragmatic-Play"
+    }
+  ]
+}

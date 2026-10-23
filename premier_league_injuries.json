@@ -1,37 +1,49 @@
 {
-  "scrapedAt": "2026-10-16T12:41:19.573Z",
-  "sourceUpdatedAt": "12:29 BST, 16 October 2026.",
+  "scrapedAt": "2026-10-23T08:08:27.204Z",
+  "sourceUpdatedAt": "18:15 BST, 22 October 2026.",
   "sourceUrl": "https://www.premierleague.com/en/latest-player-injuries",
   "injuries": [
     {
       "team": "Arsenal",
-      "player": "Christos Tzolis",
+      "player": "Bukayo Saka",
+      "injury": "Quad",
+      "latestUrl": "https://www.arsenal.com/news/every-word-from-artetas-post-bayern-presser-azIsw7P3tdJO"
+    },
+    {
+      "team": "Arsenal",
+      "player": "Kepa Arrizabalaga",
       "injury": "Not specified",
-      "latestUrl": "https://www.arsenal.com/news/injury-latest-on-havertz-tzolis-rice-konsa-and-white-a5Pwa1R5zpMU"
-    },
-    {
-      "team": "Arsenal",
-      "player": "William Saliba",
-      "injury": "Back",
-      "latestUrl": "https://www.arsenal.com/news/artetas-injury-update-in-hincapie-zubimendi-and-saliba-aDJYC5B5SkSn"
-    },
-    {
-      "team": "Arsenal",
-      "player": "Martin Zubimendi",
-      "injury": "Ankle",
-      "latestUrl": "https://www.arsenal.com/news/every-word-from-mikel-artetas-pre-lille-presser-agEnG4Y2wWIW"
+      "latestUrl": "https://www.arsenal.com/news/team-news-havertz-saka-and-odegaard-return-v-forest-angba8L4ot3m"
     },
     {
       "team": "Arsenal",
       "player": "Piero Hincapie",
       "injury": "Ankle",
-      "latestUrl": "https://www.arsenal.com/news/every-word-from-artetas-post-lille-press-conference-ayoR26N8ce4k"
+      "latestUrl": "https://www.arsenal.com/news/every-word-of-mikel-artetas-pre-bayern-presser-agdMk0a7U4Ft"
+    },
+    {
+      "team": "Arsenal",
+      "player": "Christos Tzolis",
+      "injury": "Not specified",
+      "latestUrl": "https://www.arsenal.com/news/injury-latest-on-zubimendi-hincapie-tzolis-and-saliba-a2zDM9u0H6CB"
+    },
+    {
+      "team": "Arsenal",
+      "player": "William Saliba",
+      "injury": "Back",
+      "latestUrl": "https://www.arsenal.com/news/injury-latest-on-zubimendi-hincapie-tzolis-and-saliba-a2zDM9u0H6CB"
     },
     {
       "team": "Aston Villa",
-      "player": "Leon Goretzka",
+      "player": "Johan Manzambi",
       "injury": "Not specified",
-      "latestUrl": "https://www.avfc.co.uk/news/2026/october/13/news-team-news-for-fenerbahce-tilt/"
+      "latestUrl": "https://www.avfc.co.uk/news/2026/october/20/prematch-team-news-for-viking-visit/"
+    },
+    {
+      "team": "Aston Villa",
+      "player": "Aaron Wan-Bissaka",
+      "injury": "Not specified",
+      "latestUrl": "https://www.avfc.co.uk/news/2026/october/20/prematch-team-news-for-viking-visit/"
     },
     {
       "team": "Aston Villa",
@@ -43,7 +55,7 @@
       "team": "Aston Villa",
       "player": "Ian Maatsen",
       "injury": "Not specified",
-      "latestUrl": "https://www.avfc.co.uk/news/2026/october/13/news-team-news-for-fenerbahce-tilt/"
+      "latestUrl": "https://www.avfc.co.uk/news/2026/october/20/prematch-team-news-for-viking-visit/"
     },
     {
       "team": "Aston Villa",
@@ -73,7 +85,7 @@
       "team": "Aston Villa",
       "player": "George Hemmings",
       "injury": "Not specified",
-      "latestUrl": "https://www.avfc.co.uk/news/2026/october/13/news-team-news-for-fenerbahce-tilt/"
+      "latestUrl": "https://www.avfc.co.uk/news/2026/october/16/prematch-team-news-for-magpies-meeting/"
     },
     {
       "team": "Bournemouth",
@@ -85,7 +97,7 @@
       "team": "Bournemouth",
       "player": "Junior Kroupi",
       "injury": "Foot",
-      "latestUrl": "https://www.afcb.co.uk/news/2026/september/10/injury-news--updates-on-/?utm_source=premier_league&utm_medium=referral&utm_campaign=fantasy&utm_content=injuries-flag?utm_source=premier_league&utm_medium=referral&utm_campaign=fantasy&utm_content=injuries-flag"
+      "latestUrl": "https://www.afcb.co.uk/news/2026/october/21/injury-news--rose-gives-update-on-kroupi-return/"
     },
     {
       "team": "Bournemouth",
@@ -101,27 +113,9 @@
     },
     {
       "team": "Brentford",
-      "player": "Kevin Schade",
-      "injury": "Shoulder",
-      "latestUrl": "https://www.brentfordfc.com/en/news/first-team-keith-andrews-kevin-schade-jannik-schuster-injury-update-brentford"
-    },
-    {
-      "team": "Brentford",
-      "player": "Mathias Jensen",
-      "injury": "Not specified",
-      "latestUrl": "https://www.brentfordfc.com/en/news/first-team-news-aston-villa-v-brentford-premier-league-10-10-2026"
-    },
-    {
-      "team": "Brentford",
-      "player": "Nathan Collins",
-      "injury": "Calf",
-      "latestUrl": "https://www.brentfordfc.com/en/news/first-team-news-aston-villa-v-brentford-premier-league-10-10-2026"
-    },
-    {
-      "team": "Brentford",
-      "player": "Sepp van den Berg",
-      "injury": "Groin",
-      "latestUrl": "https://www.brentfordfc.com/en/news/first-team-news-aston-villa-v-brentford-premier-league-10-10-2026"
+      "player": "Jannik Schuster",
+      "injury": "Knock / Illness",
+      "latestUrl": "https://www.brentfordfc.com/en/news/first-team-news-hull-city-v-brentford-premier-league-25-10-2026"
     },
     {
       "team": "Brentford",
@@ -133,13 +127,13 @@
       "team": "Brentford",
       "player": "Josh Dasilva",
       "injury": "Hamstring",
-      "latestUrl": "https://www.brentfordfc.com/en/news/first-team-news-aston-villa-v-brentford-premier-league-10-10-2026"
+      "latestUrl": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
     },
     {
       "team": "Brentford",
-      "player": "Jannik Schuster",
-      "injury": "Knock",
-      "latestUrl": "https://www.brentfordfc.com/en/news/first-team-keith-andrews-kevin-schade-jannik-schuster-injury-update-brentford"
+      "player": "Kaye Furo",
+      "injury": "Metatarsal",
+      "latestUrl": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
     },
     {
       "team": "Brighton and Hove Albion",
@@ -191,9 +185,27 @@
     },
     {
       "team": "Chelsea",
+      "player": "Emiliano Martinez",
+      "injury": "Not specified",
+      "latestUrl": "https://www.chelseafc.com/en/news/article/injury-update-emiliano-martinez"
+    },
+    {
+      "team": "Chelsea",
       "player": "Jamie Gittens",
       "injury": "Not specified",
-      "latestUrl": "https://www.chelseafc.com/en/news/article/xabi-alonso-confirms-chelsea-team-news-for-bournemouth"
+      "latestUrl": "https://www.chelseafc.com/en/news/article/xabi-alonso-confirms-chelsea-team-news-for-everton"
+    },
+    {
+      "team": "Chelsea",
+      "player": "Emmanuel Emegha",
+      "injury": "Knock",
+      "latestUrl": "https://www.chelseafc.com/en/news/article/xabi-alonso-confirms-chelsea-team-news-for-everton"
+    },
+    {
+      "team": "Chelsea",
+      "player": "Pep Chavarria",
+      "injury": "Not specified",
+      "latestUrl": "https://www.chelseafc.com/en/news/article/alonso-on-his-alteration-for-everton-and-midfield-duo"
     },
     {
       "team": "Coventry City",
@@ -222,14 +234,8 @@
     {
       "team": "Coventry City",
       "player": "Josh Eccles",
-      "injury": "Not specified",
-      "latestUrl": "https://www.ccfc.co.uk/news/2026/october/08/frank-lampard-provides-injury-update-ahead-of-newcastle-united-clash/"
-    },
-    {
-      "team": "Crystal Palace",
-      "player": "Jean-Philippe Mateta",
-      "injury": "Muscle",
-      "latestUrl": "https://www.cpfc.co.uk/news/first-team/team-news-sage-updates-on-mateta-and-khalaili-ahead-of-forest/"
+      "injury": "Ankle",
+      "latestUrl": "https://youtu.be/r_iOX-wdhVQ?si=T5n9dGnUs9DbfLSS&t=240"
     },
     {
       "team": "Crystal Palace",
@@ -241,7 +247,7 @@
       "team": "Crystal Palace",
       "player": "Dean Henderson",
       "injury": "Ankle",
-      "latestUrl": "https://www.cpfc.co.uk/news/first-team/team-news-sage-updates-on-mateta-and-khalaili-ahead-of-forest/"
+      "latestUrl": "https://www.cpfc.co.uk/news/first-team/sage-reveals-expectations-focus-for-palace-v-brighton-rivalry/"
     },
     {
       "team": "Crystal Palace",
@@ -250,22 +256,10 @@
       "latestUrl": "https://www.cpfc.co.uk/news/first-team/press-conference-team-news-crystal-palace-manchester-city-august-2026/"
     },
     {
-      "team": "Everton",
-      "player": "Vitalii Mykolenko",
-      "injury": "Not specified",
-      "latestUrl": "https://www.evertonfc.com/news/2026/october/09/moyes-reveals-everton-team-news-for-hull-trip/"
-    },
-    {
       "team": "Fulham",
       "player": "Hugo Larsson",
       "injury": "Groin",
       "latestUrl": "https://www.fulhamfc.com/news/2026/october/16/pre-hull-press-conference/"
-    },
-    {
-      "team": "Fulham",
-      "player": "Tom Cairney",
-      "injury": "Knee",
-      "latestUrl": "https://www.fulhamfc.com/news/2026/october/09/pre-ipswich-press-conference/"
     },
     {
       "team": "Hull City",
@@ -311,6 +305,12 @@
     },
     {
       "team": "Ipswich Town",
+      "player": "Sasa Lukic",
+      "injury": "Not specified",
+      "latestUrl": "https://www.itfc.co.uk/news/2026/october/22/early-nottingham-forest-team-news/"
+    },
+    {
+      "team": "Ipswich Town",
       "player": "Jack Taylor",
       "injury": "Knee",
       "latestUrl": "https://www.itfc.co.uk/news/2026/october/09/Gary-ONeil-early-Town-team-news-Fulham-Premier-League/"
@@ -319,13 +319,13 @@
       "team": "Leeds United",
       "player": "Joe Rodon",
       "injury": "Hamstring",
-      "latestUrl": "https://www.leedsunited.com/en/news/squad-update-farke-on-bahoya-wilson-and-more"
+      "latestUrl": "https://www.leedsunited.com/en/news/team-news-daniel-farke-gives-positive-update-on-wales-duo"
     },
     {
       "team": "Leeds United",
       "player": "Dan James",
       "injury": "Back",
-      "latestUrl": "https://www.leedsunited.com/en/news/squad-update-farke-on-bahoya-wilson-and-more"
+      "latestUrl": "https://www.leedsunited.com/en/news/team-news-daniel-farke-gives-positive-update-on-wales-duo"
     },
     {
       "team": "Leeds United",
@@ -337,19 +337,13 @@
       "team": "Liverpool",
       "player": "Dominik Szoboszlai",
       "injury": "Hamstring",
-      "latestUrl": "https://www.liverpoolfc.com/news/fitness-update-andoni-iraola-gakpo-isak-szoboszlai-changes-brentford"
+      "latestUrl": "https://www.liverpoolfc.com/news/injury-news-jeremie-frimpong-dominik-szoboszlai-liverpool-fc"
     },
     {
       "team": "Liverpool",
-      "player": "Alexander Isak",
+      "player": "Jeremie Frimpong",
       "injury": "Not specified",
-      "latestUrl": "https://www.liverpoolfc.com/news/fitness-update-andoni-iraola-gakpo-isak-szoboszlai-changes-brentford"
-    },
-    {
-      "team": "Liverpool",
-      "player": "Cody Gakpo",
-      "injury": "Not specified",
-      "latestUrl": "https://www.liverpoolfc.com/news/fitness-update-andoni-iraola-gakpo-isak-szoboszlai-changes-brentford"
+      "latestUrl": "https://www.liverpoolfc.com/news/injury-news-jeremie-frimpong-dominik-szoboszlai-liverpool-fc"
     },
     {
       "team": "Liverpool",
@@ -376,40 +370,76 @@
       "latestUrl": "https://www.liverpoolfc.com/news/afc-bournemouth-v-liverpool-team-news-1"
     },
     {
+      "team": "Manchester City",
+      "player": "Antoine Semenyo",
+      "injury": "Not specified",
+      "latestUrl": "https://www.mancity.com/news/mens/maresca-aek-athen-written-press-conference-63928003"
+    },
+    {
+      "team": "Manchester City",
+      "player": "Matheus Nunes",
+      "injury": "Not specified",
+      "latestUrl": "https://www.mancity.com/news/mens/maresca-aek-athen-written-press-conference-63928003"
+    },
+    {
+      "team": "Manchester City",
+      "player": "Nico O'Reilly",
+      "injury": "Not specified",
+      "latestUrl": "https://www.mancity.com/news/mens/maresca-aek-athen-written-press-conference-63928003"
+    },
+    {
+      "team": "Manchester City",
+      "player": "Mateo Kovacic",
+      "injury": "Knee",
+      "latestUrl": "https://www.mancity.com/news/mens/maresca-aek-athen-written-press-conference-63928003"
+    },
+    {
+      "team": "Manchester United",
+      "player": "Marcus Rashford",
+      "injury": "Not specified",
+      "latestUrl": "https://www.manutd.com/en/news/press-conference-team-news-for-como-v-united"
+    },
+    {
+      "team": "Manchester United",
+      "player": "Lisandro Martinez",
+      "injury": "Not specified",
+      "latestUrl": "https://www.manutd.com/en/news/press-conference-team-news-for-como-v-united"
+    },
+    {
+      "team": "Manchester United",
+      "player": "Ayden Heaven",
+      "injury": "Not specified",
+      "latestUrl": "https://www.manutd.com/en/news/press-conference-team-news-for-como-v-united"
+    },
+    {
       "team": "Manchester United",
       "player": "Kobbie Mainoo",
       "injury": "Not specified",
-      "latestUrl": "https://www.manutd.com/en/news/team-news-for-atletico-de-madrid-v-united"
+      "latestUrl": "https://www.manutd.com/en/news/press-conference-team-news-for-como-v-united"
     },
     {
       "team": "Manchester United",
       "player": "Luke Shaw",
       "injury": "Not specified",
-      "latestUrl": "https://www.manutd.com/en/news/team-news-for-atletico-de-madrid-v-united"
-    },
-    {
-      "team": "Manchester United",
-      "player": "Patrick Dorgu",
-      "injury": "Not specified",
-      "latestUrl": "https://www.manutd.com/en/news/team-news-for-united-v-spurs-10-October"
+      "latestUrl": "https://www.manutd.com/en/news/press-conference-team-news-for-como-v-united"
     },
     {
       "team": "Manchester United",
       "player": "Benjamin Sesko",
       "injury": "Knock",
-      "latestUrl": "https://www.manutd.com/en/news/team-news-for-united-v-spurs-10-October"
+      "latestUrl": "https://www.manutd.com/en/news/benjamin-sesko-injury-news-before-como-v-united"
     },
     {
       "team": "Manchester United",
-      "player": "Noussair Mazraoui",
+      "player": "Patrick Dorgu",
       "injury": "Not specified",
-      "latestUrl": "https://www.manutd.com/en/news/team-news-for-united-v-spurs-10-October"
+      "latestUrl": "https://www.manutd.com/en/news/team-news-for-leeds-v-united-18-october-2026"
     },
     {
       "team": "Manchester United",
       "player": "Manuel Ugarte",
       "injury": "Knee",
-      "latestUrl": "https://www.manutd.com/en/news/ugarte-continues-his-rehab-at-carrington"
+      "latestUrl": "https://www.manutd.com/en/news/team-news-for-leeds-v-united-18-october-2026"
     },
     {
       "team": "Manchester United",
@@ -449,20 +479,14 @@
     },
     {
       "team": "Nottingham Forest",
+      "player": "Morgan Gibbs-White",
+      "injury": "Muscle",
+      "latestUrl": "https://www.nottinghamforest.co.uk/news/2026/october/21/team-news---gibbs-white-fit-to-return-against-ipswich/"
+    },
+    {
+      "team": "Nottingham Forest",
       "player": "Igor Jesus",
       "injury": "Calf",
-      "latestUrl": "https://www.nottinghamforest.co.uk/news/2026/october/09/team-news---duo-ruled-out-of-palace-trip/"
-    },
-    {
-      "team": "Nottingham Forest",
-      "player": "Neco Williams",
-      "injury": "Illness",
-      "latestUrl": "https://www.nottinghamforest.co.uk/news/2026/october/09/team-news---duo-ruled-out-of-palace-trip/"
-    },
-    {
-      "team": "Nottingham Forest",
-      "player": "Nikola Milenkovic",
-      "injury": "Knee",
       "latestUrl": "https://www.nottinghamforest.co.uk/news/2026/october/09/team-news---duo-ruled-out-of-palace-trip/"
     },
     {
@@ -470,6 +494,12 @@
       "player": "Nicolo Savona",
       "injury": "Knee",
       "latestUrl": "https://www.nottinghamforest.co.uk/news/2026/september/17/early-team-news-for-coventry-clash/"
+    },
+    {
+      "team": "Sunderland",
+      "player": "Brian Brobbey",
+      "injury": "Hamstring",
+      "latestUrl": "https://www.safc.com/news/2026/october/21/le-bris-confirms-brobbey-timeline/"
     },
     {
       "team": "Sunderland",
@@ -491,15 +521,39 @@
     },
     {
       "team": "Tottenham Hotspur",
-      "player": "Pedro Porro",
-      "injury": "Knock",
-      "latestUrl": "https://www.tottenhamhotspur.com/match/2645253/manchester-united-tottenham-hotspur?tab=liveblog&shortlink=ypfnbez6&source_caller=ui&pid=X&af_dp=thfc-app%3A%2F%2F&af_xp=custom&deep_link_value=match%2Fcommentary%2F2645253&onelink_id=ZAdS&c=Team+news+%7C+Man+Utd+%28A%29+%7C+Content"
+      "player": "Tosin Adarabioyo",
+      "injury": "Not specified",
+      "latestUrl": "https://www.tottenhamhotspur.com/match/2645264/tottenham-hotspur-coventry-city?tab=liveblog"
     },
     {
       "team": "Tottenham Hotspur",
-      "player": "Dejan Kulusevski",
+      "player": "Destiny Udogie",
       "injury": "Knee",
-      "latestUrl": "https://www.tottenhamhotspur.com/match/2645253/manchester-united-tottenham-hotspur?tab=liveblog&shortlink=ypfnbez6&source_caller=ui&pid=X&af_dp=thfc-app%3A%2F%2F&af_xp=custom&deep_link_value=match%2Fcommentary%2F2645253&onelink_id=ZAdS&c=Team+news+%7C+Man+Utd+%28A%29+%7C+Content"
+      "latestUrl": "https://www.tottenhamhotspur.com/news/1179150/update-destiny-udogie?af_dp=thfc-app%3A%2F%2F&deep_link_value=news%2F1179150%2Fupdate-destiny-udogie&onelink_id=ZAdS&af_xp=custom&c=Destiny%20Udogie%20update%20|%20Content&shortlink=wvuoc8lu&source_caller=ui&pid=X"
+    },
+    {
+      "team": "Tottenham Hotspur",
+      "player": "Andy Robertson",
+      "injury": "Not specified",
+      "latestUrl": "https://www.tottenhamhotspur.com/match/2645264/tottenham-hotspur-coventry-city?tab=liveblog"
+    },
+    {
+      "team": "Tottenham Hotspur",
+      "player": "Lucas Bergvall",
+      "injury": "Knee",
+      "latestUrl": "https://www.tottenhamhotspur.com/news/1178784/spurs-vs-coventry-every-word-of-roberto-de-zerbis-pre-match-press-conference"
+    },
+    {
+      "team": "Tottenham Hotspur",
+      "player": "Savio",
+      "injury": "Muscle",
+      "latestUrl": "https://www.tottenhamhotspur.com/news/1178784/spurs-vs-coventry-every-word-of-roberto-de-zerbis-pre-match-press-conference"
+    },
+    {
+      "team": "Tottenham Hotspur",
+      "player": "Pedro Porro",
+      "injury": "Knock",
+      "latestUrl": "https://www.tottenhamhotspur.com/news/1178784/spurs-vs-coventry-every-word-of-roberto-de-zerbis-pre-match-press-conference"
     },
     {
       "team": "Tottenham Hotspur",

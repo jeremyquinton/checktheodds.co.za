@@ -4,138 +4,18 @@
   "sport": "Soccer",
   "country": "England",
   "competition": "Premier League",
-  "scrapedAt": "2026-10-16T12:57:52.677Z",
+  "scrapedAt": "2026-10-23T08:07:16.386Z",
   "sourceUrl": "https://easybet.co.za/sports/match/football/england/premier-league",
   "events": [
-    {
-      "eventId": "3462",
-      "homeTeam": "Everton FC",
-      "awayTeam": "Chelsea FC",
-      "startTime": "2026-10-17 13:30",
-      "odds": {
-        "home": 3.15,
-        "draw": 3.7,
-        "away": 2.2
-      },
-      "url": "https://easybet.co.za/sports/match/football/england/premier-league/everton-fc-chelsea-fc-3462"
-    },
-    {
-      "eventId": "5080",
-      "homeTeam": "Brentford FC",
-      "awayTeam": "Liverpool FC",
-      "startTime": "2026-10-17 16:00",
-      "odds": {
-        "home": 2.45,
-        "draw": 3.65,
-        "away": 2.75
-      },
-      "url": "https://easybet.co.za/sports/match/football/england/premier-league/brentford-fc-liverpool-fc-5080"
-    },
-    {
-      "eventId": "4475",
-      "homeTeam": "Manchester City",
-      "awayTeam": "Ipswich Town",
-      "startTime": "2026-10-17 16:00",
-      "odds": {
-        "home": 1.25,
-        "draw": 6.6,
-        "away": 10
-      },
-      "url": "https://easybet.co.za/sports/match/football/england/premier-league/manchester-city-ipswich-town-4475"
-    },
-    {
-      "eventId": "5217",
-      "homeTeam": "Fulham FC",
-      "awayTeam": "Hull City",
-      "startTime": "2026-10-17 16:00",
-      "odds": {
-        "home": 1.72,
-        "draw": 3.9,
-        "away": 4.6
-      },
-      "url": "https://easybet.co.za/sports/match/football/england/premier-league/fulham-fc-hull-city-5217"
-    },
-    {
-      "eventId": "2625",
-      "homeTeam": "Newcastle United",
-      "awayTeam": "Aston Villa",
-      "startTime": "2026-10-17 18:30",
-      "odds": {
-        "home": 2.32,
-        "draw": 3.65,
-        "away": 2.9
-      },
-      "url": "https://easybet.co.za/sports/match/football/england/premier-league/newcastle-united-aston-villa-2625"
-    },
-    {
-      "eventId": "5236",
-      "homeTeam": "Leeds United",
-      "awayTeam": "Manchester United",
-      "startTime": "18 Oct, 15:00",
-      "odds": {
-        "home": 2.38,
-        "draw": 3.55,
-        "away": 2.85
-      },
-      "url": "https://easybet.co.za/sports/match/football/england/premier-league/leeds-united-manchester-united-5236"
-    },
-    {
-      "eventId": "1195",
-      "homeTeam": "Brighton & Hove Albion",
-      "awayTeam": "Crystal Palace",
-      "startTime": "18 Oct, 15:00",
-      "odds": {
-        "home": 1.54,
-        "draw": 4.5,
-        "away": 5.6
-      },
-      "url": "https://easybet.co.za/sports/match/football/england/premier-league/brighton-hove-albion-crystal-palace-1195"
-    },
-    {
-      "eventId": "3407",
-      "homeTeam": "AFC Bournemouth",
-      "awayTeam": "Sunderland AFC",
-      "startTime": "18 Oct, 15:00",
-      "odds": {
-        "home": 2.13,
-        "draw": 3.45,
-        "away": 3.45
-      },
-      "url": "https://easybet.co.za/sports/match/football/england/premier-league/afc-bournemouth-sunderland-afc-3407"
-    },
-    {
-      "eventId": "5696",
-      "homeTeam": "Nottingham Forest",
-      "awayTeam": "Arsenal FC",
-      "startTime": "18 Oct, 17:30",
-      "odds": {
-        "home": 5.6,
-        "draw": 3.9,
-        "away": 1.63
-      },
-      "url": "https://easybet.co.za/sports/match/football/england/premier-league/nottingham-forest-arsenal-fc-5696"
-    },
-    {
-      "eventId": "5900",
-      "homeTeam": "Tottenham Hotspur",
-      "awayTeam": "Coventry City",
-      "startTime": "19 Oct, 21:00",
-      "odds": {
-        "home": 1.47,
-        "draw": 4.7,
-        "away": 6
-      },
-      "url": "https://easybet.co.za/sports/match/football/england/premier-league/tottenham-hotspur-coventry-city-5900"
-    },
     {
       "eventId": "1399",
       "homeTeam": "Ipswich Town",
       "awayTeam": "Nottingham Forest",
-      "startTime": "23 Oct, 21:00",
+      "startTime": "2026-10-23 21:00",
       "odds": {
         "home": 3.05,
-        "draw": 3.45,
-        "away": 2.25
+        "draw": 3.5,
+        "away": 2.33
       },
       "url": "https://easybet.co.za/sports/match/football/england/premier-league/ipswich-town-nottingham-forest-1399"
     },
@@ -143,11 +23,11 @@
       "eventId": "3108",
       "homeTeam": "Aston Villa",
       "awayTeam": "Manchester City",
-      "startTime": "24 Oct, 13:30",
+      "startTime": "2026-10-24 13:30",
       "odds": {
-        "home": 4.3,
-        "draw": 4,
-        "away": 1.72
+        "home": 4.9,
+        "draw": 4.4,
+        "away": 1.63
       },
       "url": "https://easybet.co.za/sports/match/football/england/premier-league/aston-villa-manchester-city-3108"
     },
@@ -155,11 +35,11 @@
       "eventId": "3125",
       "homeTeam": "Arsenal FC",
       "awayTeam": "Everton FC",
-      "startTime": "24 Oct, 16:00",
+      "startTime": "2026-10-24 16:00",
       "odds": {
-        "home": 1.37,
-        "draw": 4.8,
-        "away": 8.2
+        "home": 1.44,
+        "draw": 4.6,
+        "away": 7.2
       },
       "url": "https://easybet.co.za/sports/match/football/england/premier-league/arsenal-fc-everton-fc-3125"
     },
@@ -167,11 +47,11 @@
       "eventId": "3135",
       "homeTeam": "Coventry City",
       "awayTeam": "Fulham FC",
-      "startTime": "24 Oct, 16:00",
+      "startTime": "2026-10-24 16:00",
       "odds": {
-        "home": 2.85,
-        "draw": 3.5,
-        "away": 2.35
+        "home": 3.1,
+        "draw": 3.45,
+        "away": 2.29
       },
       "url": "https://easybet.co.za/sports/match/football/england/premier-league/coventry-city-fulham-fc-3135"
     },
@@ -179,11 +59,11 @@
       "eventId": "3129",
       "homeTeam": "Chelsea FC",
       "awayTeam": "Tottenham Hotspur",
-      "startTime": "24 Oct, 18:30",
+      "startTime": "2026-10-24 18:30",
       "odds": {
-        "home": 1.82,
-        "draw": 3.95,
-        "away": 3.9
+        "home": 1.72,
+        "draw": 4.2,
+        "away": 4.4
       },
       "url": "https://easybet.co.za/sports/match/football/england/premier-league/chelsea-fc-tottenham-hotspur-3129"
     },
@@ -193,9 +73,9 @@
       "awayTeam": "Brentford FC",
       "startTime": "25 Oct, 16:00",
       "odds": {
-        "home": 4.5,
-        "draw": 3.9,
-        "away": 1.72
+        "home": 4.8,
+        "draw": 4,
+        "away": 1.69
       },
       "url": "https://easybet.co.za/sports/match/football/england/premier-league/hull-city-brentford-fc-2706"
     },
@@ -205,9 +85,9 @@
       "awayTeam": "Brighton & Hove Albion",
       "startTime": "25 Oct, 16:00",
       "odds": {
-        "home": 2.05,
-        "draw": 3.75,
-        "away": 3.25
+        "home": 2.15,
+        "draw": 3.7,
+        "away": 3.15
       },
       "url": "https://easybet.co.za/sports/match/football/england/premier-league/liverpool-fc-brighton-hove-albion-3063"
     },
@@ -217,9 +97,9 @@
       "awayTeam": "Newcastle United",
       "startTime": "25 Oct, 16:00",
       "odds": {
-        "home": 2.65,
-        "draw": 3.55,
-        "away": 2.49
+        "home": 2.9,
+        "draw": 3.65,
+        "away": 2.31
       },
       "url": "https://easybet.co.za/sports/match/football/england/premier-league/crystal-palace-newcastle-united-3024"
     },
@@ -229,9 +109,9 @@
       "awayTeam": "AFC Bournemouth",
       "startTime": "25 Oct, 16:00",
       "odds": {
-        "home": 1.79,
-        "draw": 4,
-        "away": 3.95
+        "home": 2.13,
+        "draw": 3.65,
+        "away": 3.25
       },
       "url": "https://easybet.co.za/sports/match/football/england/premier-league/manchester-united-afc-bournemouth-2593"
     },
@@ -241,11 +121,131 @@
       "awayTeam": "Leeds United",
       "startTime": "25 Oct, 18:30",
       "odds": {
-        "home": 2.75,
-        "draw": 3.3,
-        "away": 2.55
+        "home": 3.15,
+        "draw": 3.25,
+        "away": 2.36
       },
       "url": "https://easybet.co.za/sports/match/football/england/premier-league/sunderland-afc-leeds-united-3140"
+    },
+    {
+      "eventId": "5716",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "Manchester United",
+      "startTime": "31 Oct, 14:30",
+      "odds": {
+        "home": 1.83,
+        "draw": 3.9,
+        "away": 3.85
+      },
+      "url": "https://easybet.co.za/sports/match/football/england/premier-league/chelsea-fc-manchester-united-5716"
+    },
+    {
+      "eventId": "4195",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Leeds United",
+      "startTime": "31 Oct, 17:00",
+      "odds": {
+        "home": 2.18,
+        "draw": 3.45,
+        "away": 3.2
+      },
+      "url": "https://easybet.co.za/sports/match/football/england/premier-league/afc-bournemouth-leeds-united-4195"
+    },
+    {
+      "eventId": "5516",
+      "homeTeam": "Coventry City",
+      "awayTeam": "Sunderland AFC",
+      "startTime": "31 Oct, 17:00",
+      "odds": {
+        "home": 2.75,
+        "draw": 3.35,
+        "away": 2.5
+      },
+      "url": "https://easybet.co.za/sports/match/football/england/premier-league/coventry-city-sunderland-afc-5516"
+    },
+    {
+      "eventId": "1298",
+      "homeTeam": "Hull City",
+      "awayTeam": "Ipswich Town",
+      "startTime": "31 Oct, 17:00",
+      "odds": {
+        "home": 2.6,
+        "draw": 3.45,
+        "away": 2.65
+      },
+      "url": "https://easybet.co.za/sports/match/football/england/premier-league/hull-city-ipswich-town-1298"
+    },
+    {
+      "eventId": "2447",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "Nottingham Forest",
+      "startTime": "31 Oct, 17:00",
+      "odds": {
+        "home": 2.03,
+        "draw": 3.6,
+        "away": 3.45
+      },
+      "url": "https://easybet.co.za/sports/match/football/england/premier-league/brentford-fc-nottingham-forest-2447"
+    },
+    {
+      "eventId": "1685",
+      "homeTeam": "Manchester City",
+      "awayTeam": "Brighton & Hove Albion",
+      "startTime": "31 Oct, 17:00",
+      "odds": {
+        "home": 1.68,
+        "draw": 4.2,
+        "away": 4.4
+      },
+      "url": "https://easybet.co.za/sports/match/football/england/premier-league/manchester-city-brighton-hove-albion-1685"
+    },
+    {
+      "eventId": "1059",
+      "homeTeam": "Tottenham Hotspur",
+      "awayTeam": "Crystal Palace",
+      "startTime": "31 Oct, 19:30",
+      "odds": {
+        "home": 1.61,
+        "draw": 4.2,
+        "away": 5
+      },
+      "url": "https://easybet.co.za/sports/match/football/england/premier-league/tottenham-hotspur-crystal-palace-1059"
+    },
+    {
+      "eventId": "3053",
+      "homeTeam": "Aston Villa",
+      "awayTeam": "Fulham FC",
+      "startTime": "31 Oct, 22:00",
+      "odds": {
+        "home": 2.07,
+        "draw": 3.55,
+        "away": 3.4
+      },
+      "url": "https://easybet.co.za/sports/match/football/england/premier-league/aston-villa-fulham-fc-3053"
+    },
+    {
+      "eventId": "2876",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "Arsenal FC",
+      "startTime": "01 Nov, 18:30",
+      "odds": {
+        "home": 3.2,
+        "draw": 3.6,
+        "away": 2.14
+      },
+      "url": "https://easybet.co.za/sports/match/football/england/premier-league/liverpool-fc-arsenal-fc-2876"
+    },
+    {
+      "eventId": "3134",
+      "homeTeam": "Newcastle United",
+      "awayTeam": "Everton FC",
+      "startTime": "02 Nov, 22:00",
+      "odds": {
+        "home": 2.23,
+        "draw": 3.65,
+        "away": 3
+      },
+      "url": "https://easybet.co.za/sports/match/football/england/premier-league/newcastle-united-everton-fc-3134"
     }
   ]
 }

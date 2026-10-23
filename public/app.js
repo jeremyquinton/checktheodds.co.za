@@ -18,6 +18,9 @@ const bookmakerColors = {
   play: '#00695c',
   supabets: '#166534',
   yesplay: '#ef4135',
+  sportybet: '#f2a900',
+  sportingbet: '#c51f32',
+  betfred: '#c8102e',
 };
 
 const bookmakerLogos = new Set([
@@ -324,7 +327,7 @@ function renderFixture() {
 
     header.append(
       mark,
-      createElement('small', null, 'Full market'),
+      createElement('small', null, bookmaker.marketLabel ?? 'Full market'),
     );
     grid.append(header);
   }
@@ -339,13 +342,15 @@ function renderFixture() {
     grid.append(createElement('div', 'outcome-label', label));
 
     for (const bookmaker of fixture.bookmakers) {
+      const marketLabel = bookmaker.marketLabel ?? 'Full market';
+      const isBest = marketLabel === 'Full market' && bookmaker.odds[outcome] === fixture.bestOdds[outcome];
       const cell = createElement('div', 'price-cell');
       const price = createElement('a', `price ${bookmaker.movement[outcome]}`, formatPrice(bookmaker.odds[outcome]));
       price.href = bookmaker.url;
       price.target = '_blank';
       price.rel = 'noopener noreferrer';
-      price.title = `${bookmaker.name}: ${label} at ${formatPrice(bookmaker.odds[outcome])}`;
-      if (bookmaker.odds[outcome] === fixture.bestOdds[outcome]) {
+      price.title = `${bookmaker.name}: ${label} at ${formatPrice(bookmaker.odds[outcome])} (${marketLabel})`;
+      if (isBest) {
         price.classList.add('best');
         price.title += ' (best odds)';
       }

@@ -67,12 +67,14 @@ try {
         [...gameRow.querySelectorAll('.oddsBtn[data-event-name][data-price]')]
           .map((button) => [button.dataset.eventName, Number(button.dataset.price)]),
       );
+      const startTime = gameRow.querySelector('.gameMore')?.dataset.time ??
+        (date && time ? `${date} ${time}` : null);
 
       return {
         eventId: gameRow.dataset.gameId ?? null,
         homeTeam: gameRow.dataset.team1 ?? null,
         awayTeam: gameRow.dataset.team2 ?? null,
-        startTime: date && time ? `${date} ${time}` : null,
+        startTime,
         odds: {
           home: Number.isFinite(prices.W1) ? prices.W1 : null,
           draw: Number.isFinite(prices.Draw) ? prices.Draw : null,

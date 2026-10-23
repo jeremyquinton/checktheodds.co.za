@@ -1,16 +1,23 @@
 # Check the Odds
 
 Puppeteer scrapers for Premier League odds from Virgin Bet, Betway, Play.co.za,
-Hollywoodbets, Betfair South Africa, YesPlay, Supabets, and Easybet.
+Hollywoodbets, Betfair South Africa, YesPlay, Supabets, Easybet, SportyBet,
+Sportingbet, Betfred, PantherBet, ZARbet, and SuperSportBet.
 
 ## Run
 
 ```sh
+composer install
 npm install
-npm start
+npm run serve
 ```
 
-`npm start` scrapes Virgin Bet. The bookmaker-specific commands are:
+The odds comparison UI is served by PHP at `http://127.0.0.1:3000`. PHP must have
+PDO MySQL enabled; the page and its JSON routes use the same `MYSQL_*` variables
+or `MYSQL_URL` as the scrapers. The PHP page renders current odds on first load,
+and the existing browser script handles fixture navigation and odds formatting.
+
+The bookmaker-specific scraper commands are:
 
 ```sh
 npm run scrape:virgin-bet
@@ -22,12 +29,23 @@ npm run scrape:yesplay
 npm run scrape:yesplay-promotions
 npm run scrape:virgin-bet-promotions
 npm run scrape:betway-promotions
+npm run scrape:play-promotions
 npm run scrape:supabets
 npm run scrape:easybet
+npm run scrape:sportybet
+npm run scrape:sportingbet
+npm run scrape:betfred
+npm run scrape:pantherbet
+npm run scrape:zarbet
+npm run scrape:supersportbet
 npm run scrape:injuries
 npm run scrape:results
 npm run scrape:match-stats
 ```
+
+`npm start` remains an alias for the Virgin Bet scraper. New bookmaker odds are
+loaded from the `bookmakers` table, so adding a scraper does not require adding
+another UI-specific bookmaker entry.
 
 Run the separate Slim-based Bethunter free-bets app and compile its Tailwind stylesheet:
 
@@ -88,8 +106,16 @@ including descriptions, banner paths, categories, and CTAs. Preview it with
 with fewer than 15 complete promotions to avoid deactivating offers after a
 partial feed response.
 
-Shared Node modules are in `src/js/`, with Premier League scrapers in
-`src/js/premier_league/`. PHP CLI scrapers are in `src/php/premier_league/`.
+The Play.co.za promotions scraper reads the rendered promotion cards, including
+their source IDs, category labels, copy, and artwork. It uses a visible browser
+by default because Play blocks the headless request; set `HEADLESS=true` only if
+the site allows it in your environment. Preview with
+`npm run scrape:play-promotions -- --dry-run`; a normal run writes
+`play_promotions.json` and syncs source offers.
+
+Node scraper modules are in `src/js/`, with Premier League scrapers in
+`src/js/premier_league/`. The main odds UI and its data routes are in `public/`
+and `src/php/premier_league/`; PHP CLI scrapers are in `src/php/premier_league/`.
 
 Run every scraper sequentially:
 
@@ -98,7 +124,9 @@ npm run scrape:all
 ```
 
 Each scraper prints JSON and writes it to `odds.json`, `betway_odds.json`, or
-the bookmaker-specific odds file, including `easybet_odds.json`. Events include
+the bookmaker-specific odds file, including `easybet_odds.json`,
+`sportybet_odds.json`, `sportingbet_odds.json`, `betfred_odds.json`, and
+`pantherbet_odds.json`, `zarbet_odds.json`, and `supersportbet_odds.json`. Events include
 their IDs, teams, start times, available event URLs, and decimal home/draw/away
 odds.
 

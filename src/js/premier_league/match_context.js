@@ -1,8 +1,9 @@
 import mysql from 'mysql2/promise';
+import { pathToFileURL } from 'node:url';
 import { getConnectionConfig } from '../database.js';
 
-function parseArguments(argumentsList) {
-  const options = { matchId: null, formLimit: 15 };
+export function parseArguments(argumentsList) {
+  const options = { matchId: null, matchweek: null, season: null, formLimit: 15 };
 
   for (let index = 0; index < argumentsList.length; index += 1) {
     const argument = argumentsList[index];
@@ -14,13 +15,34 @@ function parseArguments(argumentsList) {
       options.formLimit = Number(argumentsList[++index]);
     } else if (argument.startsWith('--form-limit=')) {
       options.formLimit = Number(argument.slice('--form-limit='.length));
+    } else if (argument === '--matchweek') {
+      options.matchweek = /^\d+$/.test(argumentsList[index + 1] ?? '')
+        ? Number(argumentsList[++index])
+        : 'auto';
+    } else if (argument.startsWith('--matchweek=')) {
+      const value = argument.slice('--matchweek='.length);
+      options.matchweek = value === 'auto' ? 'auto' : Number(value);
+    } else if (argument === '--season') {
+      options.season = Number(argumentsList[++index]);
+    } else if (argument.startsWith('--season=')) {
+      options.season = Number(argument.slice('--season='.length));
     } else {
       throw new Error(`Unknown option: ${argument}`);
     }
   }
 
-  if (!options.matchId) {
-    throw new Error('Usage: npm run fixture:context -- --match-id=<external_match_id> [--form-limit=10..15]');
+  if (Boolean(options.matchId) === (options.matchweek !== null)) {
+    throw new Error('Provide either --match-id=<external_match_id> or --matchweek[=auto|1..38].');
+  }
+  if (options.matchweek !== null && options.matchweek !== 'auto'
+    && (!Number.isInteger(options.matchweek) || options.matchweek < 1 || options.matchweek > 38)) {
+    throw new Error('--matchweek must be auto or an integer from 1 to 38.');
+  }
+  if (options.season !== null && (!Number.isInteger(options.season) || options.season < 1992 || options.season > 9999)) {
+    throw new Error('--season must be a four-digit Premier League season start year.');
+  }
+  if (options.season !== null && options.matchweek === null) {
+    throw new Error('--season is only supported with --matchweek.');
   }
   if (!Number.isInteger(options.formLimit) || options.formLimit < 10 || options.formLimit > 15) {
     throw new Error('--form-limit must be an integer from 10 to 15.');
@@ -31,6 +53,23 @@ function parseArguments(argumentsList) {
 
 function numberOrNull(value) {
   return value == null ? null : Number(value);
+}
+
+export function selectBestOdds(prices) {
+  return Object.fromEntries(['home', 'draw', 'away'].map((outcome) => {
+    const valid = prices.filter((price) => Number.isFinite(price[outcome]) && price[outcome] > 1);
+    if (valid.length === 0) return [outcome, null];
+    const decimalOdds = Math.max(...valid.map((price) => price[outcome]));
+    return [outcome, {
+      decimalOdds,
+      bookmakers: valid.filter((price) => price[outcome] === decimalOdds).map((price) => ({
+        name: price.bookmaker,
+        slug: price.bookmakerSlug,
+        capturedAt: price.capturedAt,
+        marketUrl: price.marketUrl,
+      })),
+    }];
+  }));
 }
 
 function summarizeForm(matches) {
@@ -102,7 +141,7 @@ function finalizeVenueRecords(records) {
   return records;
 }
 
-async function buildMatchContext(connection, matchId, formLimit) {
+export async function buildMatchContext(connection, matchId, formLimit = 15) {
   const [fixtures] = await connection.execute(
     `SELECT
       matches.id,
@@ -500,6 +539,15 @@ async function buildMatchContext(connection, matchId, formLimit) {
     homeXg: numberOrNull(match.home_xg),
     awayXg: numberOrNull(match.away_xg),
   }));
+  const matchResultPrices = oddsRows.map((odds) => ({
+    bookmaker: odds.bookmaker,
+    bookmakerSlug: odds.bookmaker_slug,
+    capturedAt: odds.scraped_at,
+    home: numberOrNull(odds.home_odds),
+    draw: numberOrNull(odds.draw_odds),
+    away: numberOrNull(odds.away_odds),
+    marketUrl: odds.market_url,
+  }));
 
   return {
     generatedAt: new Date().toISOString(),
@@ -566,15 +614,8 @@ async function buildMatchContext(connection, matchId, formLimit) {
       otherCompetitionsAvailable: false,
     },
     bookmakerOdds: {
-      matchResult: oddsRows.map((odds) => ({
-        bookmaker: odds.bookmaker,
-        bookmakerSlug: odds.bookmaker_slug,
-        capturedAt: odds.scraped_at,
-        home: numberOrNull(odds.home_odds),
-        draw: numberOrNull(odds.draw_odds),
-        away: numberOrNull(odds.away_odds),
-        marketUrl: odds.market_url,
-      })),
+      matchResult: matchResultPrices,
+      bestOdds: selectBestOdds(matchResultPrices),
       overUnder25: { available: false, prices: null },
     },
     availability: {
@@ -588,33 +629,79 @@ async function buildMatchContext(connection, matchId, formLimit) {
   };
 }
 
-async function main() {
-  const argumentsList = process.argv.slice(2);
-  let matchId = null;
-  let formLimit = 15;
-  for (let index = 0; index < argumentsList.length; index += 1) {
-    const argument = argumentsList[index];
-    if (argument === '--match-id') matchId = argumentsList[++index] ?? null;
-    else if (argument.startsWith('--match-id=')) matchId = argument.slice('--match-id='.length);
-    else if (argument === '--form-limit') formLimit = Number(argumentsList[++index]);
-    else if (argument.startsWith('--form-limit=')) formLimit = Number(argument.slice('--form-limit='.length));
-    else throw new Error(`Unknown option: ${argument}`);
+export async function buildMatchweekContext(connection, { matchweek = 'auto', season = null, formLimit = 15 } = {}) {
+  let selectedSeason = season;
+  let selectedWeek = matchweek;
+  if (matchweek === 'auto') {
+    const [upcoming] = await connection.execute(
+      `SELECT season, matchweek
+       FROM premier_league_matches
+       WHERE period = 'PreMatch'
+         AND DATE(kickoff) >= UTC_DATE()
+         AND season = COALESCE(?, (SELECT MAX(season) FROM premier_league_matches))
+       ORDER BY kickoff, id
+       LIMIT 1`,
+      [season],
+    );
+    if (!upcoming.length) throw new Error('No upcoming matchweek found. Import fixtures or specify --matchweek and --season.');
+    selectedSeason = Number(upcoming[0].season);
+    selectedWeek = Number(upcoming[0].matchweek);
   }
-  if (!matchId) throw new Error('Usage: npm run fixture:context -- --match-id=<external_match_id> [--form-limit=10..15]');
-  if (!Number.isInteger(formLimit) || formLimit < 10 || formLimit > 15) {
-    throw new Error('--form-limit must be an integer from 10 to 15.');
+  const [matches] = await connection.execute(
+    `SELECT external_match_id, season, matchweek
+     FROM premier_league_matches
+     WHERE season = COALESCE(?, (SELECT MAX(season) FROM premier_league_matches))
+       AND matchweek = ?
+     ORDER BY kickoff, id`,
+    [selectedSeason, selectedWeek],
+  );
+  if (!matches.length) throw new Error('No fixtures found for the selected season and matchweek.');
+  const fixtures = [];
+  for (const match of matches) {
+    fixtures.push(await buildMatchContext(connection, match.external_match_id, formLimit));
   }
+  return {
+    generatedAt: new Date().toISOString(),
+    competition: 'Premier League',
+    season: Number(matches[0].season),
+    matchweek: Number(matches[0].matchweek),
+    fixtureCount: fixtures.length,
+    notes: [
+      'Includes every stored fixture in this matchweek, including completed matches and fixtures without odds.',
+      'Best odds are the highest latest stored decimal 1X2 prices per bookmaker, not predictions or value-bet recommendations.',
+      'Prices may be stale or unavailable; check capture times and verify with the bookmaker.',
+      'Injuries and odds are latest snapshots, not historical as-of-kickoff data; do not use this export for leakage-free backtesting.',
+      'Form, results and schedule cover Premier League only; unavailable data is marked explicitly.',
+    ],
+    bestOdds: fixtures.map((context) => ({
+      matchId: context.fixture.matchId,
+      homeTeam: context.fixture.homeTeam,
+      awayTeam: context.fixture.awayTeam,
+      kickoff: context.fixture.kickoff,
+      timezone: context.fixture.timezone,
+      period: context.fixture.period,
+      ...context.bookmakerOdds.bestOdds,
+    })),
+    fixtures,
+  };
+}
 
+async function main() {
+  const options = parseArguments(process.argv.slice(2));
   const connection = await mysql.createConnection(getConnectionConfig());
   try {
-    const context = await buildMatchContext(connection, matchId, formLimit);
+    const context = options.matchweek !== null
+      ? await buildMatchweekContext(connection, options)
+      : await buildMatchContext(connection, options.matchId, options.formLimit);
     process.stdout.write(`${JSON.stringify(context, null, 2)}\n`);
   } finally {
     await connection.end();
   }
 }
 
-main().catch((error) => {
-  process.stderr.write(`Unable to build match context: ${error.message}\n`);
-  process.exitCode = 1;
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((error) => {
+    process.stderr.write(`Unable to build match context: ${error.message}\n`);
+    process.exitCode = 1;
+  });
+}

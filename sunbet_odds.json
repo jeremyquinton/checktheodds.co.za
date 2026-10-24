@@ -1,0 +1,131 @@
+{
+  "bookmaker": "SunBet",
+  "bookmakerSlug": "sunbet",
+  "sport": "Soccer",
+  "country": "England",
+  "competition": "Premier League",
+  "scrapedAt": "2026-10-01T16:15:13.879Z",
+  "sourceUrl": "https://play.sunbet.co.za/#sports-hub/football/england/premier_league",
+  "events": [
+    {
+      "eventId": "1028072797",
+      "homeTeam": "Arsenal",
+      "awayTeam": "Leeds United",
+      "startTime": "10 Oct 13:30",
+      "odds": {
+        "home": 1.38,
+        "draw": 5.2,
+        "away": 8.5
+      },
+      "url": "https://play.sunbet.co.za/#/event/1028072797"
+    },
+    {
+      "eventId": "1028072796",
+      "homeTeam": "Aston Villa",
+      "awayTeam": "Brentford",
+      "startTime": "10 Oct 16:00",
+      "odds": {
+        "home": 2.6,
+        "draw": 3.65,
+        "away": 2.65
+      },
+      "url": "https://play.sunbet.co.za/#/event/1028072796"
+    },
+    {
+      "eventId": "1028072799",
+      "homeTeam": "Chelsea",
+      "awayTeam": "Bournemouth",
+      "startTime": "10 Oct 16:00",
+      "odds": {
+        "home": 1.75,
+        "draw": 4.25,
+        "away": 4.3
+      },
+      "url": "https://play.sunbet.co.za/#/event/1028072799"
+    },
+    {
+      "eventId": "1028072678",
+      "homeTeam": "Ipswich Town",
+      "awayTeam": "Fulham",
+      "startTime": "10 Oct 16:00",
+      "odds": {
+        "home": 2.7,
+        "draw": 3.55,
+        "away": 2.6
+      },
+      "url": "https://play.sunbet.co.za/#/event/1028072678"
+    },
+    {
+      "eventId": "1028072687",
+      "homeTeam": "Sunderland",
+      "awayTeam": "Brighton",
+      "startTime": "10 Oct 16:00",
+      "odds": {
+        "home": 2.9,
+        "draw": 3.5,
+        "away": 2.43
+      },
+      "url": "https://play.sunbet.co.za/#/event/1028072687"
+    },
+    {
+      "eventId": "1028072680",
+      "homeTeam": "Manchester United",
+      "awayTeam": "Tottenham",
+      "startTime": "10 Oct 18:30",
+      "odds": {
+        "home": 1.73,
+        "draw": 4.25,
+        "away": 4.5
+      },
+      "url": "https://play.sunbet.co.za/#/event/1028072680"
+    },
+    {
+      "eventId": "1028072779",
+      "homeTeam": "Crystal Palace",
+      "awayTeam": "Nottingham Forest",
+      "startTime": "11 Oct 15:00",
+      "odds": {
+        "home": 2.7,
+        "draw": 3.35,
+        "away": 2.7
+      },
+      "url": "https://play.sunbet.co.za/#/event/1028072779"
+    },
+    {
+      "eventId": "1028072776",
+      "homeTeam": "Hull City",
+      "awayTeam": "Everton",
+      "startTime": "11 Oct 15:00",
+      "odds": {
+        "home": 3.85,
+        "draw": 3.3,
+        "away": 2.1
+      },
+      "url": "https://play.sunbet.co.za/#/event/1028072776"
+    },
+    {
+      "eventId": "1028072675",
+      "homeTeam": "Liverpool",
+      "awayTeam": "Manchester City",
+      "startTime": "11 Oct 17:30",
+      "odds": {
+        "home": 2.65,
+        "draw": 3.8,
+        "away": 2.5
+      },
+      "url": "https://play.sunbet.co.za/#/event/1028072675"
+    },
+    {
+      "eventId": "1028072798",
+      "homeTeam": "Coventry City",
+      "awayTeam": "Newcastle United",
+      "startTime": "12 Oct 21:00",
+      "odds": {
+        "home": 3.25,
+        "draw": 3.75,
+        "away": 2.17
+      },
+      "url": "https://play.sunbet.co.za/#/event/1028072798"
+    }
+  ]
+}

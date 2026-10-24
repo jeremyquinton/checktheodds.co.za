@@ -1,0 +1,251 @@
+{
+  "bookmaker": "GBets",
+  "bookmakerSlug": "gbets",
+  "sport": "Soccer",
+  "country": "England",
+  "competition": "Premier League",
+  "scrapedAt": "2026-10-01T17:59:50.706Z",
+  "sourceUrl": "https://www.gbets.co.za/sports/match/topLeague/Soccer/England/538/30884778",
+  "events": [
+    {
+      "eventId": "30884778",
+      "homeTeam": "Arsenal",
+      "awayTeam": "Leeds United",
+      "startTime": "Sat 10 Oct 2026 13:30",
+      "odds": {
+        "home": 1.37,
+        "draw": 5,
+        "away": 7.7
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30884778"
+    },
+    {
+      "eventId": "30884773",
+      "homeTeam": "Ipswich Town",
+      "awayTeam": "Fulham",
+      "startTime": "Sat 10 Oct 2026 16:00",
+      "odds": {
+        "home": 2.64,
+        "draw": 3.56,
+        "away": 2.5
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30884773"
+    },
+    {
+      "eventId": "30884775",
+      "homeTeam": "Aston Villa",
+      "awayTeam": "Brentford",
+      "startTime": "Sat 10 Oct 2026 16:00",
+      "odds": {
+        "home": 2.6,
+        "draw": 3.51,
+        "away": 2.56
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30884775"
+    },
+    {
+      "eventId": "30884776",
+      "homeTeam": "Sunderland",
+      "awayTeam": "Brighton and Hove Albion",
+      "startTime": "Sat 10 Oct 2026 16:00",
+      "odds": {
+        "home": 2.84,
+        "draw": 3.5,
+        "away": 2.37
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30884776"
+    },
+    {
+      "eventId": "30884777",
+      "homeTeam": "Chelsea",
+      "awayTeam": "Bournemouth",
+      "startTime": "Sat 10 Oct 2026 16:00",
+      "odds": {
+        "home": 1.71,
+        "draw": 4.1,
+        "away": 4.4
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30884777"
+    },
+    {
+      "eventId": "30884779",
+      "homeTeam": "Manchester United",
+      "awayTeam": "Tottenham Hotspur",
+      "startTime": "Sat 10 Oct 2026 18:30",
+      "odds": {
+        "home": 1.7,
+        "draw": 4.2,
+        "away": 4.3
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30884779"
+    },
+    {
+      "eventId": "30884780",
+      "homeTeam": "Crystal Palace",
+      "awayTeam": "Nottingham Forest",
+      "startTime": "Sun 11 Oct 2026 15:00",
+      "odds": {
+        "home": 2.59,
+        "draw": 3.41,
+        "away": 2.63
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30884780"
+    },
+    {
+      "eventId": "30884781",
+      "homeTeam": "Hull City",
+      "awayTeam": "Everton",
+      "startTime": "Sun 11 Oct 2026 15:00",
+      "odds": {
+        "home": 3.69,
+        "draw": 3.38,
+        "away": 2.03
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30884781"
+    },
+    {
+      "eventId": "30893905",
+      "homeTeam": "Liverpool",
+      "awayTeam": "Manchester City",
+      "startTime": "Sun 11 Oct 2026 17:30",
+      "odds": {
+        "home": 2.55,
+        "draw": 3.65,
+        "away": 2.55
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30893905"
+    },
+    {
+      "eventId": "30884774",
+      "homeTeam": "Coventry City",
+      "awayTeam": "Newcastle United",
+      "startTime": "Mon 12 Oct 2026 21:00",
+      "odds": {
+        "home": 3.23,
+        "draw": 3.56,
+        "away": 2.13
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30884774"
+    },
+    {
+      "eventId": "30959189",
+      "homeTeam": "Everton",
+      "awayTeam": "Chelsea",
+      "startTime": "Sat 17 Oct 2026 13:30",
+      "odds": {
+        "home": 2.68,
+        "draw": 3.8,
+        "away": 2.36
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30959189"
+    },
+    {
+      "eventId": "30959282",
+      "homeTeam": "Brentford",
+      "awayTeam": "Liverpool",
+      "startTime": "Sat 17 Oct 2026 16:00",
+      "odds": {
+        "home": 2.75,
+        "draw": 3.53,
+        "away": 2.42
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30959282"
+    },
+    {
+      "eventId": "30959285",
+      "homeTeam": "Manchester City",
+      "awayTeam": "Ipswich Town",
+      "startTime": "Sat 17 Oct 2026 16:00",
+      "odds": {
+        "home": 1.22,
+        "draw": 7.1,
+        "away": 10
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30959285"
+    },
+    {
+      "eventId": "30959309",
+      "homeTeam": "Fulham",
+      "awayTeam": "Hull City",
+      "startTime": "Sat 17 Oct 2026 16:00",
+      "odds": {
+        "home": 1.67,
+        "draw": 3.97,
+        "away": 4.8
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30959309"
+    },
+    {
+      "eventId": "30959287",
+      "homeTeam": "Newcastle United",
+      "awayTeam": "Aston Villa",
+      "startTime": "Sat 17 Oct 2026 18:30",
+      "odds": {
+        "home": 2.07,
+        "draw": 3.82,
+        "away": 3.18
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30959287"
+    },
+    {
+      "eventId": "30959283",
+      "homeTeam": "Brighton and Hove Albion",
+      "awayTeam": "Crystal Palace",
+      "startTime": "Sun 18 Oct 2026 15:00",
+      "odds": {
+        "home": 1.58,
+        "draw": 4.4,
+        "away": 5
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30959283"
+    },
+    {
+      "eventId": "30959284",
+      "homeTeam": "Leeds United",
+      "awayTeam": "Manchester United",
+      "startTime": "Sun 18 Oct 2026 15:00",
+      "odds": {
+        "home": 2.79,
+        "draw": 3.63,
+        "away": 2.35
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30959284"
+    },
+    {
+      "eventId": "30959310",
+      "homeTeam": "Bournemouth",
+      "awayTeam": "Sunderland",
+      "startTime": "Sun 18 Oct 2026 15:00",
+      "odds": {
+        "home": 2,
+        "draw": 3.55,
+        "away": 3.62
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30959310"
+    },
+    {
+      "eventId": "30959286",
+      "homeTeam": "Nottingham Forest",
+      "awayTeam": "Arsenal",
+      "startTime": "Sun 18 Oct 2026 17:30",
+      "odds": {
+        "home": 6,
+        "draw": 3.72,
+        "away": 1.6
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30959286"
+    },
+    {
+      "eventId": "30959288",
+      "homeTeam": "Tottenham Hotspur",
+      "awayTeam": "Coventry City",
+      "startTime": "Mon 19 Oct 2026 21:00",
+      "odds": {
+        "home": 1.5,
+        "draw": 4.5,
+        "away": 5.8
+      },
+      "url": "https://www.gbets.co.za/sports/match/Soccer/England/538/30959288"
+    }
+  ]
+}

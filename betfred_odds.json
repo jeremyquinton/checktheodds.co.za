@@ -1,0 +1,10 @@
+{
+  "bookmaker": "Betfred",
+  "bookmakerSlug": "betfred",
+  "sport": "Soccer",
+  "country": "England",
+  "competition": "Premier League",
+  "scrapedAt": "2026-10-01T17:11:51.093Z",
+  "sourceUrl": "https://betfred.co.za/sports/match/football/england/premier-league",
+  "events": []
+}

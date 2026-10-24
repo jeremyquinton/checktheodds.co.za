@@ -1,10 +1,16 @@
 {
+<<<<<<< Updated upstream
   "scrapedAt": "2026-10-23T08:08:27.204Z",
   "sourceUpdatedAt": "18:15 BST, 22 October 2026.",
+=======
+  "scrapedAt": "2026-10-17T11:15:29.266Z",
+  "sourceUpdatedAt": "14:23 BST, 16 October 2026.",
+>>>>>>> Stashed changes
   "sourceUrl": "https://www.premierleague.com/en/latest-player-injuries",
   "injuries": [
     {
       "team": "Arsenal",
+<<<<<<< Updated upstream
       "player": "Bukayo Saka",
       "injury": "Quad",
       "latestUrl": "https://www.arsenal.com/news/every-word-from-artetas-post-bayern-presser-azIsw7P3tdJO"
@@ -25,6 +31,22 @@
       "team": "Arsenal",
       "player": "Christos Tzolis",
       "injury": "Not specified",
+=======
+      "player": "Piero Hincapie",
+      "injury": "Ankle",
+      "latestUrl": "https://www.arsenal.com/news/injury-latest-on-zubimendi-hincapie-tzolis-and-saliba-a2zDM9u0H6CB"
+    },
+    {
+      "team": "Arsenal",
+      "player": "Martin Zubimendi",
+      "injury": "Not specified",
+      "latestUrl": "https://www.arsenal.com/news/injury-latest-on-zubimendi-hincapie-tzolis-and-saliba-a2zDM9u0H6CB"
+    },
+    {
+      "team": "Arsenal",
+      "player": "Christos Tzolis",
+      "injury": "Not specified",
+>>>>>>> Stashed changes
       "latestUrl": "https://www.arsenal.com/news/injury-latest-on-zubimendi-hincapie-tzolis-and-saliba-a2zDM9u0H6CB"
     },
     {
@@ -32,6 +54,15 @@
       "player": "William Saliba",
       "injury": "Back",
       "latestUrl": "https://www.arsenal.com/news/injury-latest-on-zubimendi-hincapie-tzolis-and-saliba-a2zDM9u0H6CB"
+<<<<<<< Updated upstream
+=======
+    },
+    {
+      "team": "Aston Villa",
+      "player": "Ross Barkley",
+      "injury": "Not specified",
+      "latestUrl": "https://www.avfc.co.uk/news/2026/october/16/prematch-team-news-for-magpies-meeting/"
+>>>>>>> Stashed changes
     },
     {
       "team": "Aston Villa",
@@ -113,9 +144,45 @@
     },
     {
       "team": "Brentford",
+<<<<<<< Updated upstream
       "player": "Jannik Schuster",
       "injury": "Knock / Illness",
       "latestUrl": "https://www.brentfordfc.com/en/news/first-team-news-hull-city-v-brentford-premier-league-25-10-2026"
+=======
+      "player": "Kevin Schade",
+      "injury": "Shoulder",
+      "latestUrl": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
+    },
+    {
+      "team": "Brentford",
+      "player": "Jannik Schuster",
+      "injury": "Knock",
+      "latestUrl": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
+    },
+    {
+      "team": "Brentford",
+      "player": "Nathan Collins",
+      "injury": "Calf",
+      "latestUrl": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
+    },
+    {
+      "team": "Brentford",
+      "player": "Mathias Jensen",
+      "injury": "Not specified",
+      "latestUrl": "https://www.brentfordfc.com/en/news/first-team-news-aston-villa-v-brentford-premier-league-10-10-2026"
+    },
+    {
+      "team": "Brentford",
+      "player": "Mikkel Damsgaard",
+      "injury": "Not specified",
+      "latestUrl": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
+    },
+    {
+      "team": "Brentford",
+      "player": "Sepp van den Berg",
+      "injury": "Groin",
+      "latestUrl": "https://www.brentfordfc.com/en/news/first-team-news-aston-villa-v-brentford-premier-league-10-10-2026"
+>>>>>>> Stashed changes
     },
     {
       "team": "Brentford",
@@ -200,12 +267,15 @@
       "player": "Emmanuel Emegha",
       "injury": "Knock",
       "latestUrl": "https://www.chelseafc.com/en/news/article/xabi-alonso-confirms-chelsea-team-news-for-everton"
+<<<<<<< Updated upstream
     },
     {
       "team": "Chelsea",
       "player": "Pep Chavarria",
       "injury": "Not specified",
       "latestUrl": "https://www.chelseafc.com/en/news/article/alonso-on-his-alteration-for-everton-and-midfield-duo"
+=======
+>>>>>>> Stashed changes
     },
     {
       "team": "Coventry City",
@@ -256,6 +326,21 @@
       "latestUrl": "https://www.cpfc.co.uk/news/first-team/press-conference-team-news-crystal-palace-manchester-city-august-2026/"
     },
     {
+<<<<<<< Updated upstream
+=======
+      "team": "Everton",
+      "player": "Vitalii Mykolenko",
+      "injury": "Not specified",
+      "latestUrl": "https://www.evertonfc.com/news/2026/october/16/Chelseateamnews/"
+    },
+    {
+      "team": "Everton",
+      "player": "Jarrad Branthwaite",
+      "injury": "Not specified",
+      "latestUrl": "https://www.evertonfc.com/news/2026/october/16/Chelseateamnews/"
+    },
+    {
+>>>>>>> Stashed changes
       "team": "Fulham",
       "player": "Hugo Larsson",
       "injury": "Groin",
@@ -415,19 +500,37 @@
       "team": "Manchester United",
       "player": "Kobbie Mainoo",
       "injury": "Not specified",
+<<<<<<< Updated upstream
       "latestUrl": "https://www.manutd.com/en/news/press-conference-team-news-for-como-v-united"
+=======
+      "latestUrl": "https://www.manutd.com/en/news/team-news-for-leeds-v-united-18-october-2026"
+>>>>>>> Stashed changes
     },
     {
       "team": "Manchester United",
       "player": "Luke Shaw",
       "injury": "Not specified",
+<<<<<<< Updated upstream
       "latestUrl": "https://www.manutd.com/en/news/press-conference-team-news-for-como-v-united"
+=======
+      "latestUrl": "https://www.manutd.com/en/news/team-news-for-leeds-v-united-18-october-2026"
+>>>>>>> Stashed changes
     },
     {
       "team": "Manchester United",
       "player": "Benjamin Sesko",
       "injury": "Knock",
+<<<<<<< Updated upstream
       "latestUrl": "https://www.manutd.com/en/news/benjamin-sesko-injury-news-before-como-v-united"
+=======
+      "latestUrl": "https://www.manutd.com/en/news/team-news-for-leeds-v-united-18-october-2026"
+    },
+    {
+      "team": "Manchester United",
+      "player": "Patrick Dorgu",
+      "injury": "Not specified",
+      "latestUrl": "https://www.manutd.com/en/news/team-news-for-leeds-v-united-18-october-2026"
+>>>>>>> Stashed changes
     },
     {
       "team": "Manchester United",
@@ -481,7 +584,17 @@
       "team": "Nottingham Forest",
       "player": "Morgan Gibbs-White",
       "injury": "Muscle",
+<<<<<<< Updated upstream
       "latestUrl": "https://www.nottinghamforest.co.uk/news/2026/october/21/team-news---gibbs-white-fit-to-return-against-ipswich/"
+=======
+      "latestUrl": "https://www.nottinghamforest.co.uk/news/2026/october/16/milenkovi----mgw--doubts--for-visit-of-arsenal/"
+    },
+    {
+      "team": "Nottingham Forest",
+      "player": "Nikola Milenkovic",
+      "injury": "Hamstring",
+      "latestUrl": "https://www.nottinghamforest.co.uk/news/2026/october/16/milenkovi----mgw--doubts--for-visit-of-arsenal/"
+>>>>>>> Stashed changes
     },
     {
       "team": "Nottingham Forest",

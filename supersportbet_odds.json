@@ -1,0 +1,251 @@
+{
+  "bookmaker": "SuperSport Bet",
+  "bookmakerSlug": "supersportbet",
+  "sport": "Soccer",
+  "country": "England",
+  "competition": "Premier League",
+  "scrapedAt": "2026-10-01T17:08:24.466Z",
+  "sourceUrl": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/matches",
+  "events": [
+    {
+      "eventId": "1005458765",
+      "homeTeam": "Arsenal",
+      "awayTeam": "Leeds",
+      "startTime": "13:30",
+      "odds": {
+        "home": 1.34,
+        "draw": 5.1,
+        "away": 8.5
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005458765/arsenal-leeds"
+    },
+    {
+      "eventId": "1005458721",
+      "homeTeam": "Aston Villa",
+      "awayTeam": "Brentford",
+      "startTime": "16:00",
+      "odds": {
+        "home": 2.63,
+        "draw": 3.6,
+        "away": 2.6
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005458721/aston-villa-brentford"
+    },
+    {
+      "eventId": "1005458722",
+      "homeTeam": "Sunderland",
+      "awayTeam": "Brighton",
+      "startTime": "16:00",
+      "odds": {
+        "home": 2.92,
+        "draw": 3.55,
+        "away": 2.4
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005458722/sunderland-brighton"
+    },
+    {
+      "eventId": "1005458782",
+      "homeTeam": "Chelsea",
+      "awayTeam": "Bournemouth",
+      "startTime": "16:00",
+      "odds": {
+        "home": 1.74,
+        "draw": 4.2,
+        "away": 4.45
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005458782/chelsea-bournemouth"
+    },
+    {
+      "eventId": "1005458792",
+      "homeTeam": "Ipswich",
+      "awayTeam": "Fulham",
+      "startTime": "16:00",
+      "odds": {
+        "home": 2.72,
+        "draw": 3.55,
+        "away": 2.53
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005458792/ipswich-fulham"
+    },
+    {
+      "eventId": "1005458803",
+      "homeTeam": "Man Utd",
+      "awayTeam": "Tottenham",
+      "startTime": "18:30",
+      "odds": {
+        "home": 1.75,
+        "draw": 4.2,
+        "away": 4.4
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005458803/man-utd-tottenham"
+    },
+    {
+      "eventId": "1005458779",
+      "homeTeam": "Crystal Palace",
+      "awayTeam": "Nottingham",
+      "startTime": "15:00",
+      "odds": {
+        "home": 2.68,
+        "draw": 3.3,
+        "away": 2.72
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005458779/crystal-palace-nottingham"
+    },
+    {
+      "eventId": "1005458796",
+      "homeTeam": "Hull",
+      "awayTeam": "Everton",
+      "startTime": "15:00",
+      "odds": {
+        "home": 3.6,
+        "draw": 3.45,
+        "away": 2.1
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005458796/hull-everton"
+    },
+    {
+      "eventId": "1005458804",
+      "homeTeam": "Liverpool",
+      "awayTeam": "Man City",
+      "startTime": "17:30",
+      "odds": {
+        "home": 2.58,
+        "draw": 3.75,
+        "away": 2.58
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005458804/liverpool-man-city"
+    },
+    {
+      "eventId": "1005458720",
+      "homeTeam": "Coventry",
+      "awayTeam": "Newcastle",
+      "startTime": "21:00",
+      "odds": {
+        "home": 3.25,
+        "draw": 3.6,
+        "away": 2.18
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005458720/coventry-newcastle"
+    },
+    {
+      "eventId": "1005519415",
+      "homeTeam": "Everton",
+      "awayTeam": "Chelsea",
+      "startTime": "13:30",
+      "odds": {
+        "home": 2.82,
+        "draw": 3.7,
+        "away": 2.35
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005519415/everton-chelsea"
+    },
+    {
+      "eventId": "1005519428",
+      "homeTeam": "Brentford",
+      "awayTeam": "Liverpool",
+      "startTime": "16:00",
+      "odds": {
+        "home": 2.77,
+        "draw": 3.7,
+        "away": 2.38
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005519428/brentford-liverpool"
+    },
+    {
+      "eventId": "1005519456",
+      "homeTeam": "Fulham",
+      "awayTeam": "Hull",
+      "startTime": "16:00",
+      "odds": {
+        "home": 1.68,
+        "draw": 4,
+        "away": 4.85
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005519456/fulham-hull"
+    },
+    {
+      "eventId": "1005519458",
+      "homeTeam": "Man City",
+      "awayTeam": "Ipswich",
+      "startTime": "16:00",
+      "odds": {
+        "home": 1.23,
+        "draw": 6.9,
+        "away": 10.75
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005519458/man-city-ipswich"
+    },
+    {
+      "eventId": "1005519459",
+      "homeTeam": "Newcastle",
+      "awayTeam": "Aston Villa",
+      "startTime": "18:30",
+      "odds": {
+        "home": 2.08,
+        "draw": 3.75,
+        "away": 3.3
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005519459/newcastle-aston-villa"
+    },
+    {
+      "eventId": "1005519461",
+      "homeTeam": "Bournemouth",
+      "awayTeam": "Sunderland",
+      "startTime": "15:00",
+      "odds": {
+        "home": 2,
+        "draw": 3.6,
+        "away": 3.65
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005519461/bournemouth-sunderland"
+    },
+    {
+      "eventId": "1005519463",
+      "homeTeam": "Brighton",
+      "awayTeam": "Crystal Palace",
+      "startTime": "15:00",
+      "odds": {
+        "home": 1.59,
+        "draw": 4.4,
+        "away": 5.1
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005519463/brighton-crystal-palace"
+    },
+    {
+      "eventId": "1005519466",
+      "homeTeam": "Leeds",
+      "awayTeam": "Man Utd",
+      "startTime": "15:00",
+      "odds": {
+        "home": 2.87,
+        "draw": 3.65,
+        "away": 2.33
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005519466/leeds-man-utd"
+    },
+    {
+      "eventId": "1005519498",
+      "homeTeam": "Nottingham",
+      "awayTeam": "Arsenal",
+      "startTime": "17:30",
+      "odds": {
+        "home": 5.5,
+        "draw": 4,
+        "away": 1.61
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005519498/nottingham-arsenal"
+    },
+    {
+      "eventId": "1005519488",
+      "homeTeam": "Tottenham",
+      "awayTeam": "Coventry",
+      "startTime": "21:00",
+      "odds": {
+        "home": 1.5,
+        "draw": 4.6,
+        "away": 6
+      },
+      "url": "https://www.supersportbet.com/en-za/sports/football/england/premier-league/1005519488/tottenham-coventry"
+    }
+  ]
+}

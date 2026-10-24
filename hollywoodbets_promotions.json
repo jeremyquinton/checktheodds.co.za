@@ -1,0 +1,530 @@
+{
+  "bookmaker": "Hollywoodbets",
+  "bookmakerSlug": "hollywoodbets",
+  "sourceUrl": "https://www.hollywoodbets.net/promotions",
+  "scrapedAt": "2026-10-16T16:47:19.655Z",
+  "promotions": [
+    {
+      "offerKey": "hollywoodbets-1951",
+      "productCategory": "Sports",
+      "title": "HALAKASHA – Let’s Play!",
+      "subtitle": null,
+      "bodyText": "Bet R20 or more on any soccer fixture.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "21 Aug 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "30 May 2027"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/ca40c325_6a59_46e4_bf8b_9b92437fe9fa_0f6295fef5.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/betting/1/soccer/all"
+    },
+    {
+      "offerKey": "hollywoodbets-2009",
+      "productCategory": "Other",
+      "title": "Blu Voucher & Hollywoodbets",
+      "subtitle": null,
+      "bodyText": "Top up your Hollywoodbets accounts with a Blu Voucher valued at R50 or more during the promotional period.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "15 Oct 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "15 Nov 2026"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/5bcb3100_1406_48ea_960a_69644cdfb2b9_5571b37693.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/"
+    },
+    {
+      "offerKey": "hollywoodbets-1954",
+      "productCategory": "Casino",
+      "title": "Pragmatic Tournament",
+      "subtitle": null,
+      "bodyText": "Bet R20 on any roulette games by Pragmatic Play.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "07 Oct 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "18 Oct 2026"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/7fc8d27a_7c1a_41a9_937d_2b7479855132_d12ff25f80.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/lobby/live-tables-and-game-shows/?utm_source=HWB_Premium&utm_medium=Promotion&utm_campaign=Pragmatic+Tournament&utm_id=Pragmatic+Tournament#/p/dxn4p3zcn950ys9rxkeojme1"
+    },
+    {
+      "offerKey": "hollywoodbets-1957",
+      "productCategory": "Casino",
+      "title": "EGT October Heat - Network Tournament",
+      "subtitle": null,
+      "bodyText": "Bet R2 on selected games from EGT Digital slots to climb the leaderboard.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "01 Oct 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "30 Oct 2026"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/d9409ab8_f7fe_4df1_83c5_09ae3c149708_84c4dbf60b.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/lobby/spina-zonke/?utm_source=HWB_Premium&utm_medium=Promotion&utm_campaign=EGT-OctoberHeat&utm_id=EGT-OctoberHeat#/p/kutl0zcw674h7zkux75pyza1"
+    },
+    {
+      "offerKey": "hollywoodbets-1960",
+      "productCategory": "Casino",
+      "title": "Extreme Home Makeover",
+      "subtitle": null,
+      "bodyText": "Bet R2 or more on any of the selected Red Tiger slots, or bet R10 or more on Red Baron during the campaign period.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "01 Oct 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "31 Oct 2026"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/db5bbab3_c5aa_4c1f_85a2_ccc902123f0e_4fc3f8ad41.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/lobby/spina-zonke/?utm_source=HWB_Premium&utm_medium=Promotion&utm_campaign=ExtremeMakeover&utm_id=ExtremeMakeover#/p/lbqjhf6qn6qwefz8pngm7sf6"
+    },
+    {
+      "offerKey": "hollywoodbets-2003",
+      "productCategory": "Casino",
+      "title": "Weekend Bonus Bonanza",
+      "subtitle": null,
+      "bodyText": "Bet R2 or more on selected participating games every weekend from Friday to Sunday.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "16 Oct 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "18 Oct 2026"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/27ffcf0a_6561_41ae_84ee_c4ee477295c3_e9b907bc9e.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/lobby/spina-zonke/?utm_source=HWB_Premium&utm_medium=Promotion&utm_campaign=WeekendBBOctober&utm_id=WeekendBBOctober#/p/mnq6gg6kzjhave5bbylukdyr"
+    },
+    {
+      "offerKey": "hollywoodbets-1058",
+      "productCategory": "HWB Exclusives",
+      "title": "Soccer Money Back",
+      "subtitle": null,
+      "bodyText": "Stand a chance of winning your stake back up to ten times if you go out in the last leg when taking your soccer multiples!",
+      "steps": [],
+      "details": [],
+      "imageUrl": "https://content.hollywoodbets.net/84b7dd79_3c33_4c06_aa0b_b79ea5007ff2_a5a555942b.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/betting/1/soccer/all"
+    },
+    {
+      "offerKey": "hollywoodbets-1840",
+      "productCategory": "Casino",
+      "title": "Pragmatic Play Prize Drops!",
+      "subtitle": null,
+      "bodyText": "Bet R2,  Monday, Tuesday, and Thursday, between 12:30 – 22:30.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "01 Oct 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "29 Oct 2026"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/53d93b88_51a5_41ec_b9d8_0aaa2438f23a_ae7bb24294.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/lobby/spina-zonke/?utm_source=HWB_Premium&utm_medium=Promotion&utm_campaign=PrizeDropOctober&utm_id=PrizeDropOctober#/p/p4qhf1nbv9sptyyemf36h59d"
+    },
+    {
+      "offerKey": "hollywoodbets-1881",
+      "productCategory": "Casino",
+      "title": "Habanero Jackpot Race",
+      "subtitle": null,
+      "bodyText": "Bet R2 or more on selected Habanero games between 08.30pm – 10.30pm on Wednesday, Friday, & Saturday.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "02 Oct 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "31 Oct 2026"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/97d5fc34_7233_4583_afb2_6dcd19fac6db_ffd2f7972b.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/lobby/spina-zonke/#/p/mw31ti234g31r2m6jpf29th4"
+    },
+    {
+      "offerKey": "hollywoodbets-1964",
+      "productCategory": "Casino",
+      "title": "Playtech Lucky Rush Tournament",
+      "subtitle": null,
+      "bodyText": "Bet R2 or more to participate in the tournament.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "06 Mar 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "17 Jan 2027"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/HWPO_0652_Playtech_Tournament_Lucky_Rush_PROMOPG_PUSH_c748fbaca9.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/lobby/spina-zonke/#/p/q230ocl8ivge6vu4b1vkpfui"
+    },
+    {
+      "offerKey": "hollywoodbets-1965",
+      "productCategory": "Casino",
+      "title": "Rewards Burst Tournament",
+      "subtitle": null,
+      "bodyText": "Bet R2 or more on Prize Drops.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "21 Aug 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "20 Aug 2027"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/ac24715d_f00d_48ad_acb8_aa99a8f78c5c_d518b116db.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/lobby/spina-zonke/#/p/ivgq9yb8xer9ztpkgqzdi35e"
+    },
+    {
+      "offerKey": "hollywoodbets-1551",
+      "productCategory": "Casino",
+      "title": "Aviatrix Tournament",
+      "subtitle": null,
+      "bodyText": "Make at least one bet with an NFT aircraft in 24 hours in the first stage. Claim a reward if there has been one active in the second stage and stand a chance to win a share of R280 000 in Cash.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "01 Sept 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "30 Nov 2026"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/a2a74a72_acd3_4326_97b0_b3529ceadb16_e7faa2fc07.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/lobby/crash-games/?utm_source=HWB_Premuim&utm_medium=Promotion&utm_campaign=Aviatrix+Tournament+&utm_id=Aviatrix+Tournament+#/g/aviatrix"
+    },
+    {
+      "offerKey": "hollywoodbets-1585",
+      "productCategory": "Casino",
+      "title": "Spinoleague Tournament",
+      "subtitle": null,
+      "bodyText": "Bet R4 or more on selected  Spinomenal games.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "05 Mar 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "04 Mar 2027"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/stand_a_chance_to_win_your_share_of_r230_000_000_with_spinoleague_5fbe4e8ffc.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/lobby/spina-zonke/#/p/acycvhoujym8pz8jaj8onox4"
+    },
+    {
+      "offerKey": "hollywoodbets-1909",
+      "productCategory": "Casino",
+      "title": "Playtech Mystery Parcel!",
+      "subtitle": null,
+      "bodyText": "Bet R2 or more on selected Playtech slots every Wednesday between 08:00am – 23:59pm & Sunday between 08:00am –23:59pm.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "07 Oct 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "28 Oct 2026"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/HWSZ_0188_Mystery_Parcel_October_PROMOPG_PUSH_3d0e9df363.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/lobby/spina-zonke/?utm_source=HWB_Premium&utm_medium=Promotion&utm_campaign=Mystery+Parcel&utm_id=Mystery+Parcel#/p/elwzah50r0jamo5alan9893k"
+    },
+    {
+      "offerKey": "hollywoodbets-2027",
+      "productCategory": "HWB Exclusives",
+      "title": "Zama Fruit - Happy Hour Weekend Drops",
+      "subtitle": null,
+      "bodyText": "Place 5 or more bets of R2 within 5 minutes when the drop is live to qualify.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "16 Oct 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "18 Oct 2026"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/e7a6734a_e525_4665_82d3_1dd4719ac621_71e8f05567.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/lobby/split-the-pot/#/p/xxutfw5z8hi9agr3kotjaxvp"
+    },
+    {
+      "offerKey": "hollywoodbets-1870",
+      "productCategory": "Casino",
+      "title": "App Jackpot",
+      "subtitle": null,
+      "bodyText": "Bet R10 or more on App on Soccer between 1st October 2026 – 31st December 2026.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "01 Oct 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "31 Dec 2026"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/07921824_f634_44f1_80b0_82b34b918234_815825119a.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://hollywoodbetsapppromo.onelink.me/LfwI/tmrx0qh3"
+    },
+    {
+      "offerKey": "hollywoodbets-2017",
+      "productCategory": "Casino",
+      "title": "Daily Holly Jackpot",
+      "subtitle": null,
+      "bodyText": "Stakes of R2 apply for all selected holly jackpot games",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "15 Oct 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "21 Oct 2026"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/e6c978c3_0295_4602_a43e_6056269b041d_36973a4e5a.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/lobby/spina-zonke/#/pr/y8drioo3en3o5du13ivuarrs"
+    },
+    {
+      "offerKey": "hollywoodbets-2021",
+      "productCategory": "Other",
+      "title": "JetX Holly Jackpot",
+      "subtitle": null,
+      "bodyText": "Bet of R2 on JETX gets you an entry into the jackpot.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "16 Oct 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "17 Oct 2026"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/546af244_2c39_4da1_af14_d9e764cc6216_cfd49884b0.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/lobby/crash-games/#/g/jet-x"
+    },
+    {
+      "offerKey": "hollywoodbets-1969",
+      "productCategory": "HWB Exclusives",
+      "title": "Irish Objection Promotion",
+      "subtitle": null,
+      "bodyText": "Back the horse that finishes first but is objected against.",
+      "steps": [],
+      "details": [],
+      "imageUrl": "https://content.hollywoodbets.net/irish_objection_promotion_bb9c08f1b6.png",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/betting/8/horse-racing-south-africa/all"
+    },
+    {
+      "offerKey": "hollywoodbets-2014",
+      "productCategory": "Casino",
+      "title": "Weekly Holly Jackpot",
+      "subtitle": null,
+      "bodyText": "Bet R2 or more on all selected Holly Jackpot Games.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "15 Oct 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "22 Oct 2026"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/bf4d029d_d6c1_41cf_b4af_fd0c3991776f_f68b740492.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/lobby/spina-zonke/?utm_source=HWB_Premuim&utm_medium=Promotion&utm_campaign=WeeklyHollyJackpot&utm_id=WeeklyHollyJackpot#/p/op6x1z3xtnedvqhxpsvt3n6g"
+    },
+    {
+      "offerKey": "hollywoodbets-2032",
+      "productCategory": "Other",
+      "title": "Pragmatic Play Drops & Wins!",
+      "subtitle": null,
+      "bodyText": "Bet any amount on selected Pragmatic Play Games.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "04 Mar 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "03 Mar 2027"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/stand_a_chance_to_win_a_share_of_r500_million_in_cash_with_pragmatic_play_drops_wins_de599aa484.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/lobby/spina-zonke/#/p/iwyorhtydvydaau81bhy49ti"
+    },
+    {
+      "offerKey": "hollywoodbets-814",
+      "productCategory": "Other",
+      "title": "Refer a Friend and Get a R50 Bonus",
+      "subtitle": null,
+      "bodyText": "Maximise your potential winnings with Hollywoodbets’ Refer a Friend bonus! For every successful friend that you refer to Hollywoodbets, we’ll give you a free R50 betting voucher.",
+      "steps": [],
+      "details": [],
+      "imageUrl": "https://content.hollywoodbets.net/refer_a_friend_and_get_a_r50_bonus_cbf5814f36.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/account/refer-a-friend"
+    },
+    {
+      "offerKey": "hollywoodbets-1028",
+      "productCategory": "HWB Exclusives",
+      "title": "Get a R25 Sign Up Bonus and 50 FREE Spins!",
+      "subtitle": null,
+      "bodyText": "Register with Hollywoodbets and receive a R25 sign up bonus! We are also offering an additional 50 FREE spins for all new clients!",
+      "steps": [],
+      "details": [],
+      "imageUrl": "https://content.hollywoodbets.net/get_a_r25_sign_up_bonus_and_50_free_spins_1efaa81b17.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://register.hollywoodbets.net/south-africa/1"
+    },
+    {
+      "offerKey": "hollywoodbets-1997",
+      "productCategory": "Casino",
+      "title": "Crash Royal Tournament",
+      "subtitle": null,
+      "bodyText": "Bet of R8 or the next equivalent Bet on selected games.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "01 Oct 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "31 Dec 2026"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/8d848605_c80a_4f20_8840_97265c90bc16_bcc18f0e7b.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/lobby/crash-games/?utm_source=HWB_Premium&utm_medium=Promotion&utm_campaign=Crash+Royal+Weekly+Tournament&utm_id=Crash+Royal+Weekly+Tournament#/pr/pm3pgnl3cwtm2f73ly75fo1y"
+    },
+    {
+      "offerKey": "hollywoodbets-2000",
+      "productCategory": "Sports",
+      "title": "Halakasha  Soccer Jackpot",
+      "subtitle": null,
+      "bodyText": "Bet R20 on any bet that includes English Premier League, Spain Primera Division, Bundesliga, Serie A, PSL, Ligue 1, UEFA Champions League, UEFA Europa League, UEFA Conference League, Afcon Qualifiers.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "01 Oct 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "31 Oct 2026"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/HWSB_1473_Halakasha_Campaign_Monthly_Holly_Jackpot_PROMOPG_PUSH_08988b20b6.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/betting/1/soccer/all"
+    },
+    {
+      "offerKey": "hollywoodbets-2043",
+      "productCategory": "Casino",
+      "title": "Pragmatic X Kevin Hart",
+      "subtitle": null,
+      "bodyText": "Place real-money bets of any stake, subject to the game-specific minimum bet requirements.",
+      "steps": [],
+      "details": [
+        {
+          "label": "Valid from",
+          "value": "16 Oct 2026"
+        },
+        {
+          "label": "Valid until",
+          "value": "19 Oct 2026"
+        }
+      ],
+      "imageUrl": "https://content.hollywoodbets.net/02f5999e_0534_49e1_ac4e_b3c1919ce083_77c41ec679.jpg",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/lobby/live-tables-and-game-shows/#/pr/pooqbjvghhshxdpai5w7r5di"
+    },
+    {
+      "offerKey": "hollywoodbets-859",
+      "productCategory": "HWB Exclusives",
+      "title": "Soccer Bonus Bonanza",
+      "subtitle": null,
+      "bodyText": "Get more than you bargained for with Hollywoodbets’ Soccer Bonus Bonanza! Betting on multiple soccer markets will earn you percentage bonuses depending on the amount of legs in your accumulator.",
+      "steps": [],
+      "details": [],
+      "imageUrl": "https://content.hollywoodbets.net/soccer_bonus_bonanza_40ccf24e5f.png",
+      "actionLabel": "View offer",
+      "actionUrl": "https://www.hollywoodbets.net/betting/1/soccer/all"
+    }
+  ]
+}

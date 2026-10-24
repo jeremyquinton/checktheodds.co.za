@@ -16,7 +16,11 @@
     "scrape:yesplay-promotions": "node src/js/promotions/yesplay_promotions_scraper.js",
     "scrape:virgin-bet-promotions": "node src/js/promotions/virgin_bet_promotions_scraper.js",
     "scrape:betway-promotions": "node src/js/promotions/betway_promotions_scraper.js",
+<<<<<<< Updated upstream
     "scrape:play-promotions": "node src/js/promotions/play_promotions_scraper.js",
+=======
+    "scrape:hollywoodbets-promotions": "node src/js/promotions/hollywoodbets_promotions_scraper.js",
+>>>>>>> Stashed changes
     "scrape:supabets": "node src/js/premier_league/supabets_scraper.js",
     "scrape:easybet": "node src/js/premier_league/easybet_scraper.js",
     "scrape:sportybet": "node src/js/premier_league/sportybet_scraper.js",
@@ -31,6 +35,8 @@
     "update:results": "php src/php/premier_league/results_scraper.php --mode=update",
     "scrape:match-stats": "php src/php/premier_league/match_team_stats_scraper.php",
     "fixture:context": "node src/js/premier_league/match_context.js",
+    "matchweek:context": "node src/js/premier_league/match_context.js --matchweek",
+    "test:context": "node --test src/js/premier_league/match_context.test.js",
     "freebets:css": "tailwindcss -i freebets/assets/input.css -o freebets/public/assets/app.css",
     "freebets:css:watch": "tailwindcss -i freebets/assets/input.css -o freebets/public/assets/app.css --watch",
     "freebets:serve": "php -S 127.0.0.1:8080 -t freebets/public freebets/public/router.php",

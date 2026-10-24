@@ -29,7 +29,11 @@ npm run scrape:yesplay
 npm run scrape:yesplay-promotions
 npm run scrape:virgin-bet-promotions
 npm run scrape:betway-promotions
+<<<<<<< Updated upstream
 npm run scrape:play-promotions
+=======
+npm run scrape:hollywoodbets-promotions
+>>>>>>> Stashed changes
 npm run scrape:supabets
 npm run scrape:easybet
 npm run scrape:sportybet
@@ -68,6 +72,9 @@ Imported bookmaker promotions are curated separately at
 category, tags, text, image, action, and order before publishing. Scrapers update
 source fields without replacing curation. The public page shows only offers that
 are both active at the source and published by an admin.
+The admin promotions list and review page link to each scraped source page and
+the original action/claim destination. These links open in a new tab; the original
+claim link remains available even when you override the public button destination.
 
 Set up the admin password with a PHP-generated password hash; never put the
 plaintext password in configuration:
@@ -106,6 +113,7 @@ including descriptions, banner paths, categories, and CTAs. Preview it with
 with fewer than 15 complete promotions to avoid deactivating offers after a
 partial feed response.
 
+<<<<<<< Updated upstream
 The Play.co.za promotions scraper reads the rendered promotion cards, including
 their source IDs, category labels, copy, and artwork. It uses a visible browser
 by default because Play blocks the headless request; set `HEADLESS=true` only if
@@ -116,6 +124,22 @@ the site allows it in your environment. Preview with
 Node scraper modules are in `src/js/`, with Premier League scrapers in
 `src/js/premier_league/`. The main odds UI and its data routes are in `public/`
 and `src/php/premier_league/`; PHP CLI scrapers are in `src/php/premier_league/`.
+=======
+The Hollywoodbets promotions scraper reads the public CMS feed used by
+`https://www.hollywoodbets.net/promotions`, including all pages of results.
+Preview it with `npm run scrape:hollywoodbets-promotions -- --dry-run`; a normal
+run writes `hollywoodbets_promotions.json` and syncs active offers to MySQL.
+It imports source descriptions, categories (or `Other` when unclassified),
+official image URLs, South African validity dates, and action/claim destinations.
+New offers remain drafts in the admin until reviewed and published.
+Failed, partial, duplicate, or incomplete responses, or fewer than 15 active
+offers, leave existing database promotions untouched. Dry runs write neither
+JSON files nor database rows. Run its regression tests with
+`node --test src/js/promotions/hollywoodbets_promotions_scraper.test.js`.
+
+Shared Node modules are in `src/js/`, with Premier League scrapers in
+`src/js/premier_league/`. PHP CLI scrapers are in `src/php/premier_league/`.
+>>>>>>> Stashed changes
 
 Run every scraper sequentially:
 
@@ -204,6 +228,34 @@ H2H, available xG/xGA, injuries with per-player source links and snapshot/source
 update timestamps, upcoming Premier League fixtures, and latest 1X2 bookmaker
 odds. Suspensions, lineups, other competitions, and over/under prices are marked
 unavailable because they are not in the current database.
+
+Export every stored fixture in the next scheduled Premier League matchweek,
+including its full context and best available stored 1X2 prices:
+
+```sh
+npm run --silent matchweek:context > matchweek-context.json
+```
+
+Auto-selection uses the earliest `PreMatch` fixture dated today (UTC) or later
+in the latest stored season. It exports that entire matchweek, including any
+completed, postponed, or rescheduled fixtures in it. To select a particular
+week, use the season's start year:
+
+```sh
+npm run --silent fixture:context -- --matchweek=8 --season=2026 --form-limit=15 > matchweek-context.json
+```
+
+The top-level `bestOdds` table gives the highest decimal home/draw/away price
+for each fixture, with all tied bookmakers, market links and capture timestamps.
+`fixtures` contains the full contexts and each fixture's `bookmakerOdds.bestOdds`.
+Only the latest snapshot per bookmaker is compared; missing or invalid prices
+produce `null`, and fixtures without odds are retained. Best odds mean highest
+price, not a prediction or value-bet recommendation. Prices can be stale, so
+verify them with the bookmaker. Injury and odds snapshots are current rather
+than historical as-of-kickoff data; this is not a leakage-free backtesting export.
+This reads the existing database and does not run scrapers or call an LLM.
+
+Run the focused context tests with `npm run test:context`.
 
 All JavaScript bookmaker scrapers map events to `premier_league_matches` using
 normalized home/away team names from the next two upcoming matchweeks. Shared

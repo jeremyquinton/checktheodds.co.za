@@ -188,6 +188,7 @@ final class PromotionRepository
             'yesplay' => 'YesPlay',
             'easybet' => 'Easybet',
             'betfair-sa' => 'Betfair South Africa',
+            'hollywoodbets' => 'Hollywoodbets',
             default => ucwords(str_replace('-', ' ', $slug)),
         };
     }

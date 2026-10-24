@@ -1,0 +1,1089 @@
+{
+  "generatedAt": "2026-10-17T10:29:44.265Z",
+  "dataScope": {
+    "results": "Premier League only",
+    "statsProvider": "Premier League API v3",
+    "formLimit": 15,
+    "homeAwayRecords": "Current fixture season to date and previous season"
+  },
+  "fixture": {
+    "matchId": "2645256",
+    "season": 2026,
+    "matchweek": 7,
+    "competition": "Premier League",
+    "kickoff": "2026-10-17 15:00:00",
+    "timezone": "Europe/London",
+    "period": "PreMatch",
+    "venue": "Gtech Community Stadium, Brentford",
+    "attendance": null,
+    "homeTeam": "Brentford",
+    "awayTeam": "Liverpool",
+    "score": null
+  },
+  "teams": [
+    {
+      "name": "Brentford",
+      "recentForm": [
+        {
+          "matchId": "2645246",
+          "date": "2026-10-10 15:00:00",
+          "season": 2026,
+          "matchweek": 6,
+          "competition": "Premier League",
+          "opponent": "Aston Villa",
+          "venue": "Away",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "result": "D",
+          "xg": 1.063,
+          "xga": 2.277
+        },
+        {
+          "matchId": "2645236",
+          "date": "2026-09-18 20:00:00",
+          "season": 2026,
+          "matchweek": 5,
+          "competition": "Premier League",
+          "opponent": "Chelsea",
+          "venue": "Home",
+          "goalsFor": 3,
+          "goalsAgainst": 0,
+          "result": "W",
+          "xg": 2.646,
+          "xga": 0.829
+        },
+        {
+          "matchId": "2645225",
+          "date": "2026-09-12 15:00:00",
+          "season": 2026,
+          "matchweek": 4,
+          "competition": "Premier League",
+          "opponent": "Bournemouth",
+          "venue": "Away",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "result": "D",
+          "xg": 0.498,
+          "xga": 1.748
+        },
+        {
+          "matchId": "2645216",
+          "date": "2026-09-05 15:00:00",
+          "season": 2026,
+          "matchweek": 3,
+          "competition": "Premier League",
+          "opponent": "Sunderland",
+          "venue": "Home",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "result": "D",
+          "xg": 1.207,
+          "xga": 1.71
+        },
+        {
+          "matchId": "2645210",
+          "date": "2026-08-30 14:00:00",
+          "season": 2026,
+          "matchweek": 2,
+          "competition": "Premier League",
+          "opponent": "Leeds United",
+          "venue": "Away",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "result": "D",
+          "xg": 1.673,
+          "xga": 1.455
+        },
+        {
+          "matchId": "2645196",
+          "date": "2026-08-22 17:30:00",
+          "season": 2026,
+          "matchweek": 1,
+          "competition": "Premier League",
+          "opponent": "Tottenham Hotspur",
+          "venue": "Home",
+          "goalsFor": 3,
+          "goalsAgainst": 0,
+          "result": "W",
+          "xg": 3.874,
+          "xga": 0.568
+        },
+        {
+          "matchId": "2562269",
+          "date": "2026-05-24 16:00:00",
+          "season": 2025,
+          "matchweek": 38,
+          "competition": "Premier League",
+          "opponent": "Liverpool",
+          "venue": "Away",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "result": "D",
+          "xg": 1.564,
+          "xga": 3.041
+        },
+        {
+          "matchId": "2562258",
+          "date": "2026-05-17 15:00:00",
+          "season": 2025,
+          "matchweek": 37,
+          "competition": "Premier League",
+          "opponent": "Crystal Palace",
+          "venue": "Home",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "result": "D",
+          "xg": 1.714,
+          "xga": 1.715
+        },
+        {
+          "matchId": "2562250",
+          "date": "2026-05-09 17:30:00",
+          "season": 2025,
+          "matchweek": 36,
+          "competition": "Premier League",
+          "opponent": "Manchester City",
+          "venue": "Away",
+          "goalsFor": 0,
+          "goalsAgainst": 3,
+          "result": "L",
+          "xg": 0.243,
+          "xga": 2.984
+        },
+        {
+          "matchId": "2562238",
+          "date": "2026-05-02 15:00:00",
+          "season": 2025,
+          "matchweek": 35,
+          "competition": "Premier League",
+          "opponent": "West Ham United",
+          "venue": "Home",
+          "goalsFor": 3,
+          "goalsAgainst": 0,
+          "result": "W",
+          "xg": 2.274,
+          "xga": 0.922
+        },
+        {
+          "matchId": "2562231",
+          "date": "2026-04-27 20:00:00",
+          "season": 2025,
+          "matchweek": 34,
+          "competition": "Premier League",
+          "opponent": "Manchester United",
+          "venue": "Away",
+          "goalsFor": 1,
+          "goalsAgainst": 2,
+          "result": "L",
+          "xg": 1.174,
+          "xga": 1.361
+        },
+        {
+          "matchId": "2562216",
+          "date": "2026-04-18 12:30:00",
+          "season": 2025,
+          "matchweek": 33,
+          "competition": "Premier League",
+          "opponent": "Fulham",
+          "venue": "Home",
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "result": "D",
+          "xg": 1.429,
+          "xga": 0.775
+        },
+        {
+          "matchId": "2562206",
+          "date": "2026-04-11 15:00:00",
+          "season": 2025,
+          "matchweek": 32,
+          "competition": "Premier League",
+          "opponent": "Everton",
+          "venue": "Home",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "result": "D",
+          "xg": 2.838,
+          "xga": 1.533
+        },
+        {
+          "matchId": "2562200",
+          "date": "2026-03-21 20:00:00",
+          "season": 2025,
+          "matchweek": 31,
+          "competition": "Premier League",
+          "opponent": "Leeds United",
+          "venue": "Away",
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "result": "D",
+          "xg": 0.462,
+          "xga": 0.524
+        },
+        {
+          "matchId": "2562186",
+          "date": "2026-03-16 20:00:00",
+          "season": 2025,
+          "matchweek": 30,
+          "competition": "Premier League",
+          "opponent": "Wolverhampton Wanderers",
+          "venue": "Home",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "result": "D",
+          "xg": 2.561,
+          "xga": 1.335
+        }
+      ],
+      "summary": {
+        "played": 15,
+        "wins": 3,
+        "draws": 10,
+        "losses": 2,
+        "goalsFor": 23,
+        "goalsAgainst": 18,
+        "averageGoalsFor": 1.53,
+        "averageGoalsAgainst": 1.2,
+        "xgMatches": 15,
+        "averageXg": 1.68,
+        "averageXga": 1.52
+      },
+      "venueRecords": {
+        "currentSeason": {
+          "home": {
+            "played": 3,
+            "wins": 2,
+            "draws": 1,
+            "losses": 0,
+            "goalsFor": 7,
+            "goalsAgainst": 1,
+            "averageGoalsFor": 2.33,
+            "averageGoalsAgainst": 0.33
+          },
+          "away": {
+            "played": 3,
+            "wins": 0,
+            "draws": 3,
+            "losses": 0,
+            "goalsFor": 5,
+            "goalsAgainst": 5,
+            "averageGoalsFor": 1.67,
+            "averageGoalsAgainst": 1.67
+          }
+        },
+        "previousSeason": {
+          "home": {
+            "played": 19,
+            "wins": 8,
+            "draws": 8,
+            "losses": 3,
+            "goalsFor": 33,
+            "goalsAgainst": 21,
+            "averageGoalsFor": 1.74,
+            "averageGoalsAgainst": 1.11
+          },
+          "away": {
+            "played": 19,
+            "wins": 6,
+            "draws": 3,
+            "losses": 10,
+            "goalsFor": 22,
+            "goalsAgainst": 31,
+            "averageGoalsFor": 1.16,
+            "averageGoalsAgainst": 1.63
+          }
+        }
+      },
+      "previousMatch": {
+        "matchId": "2645246",
+        "date": "2026-10-10 15:00:00",
+        "season": 2026,
+        "matchweek": 6,
+        "competition": "Premier League",
+        "opponent": "Aston Villa",
+        "venue": "Away",
+        "goalsFor": 2,
+        "goalsAgainst": 2,
+        "result": "D",
+        "xg": 1.063,
+        "xga": 2.277
+      },
+      "upcomingPremierLeagueFixtures": [
+        {
+          "matchId": "2645270",
+          "date": "2026-10-25T12:00:00.000Z",
+          "season": 2026,
+          "matchweek": 8,
+          "competition": "Premier League",
+          "opponent": "Hull City",
+          "venue": "Away"
+        },
+        {
+          "matchId": "2645277",
+          "date": "2026-10-31T13:00:00.000Z",
+          "season": 2026,
+          "matchweek": 9,
+          "competition": "Premier League",
+          "opponent": "Nottingham Forest",
+          "venue": "Home"
+        },
+        {
+          "matchId": "2645286",
+          "date": "2026-11-08T12:00:00.000Z",
+          "season": 2026,
+          "matchweek": 10,
+          "competition": "Premier League",
+          "opponent": "Brighton and Hove Albion",
+          "venue": "Away"
+        },
+        {
+          "matchId": "2645297",
+          "date": "2026-11-23T18:00:00.000Z",
+          "season": 2026,
+          "matchweek": 11,
+          "competition": "Premier League",
+          "opponent": "Everton",
+          "venue": "Home"
+        },
+        {
+          "matchId": "2645312",
+          "date": "2026-11-28T13:00:00.000Z",
+          "season": 2026,
+          "matchweek": 12,
+          "competition": "Premier League",
+          "opponent": "Manchester United",
+          "venue": "Away"
+        }
+      ],
+      "injuries": [
+        {
+          "team": "Brentford",
+          "player": "Antoni Milambo",
+          "injury": "ACL",
+          "sourceUrl": "https://www.brentfordfc.com/en/news/first-team-news-aston-villa-v-brentford-premier-league-10-10-2026"
+        },
+        {
+          "team": "Brentford",
+          "player": "Jannik Schuster",
+          "injury": "Knock",
+          "sourceUrl": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
+        },
+        {
+          "team": "Brentford",
+          "player": "Josh Dasilva",
+          "injury": "Hamstring",
+          "sourceUrl": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
+        },
+        {
+          "team": "Brentford",
+          "player": "Kaye Furo",
+          "injury": "Metatarsal",
+          "sourceUrl": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
+        },
+        {
+          "team": "Brentford",
+          "player": "Kevin Schade",
+          "injury": "Shoulder",
+          "sourceUrl": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
+        },
+        {
+          "team": "Brentford",
+          "player": "Mathias Jensen",
+          "injury": "Not specified",
+          "sourceUrl": "https://www.brentfordfc.com/en/news/first-team-news-aston-villa-v-brentford-premier-league-10-10-2026"
+        },
+        {
+          "team": "Brentford",
+          "player": "Mikkel Damsgaard",
+          "injury": "Not specified",
+          "sourceUrl": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
+        },
+        {
+          "team": "Brentford",
+          "player": "Nathan Collins",
+          "injury": "Calf",
+          "sourceUrl": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
+        },
+        {
+          "team": "Brentford",
+          "player": "Sepp van den Berg",
+          "injury": "Groin",
+          "sourceUrl": "https://www.brentfordfc.com/en/news/first-team-news-aston-villa-v-brentford-premier-league-10-10-2026"
+        }
+      ],
+      "suspensions": {
+        "available": false,
+        "items": null
+      },
+      "likelyStartingLineup": {
+        "available": false,
+        "players": null
+      }
+    },
+    {
+      "name": "Liverpool",
+      "recentForm": [
+        {
+          "matchId": "2645252",
+          "date": "2026-10-11 16:30:00",
+          "season": 2026,
+          "matchweek": 6,
+          "competition": "Premier League",
+          "opponent": "Manchester City",
+          "venue": "Home",
+          "goalsFor": 0,
+          "goalsAgainst": 3,
+          "result": "L",
+          "xg": 0.937,
+          "xga": 1.284
+        },
+        {
+          "matchId": "2645235",
+          "date": "2026-09-20 14:00:00",
+          "season": 2026,
+          "matchweek": 5,
+          "competition": "Premier League",
+          "opponent": "Bournemouth",
+          "venue": "Away",
+          "goalsFor": 1,
+          "goalsAgainst": 0,
+          "result": "W",
+          "xg": 1.649,
+          "xga": 0.794
+        },
+        {
+          "matchId": "2645231",
+          "date": "2026-09-12 15:00:00",
+          "season": 2026,
+          "matchweek": 4,
+          "competition": "Premier League",
+          "opponent": "Fulham",
+          "venue": "Home",
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "result": "D",
+          "xg": 1.278,
+          "xga": 0.7
+        },
+        {
+          "matchId": "2645221",
+          "date": "2026-09-04 20:00:00",
+          "season": 2026,
+          "matchweek": 3,
+          "competition": "Premier League",
+          "opponent": "Ipswich Town",
+          "venue": "Away",
+          "goalsFor": 2,
+          "goalsAgainst": 0,
+          "result": "W",
+          "xg": 0.686,
+          "xga": 0.754
+        },
+        {
+          "matchId": "2645211",
+          "date": "2026-08-29 12:30:00",
+          "season": 2026,
+          "matchweek": 2,
+          "competition": "Premier League",
+          "opponent": "Nottingham Forest",
+          "venue": "Home",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "result": "D",
+          "xg": 1.747,
+          "xga": 2.302
+        },
+        {
+          "matchId": "2645203",
+          "date": "2026-08-23 16:30:00",
+          "season": 2026,
+          "matchweek": 1,
+          "competition": "Premier League",
+          "opponent": "Newcastle United",
+          "venue": "Away",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "result": "D",
+          "xg": 2.981,
+          "xga": 1.575
+        },
+        {
+          "matchId": "2562269",
+          "date": "2026-05-24 16:00:00",
+          "season": 2025,
+          "matchweek": 38,
+          "competition": "Premier League",
+          "opponent": "Brentford",
+          "venue": "Home",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "result": "D",
+          "xg": 3.041,
+          "xga": 1.564
+        },
+        {
+          "matchId": "2562257",
+          "date": "2026-05-15 20:00:00",
+          "season": 2025,
+          "matchweek": 37,
+          "competition": "Premier League",
+          "opponent": "Aston Villa",
+          "venue": "Away",
+          "goalsFor": 2,
+          "goalsAgainst": 4,
+          "result": "L",
+          "xg": 1.427,
+          "xga": 1.845
+        },
+        {
+          "matchId": "2562249",
+          "date": "2026-05-09 12:30:00",
+          "season": 2025,
+          "matchweek": 36,
+          "competition": "Premier League",
+          "opponent": "Chelsea",
+          "venue": "Home",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "result": "D",
+          "xg": 0.559,
+          "xga": 0.496
+        },
+        {
+          "matchId": "2562242",
+          "date": "2026-05-03 15:30:00",
+          "season": 2025,
+          "matchweek": 35,
+          "competition": "Premier League",
+          "opponent": "Manchester United",
+          "venue": "Away",
+          "goalsFor": 2,
+          "goalsAgainst": 3,
+          "result": "L",
+          "xg": 0.885,
+          "xga": 2.341
+        },
+        {
+          "matchId": "2562230",
+          "date": "2026-04-25 15:00:00",
+          "season": 2025,
+          "matchweek": 34,
+          "competition": "Premier League",
+          "opponent": "Crystal Palace",
+          "venue": "Home",
+          "goalsFor": 3,
+          "goalsAgainst": 1,
+          "result": "W",
+          "xg": 1.145,
+          "xga": 2.263
+        },
+        {
+          "matchId": "2562219",
+          "date": "2026-04-19 14:00:00",
+          "season": 2025,
+          "matchweek": 33,
+          "competition": "Premier League",
+          "opponent": "Everton",
+          "venue": "Away",
+          "goalsFor": 2,
+          "goalsAgainst": 1,
+          "result": "W",
+          "xg": 1.451,
+          "xga": 0.792
+        },
+        {
+          "matchId": "2562210",
+          "date": "2026-04-11 17:30:00",
+          "season": 2025,
+          "matchweek": 32,
+          "competition": "Premier League",
+          "opponent": "Fulham",
+          "venue": "Home",
+          "goalsFor": 2,
+          "goalsAgainst": 0,
+          "result": "W",
+          "xg": 1.586,
+          "xga": 1.038
+        },
+        {
+          "matchId": "2562197",
+          "date": "2026-03-21 12:45:00",
+          "season": 2025,
+          "matchweek": 31,
+          "competition": "Premier League",
+          "opponent": "Brighton and Hove Albion",
+          "venue": "Away",
+          "goalsFor": 1,
+          "goalsAgainst": 2,
+          "result": "L",
+          "xg": 1.025,
+          "xga": 2.174
+        },
+        {
+          "matchId": "2562190",
+          "date": "2026-03-15 16:30:00",
+          "season": 2025,
+          "matchweek": 30,
+          "competition": "Premier League",
+          "opponent": "Tottenham Hotspur",
+          "venue": "Home",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "result": "D",
+          "xg": 1.697,
+          "xga": 1.176
+        }
+      ],
+      "summary": {
+        "played": 15,
+        "wins": 5,
+        "draws": 6,
+        "losses": 4,
+        "goalsFor": 22,
+        "goalsAgainst": 21,
+        "averageGoalsFor": 1.47,
+        "averageGoalsAgainst": 1.4,
+        "xgMatches": 15,
+        "averageXg": 1.47,
+        "averageXga": 1.41
+      },
+      "venueRecords": {
+        "currentSeason": {
+          "home": {
+            "played": 3,
+            "wins": 0,
+            "draws": 2,
+            "losses": 1,
+            "goalsFor": 2,
+            "goalsAgainst": 5,
+            "averageGoalsFor": 0.67,
+            "averageGoalsAgainst": 1.67
+          },
+          "away": {
+            "played": 3,
+            "wins": 2,
+            "draws": 1,
+            "losses": 0,
+            "goalsFor": 5,
+            "goalsAgainst": 2,
+            "averageGoalsFor": 1.67,
+            "averageGoalsAgainst": 0.67
+          }
+        },
+        "previousSeason": {
+          "home": {
+            "played": 19,
+            "wins": 10,
+            "draws": 6,
+            "losses": 3,
+            "goalsFor": 34,
+            "goalsAgainst": 20,
+            "averageGoalsFor": 1.79,
+            "averageGoalsAgainst": 1.05
+          },
+          "away": {
+            "played": 19,
+            "wins": 7,
+            "draws": 3,
+            "losses": 9,
+            "goalsFor": 29,
+            "goalsAgainst": 33,
+            "averageGoalsFor": 1.53,
+            "averageGoalsAgainst": 1.74
+          }
+        }
+      },
+      "previousMatch": {
+        "matchId": "2645252",
+        "date": "2026-10-11 16:30:00",
+        "season": 2026,
+        "matchweek": 6,
+        "competition": "Premier League",
+        "opponent": "Manchester City",
+        "venue": "Home",
+        "goalsFor": 0,
+        "goalsAgainst": 3,
+        "result": "L",
+        "xg": 0.937,
+        "xga": 1.284
+      },
+      "upcomingPremierLeagueFixtures": [
+        {
+          "matchId": "2645272",
+          "date": "2026-10-25T12:00:00.000Z",
+          "season": 2026,
+          "matchweek": 8,
+          "competition": "Premier League",
+          "opponent": "Brighton and Hove Albion",
+          "venue": "Home"
+        },
+        {
+          "matchId": "2645281",
+          "date": "2026-11-01T14:30:00.000Z",
+          "season": 2026,
+          "matchweek": 9,
+          "competition": "Premier League",
+          "opponent": "Arsenal",
+          "venue": "Home"
+        },
+        {
+          "matchId": "2645287",
+          "date": "2026-11-08T12:00:00.000Z",
+          "season": 2026,
+          "matchweek": 10,
+          "competition": "Premier League",
+          "opponent": "Crystal Palace",
+          "venue": "Away"
+        },
+        {
+          "matchId": "2645301",
+          "date": "2026-11-22T14:30:00.000Z",
+          "season": 2026,
+          "matchweek": 11,
+          "competition": "Premier League",
+          "opponent": "Manchester United",
+          "venue": "Home"
+        },
+        {
+          "matchId": "2645308",
+          "date": "2026-11-29T10:00:00.000Z",
+          "season": 2026,
+          "matchweek": 12,
+          "competition": "Premier League",
+          "opponent": "Everton",
+          "venue": "Away"
+        }
+      ],
+      "injuries": [
+        {
+          "team": "Liverpool",
+          "player": "Alexander Isak",
+          "injury": "Not specified",
+          "sourceUrl": "https://www.liverpoolfc.com/news/fitness-update-andoni-iraola-gakpo-isak-szoboszlai-changes-brentford"
+        },
+        {
+          "team": "Liverpool",
+          "player": "Cody Gakpo",
+          "injury": "Not specified",
+          "sourceUrl": "https://www.liverpoolfc.com/news/fitness-update-andoni-iraola-gakpo-isak-szoboszlai-changes-brentford"
+        },
+        {
+          "team": "Liverpool",
+          "player": "Conor Bradley",
+          "injury": "Knee",
+          "sourceUrl": "https://www.liverpoolfc.com/news/afc-bournemouth-v-liverpool-team-news-1"
+        },
+        {
+          "team": "Liverpool",
+          "player": "Dominik Szoboszlai",
+          "injury": "Hamstring",
+          "sourceUrl": "https://www.liverpoolfc.com/news/fitness-update-andoni-iraola-gakpo-isak-szoboszlai-changes-brentford"
+        },
+        {
+          "team": "Liverpool",
+          "player": "Giovanni Leoni",
+          "injury": "ACL",
+          "sourceUrl": "https://www.liverpoolfc.com/news/afc-bournemouth-v-liverpool-team-news-1"
+        },
+        {
+          "team": "Liverpool",
+          "player": "Hugo Ekitike",
+          "injury": "Achilles",
+          "sourceUrl": "https://www.liverpoolfc.com/news/afc-bournemouth-v-liverpool-team-news-1"
+        },
+        {
+          "team": "Liverpool",
+          "player": "Vitezslav Jaros",
+          "injury": "Knee",
+          "sourceUrl": null
+        }
+      ],
+      "suspensions": {
+        "available": false,
+        "items": null
+      },
+      "likelyStartingLineup": {
+        "available": false,
+        "players": null
+      }
+    }
+  ],
+  "headToHead": [
+    {
+      "matchId": "2562269",
+      "date": "2026-05-24 16:00:00",
+      "season": 2025,
+      "matchweek": 38,
+      "homeTeam": "Liverpool",
+      "awayTeam": "Brentford",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "homeXg": 3.041,
+      "awayXg": 1.564
+    },
+    {
+      "matchId": "2561978",
+      "date": "2025-10-25 20:00:00",
+      "season": 2025,
+      "matchweek": 9,
+      "homeTeam": "Brentford",
+      "awayTeam": "Liverpool",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "homeXg": 2.743,
+      "awayXg": 2.298
+    },
+    {
+      "matchId": "2444681",
+      "date": "2025-01-18 15:00:00",
+      "season": 2024,
+      "matchweek": 22,
+      "homeTeam": "Brentford",
+      "awayTeam": "Liverpool",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "homeXg": null,
+      "awayXg": null
+    },
+    {
+      "matchId": "2444485",
+      "date": "2024-08-25 16:30:00",
+      "season": 2024,
+      "matchweek": 2,
+      "homeTeam": "Liverpool",
+      "awayTeam": "Brentford",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "homeXg": null,
+      "awayXg": null
+    },
+    {
+      "matchId": "2367778",
+      "date": "2024-02-17 12:30:00",
+      "season": 2023,
+      "matchweek": 25,
+      "homeTeam": "Brentford",
+      "awayTeam": "Liverpool",
+      "homeGoals": 1,
+      "awayGoals": 4,
+      "homeXg": null,
+      "awayXg": null
+    }
+  ],
+  "teamNews": {
+    "capturedAt": "2026-10-16T16:26:32.162Z",
+    "sourceUpdatedAt": "14:23 BST, 16 October 2026.",
+    "sourceUrl": "https://www.premierleague.com/en/latest-player-injuries",
+    "injuriesByTeam": [
+      {
+        "team": "Brentford",
+        "injuries": [
+          {
+            "team": "Brentford",
+            "player": "Antoni Milambo",
+            "injury": "ACL",
+            "sourceUrl": "https://www.brentfordfc.com/en/news/first-team-news-aston-villa-v-brentford-premier-league-10-10-2026"
+          },
+          {
+            "team": "Brentford",
+            "player": "Jannik Schuster",
+            "injury": "Knock",
+            "sourceUrl": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
+          },
+          {
+            "team": "Brentford",
+            "player": "Josh Dasilva",
+            "injury": "Hamstring",
+            "sourceUrl": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
+          },
+          {
+            "team": "Brentford",
+            "player": "Kaye Furo",
+            "injury": "Metatarsal",
+            "sourceUrl": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
+          },
+          {
+            "team": "Brentford",
+            "player": "Kevin Schade",
+            "injury": "Shoulder",
+            "sourceUrl": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
+          },
+          {
+            "team": "Brentford",
+            "player": "Mathias Jensen",
+            "injury": "Not specified",
+            "sourceUrl": "https://www.brentfordfc.com/en/news/first-team-news-aston-villa-v-brentford-premier-league-10-10-2026"
+          },
+          {
+            "team": "Brentford",
+            "player": "Mikkel Damsgaard",
+            "injury": "Not specified",
+            "sourceUrl": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
+          },
+          {
+            "team": "Brentford",
+            "player": "Nathan Collins",
+            "injury": "Calf",
+            "sourceUrl": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
+          },
+          {
+            "team": "Brentford",
+            "player": "Sepp van den Berg",
+            "injury": "Groin",
+            "sourceUrl": "https://www.brentfordfc.com/en/news/first-team-news-aston-villa-v-brentford-premier-league-10-10-2026"
+          }
+        ]
+      },
+      {
+        "team": "Liverpool",
+        "injuries": [
+          {
+            "team": "Liverpool",
+            "player": "Alexander Isak",
+            "injury": "Not specified",
+            "sourceUrl": "https://www.liverpoolfc.com/news/fitness-update-andoni-iraola-gakpo-isak-szoboszlai-changes-brentford"
+          },
+          {
+            "team": "Liverpool",
+            "player": "Cody Gakpo",
+            "injury": "Not specified",
+            "sourceUrl": "https://www.liverpoolfc.com/news/fitness-update-andoni-iraola-gakpo-isak-szoboszlai-changes-brentford"
+          },
+          {
+            "team": "Liverpool",
+            "player": "Conor Bradley",
+            "injury": "Knee",
+            "sourceUrl": "https://www.liverpoolfc.com/news/afc-bournemouth-v-liverpool-team-news-1"
+          },
+          {
+            "team": "Liverpool",
+            "player": "Dominik Szoboszlai",
+            "injury": "Hamstring",
+            "sourceUrl": "https://www.liverpoolfc.com/news/fitness-update-andoni-iraola-gakpo-isak-szoboszlai-changes-brentford"
+          },
+          {
+            "team": "Liverpool",
+            "player": "Giovanni Leoni",
+            "injury": "ACL",
+            "sourceUrl": "https://www.liverpoolfc.com/news/afc-bournemouth-v-liverpool-team-news-1"
+          },
+          {
+            "team": "Liverpool",
+            "player": "Hugo Ekitike",
+            "injury": "Achilles",
+            "sourceUrl": "https://www.liverpoolfc.com/news/afc-bournemouth-v-liverpool-team-news-1"
+          },
+          {
+            "team": "Liverpool",
+            "player": "Vitezslav Jaros",
+            "injury": "Knee",
+            "sourceUrl": null
+          }
+        ]
+      }
+    ],
+    "suspensionsAvailable": false,
+    "startingLineupsAvailable": false
+  },
+  "restAndSchedule": {
+    "upcomingPremierLeagueFixturesOnly": true,
+    "otherCompetitionsAvailable": false
+  },
+  "bookmakerOdds": {
+    "matchResult": [
+      {
+        "bookmaker": "10Bet",
+        "bookmakerSlug": "10bet",
+        "capturedAt": "2026-10-16T16:26:01.269Z",
+        "home": 2.46,
+        "draw": 3.8,
+        "away": 2.8,
+        "marketUrl": "https://www.10bet.co.za/sports/football/england-premier-league/"
+      },
+      {
+        "bookmaker": "Betfair South Africa",
+        "bookmakerSlug": "betfair-sa",
+        "capturedAt": "2026-10-16T16:26:17.763Z",
+        "home": 2.54,
+        "draw": 3.75,
+        "away": 2.92,
+        "marketUrl": "https://betfairsa.co.za/?route=%2Fcustomer%2Fsport%2F1%2Fevent%2F36091931%2F"
+      },
+      {
+        "bookmaker": "Betway",
+        "bookmakerSlug": "betway",
+        "capturedAt": "2026-10-16T16:25:57.341Z",
+        "home": 2.41,
+        "draw": 3.65,
+        "away": 2.6,
+        "marketUrl": "https://www.betway.co.za/event/soccer/england/premier-league/brentford-liverpool-fc?eventId=72221314&fixtureType=highlights"
+      },
+      {
+        "bookmaker": "Easybet",
+        "bookmakerSlug": "easybet",
+        "capturedAt": "2026-10-16T16:26:27.471Z",
+        "home": 2.44,
+        "draw": 3.75,
+        "away": 2.75,
+        "marketUrl": "https://easybet.co.za/sports/match/football/england/premier-league/brentford-fc-liverpool-fc-5080"
+      },
+      {
+        "bookmaker": "Hollywoodbets",
+        "bookmakerSlug": "hollywoodbets",
+        "capturedAt": "2026-10-16T16:26:13.514Z",
+        "home": 1.5,
+        "draw": 2.55,
+        "away": 1.55,
+        "marketUrl": "https://www.hollywoodbets.net/betting/1/soccer/all/248/england/3092452/premier-league/9422896/brentford-vs-liverpool"
+      },
+      {
+        "bookmaker": "Play.co.za",
+        "bookmakerSlug": "play",
+        "capturedAt": "2026-10-16T16:26:09.351Z",
+        "home": 2.3,
+        "draw": 3.55,
+        "away": 2.79,
+        "marketUrl": "https://play.co.za/match/Soccer/30959282"
+      },
+      {
+        "bookmaker": "Supabets",
+        "bookmakerSlug": "supabets",
+        "capturedAt": "2026-10-16T16:26:22.806Z",
+        "home": 2.35,
+        "draw": 3.62,
+        "away": 2.72,
+        "marketUrl": "https://apib2c.supabets.co.za/spa/sport/soccer/england/premier-league/202944851-brentford-fc-liverpool-fc"
+      },
+      {
+        "bookmaker": "Virgin Bet",
+        "bookmakerSlug": "virgin-bet",
+        "capturedAt": "2026-10-16T16:25:54.989Z",
+        "home": 2.38,
+        "draw": 3.55,
+        "away": 2.75,
+        "marketUrl": "https://www.virginbet.co.za/sports/soccer/england-premier-league/brentford-liverpool/SBTE_2_1028072692/"
+      },
+      {
+        "bookmaker": "YesPlay",
+        "bookmakerSlug": "yesplay",
+        "capturedAt": "2026-10-16T16:26:20.234Z",
+        "home": 2.48,
+        "draw": 3.8,
+        "away": 2.7,
+        "marketUrl": "https://yesplay.bet/sports/events/brentford-fc-liverpool-fc-72221314"
+      }
+    ],
+    "overUnder25": {
+      "available": false,
+      "prices": null
+    }
+  },
+  "availability": {
+    "expectedGoalsAvailable": true,
+    "injurySnapshotAvailable": true,
+    "suspensionsAvailable": false,
+    "startingLineupsAvailable": false,
+    "otherCompetitionsAvailable": false,
+    "overUnderOddsAvailable": false
+  }
+}

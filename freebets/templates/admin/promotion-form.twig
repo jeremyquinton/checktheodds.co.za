@@ -79,6 +79,7 @@
           <div><dt class="font-semibold text-slate-500">Source category</dt><dd>{{ promotion.product_category }}</dd></div>
           <div><dt class="font-semibold text-slate-500">Last seen</dt><dd>{{ promotion.last_seen_at|date('j M Y H:i') }}</dd></div>
           <div><dt class="font-semibold text-slate-500">Source page</dt><dd><a class="break-all text-forest-800 hover:underline" href="{{ promotion.source_url }}" target="_blank" rel="noopener noreferrer">Open source</a></dd></div>
+          <div><dt class="font-semibold text-slate-500">Original action / claim link</dt><dd><a class="break-all text-forest-800 hover:underline" href="{{ promotion.action_url }}" target="_blank" rel="noopener noreferrer">{{ promotion.action_url }}</a></dd></div>
         </dl>
       </aside>
     </div>

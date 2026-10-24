@@ -21,7 +21,14 @@
       <tbody>
         {% for promotion in promotions %}
           <tr class="border-t border-slate-100 align-top">
-            <td class="px-3 py-3"><strong class="block">{{ promotion.bookmaker_name }}</strong><span class="text-slate-600">{{ promotion.title }}</span></td>
+            <td class="px-3 py-3">
+              <strong class="block">{{ promotion.bookmaker_name }}</strong>
+              <span class="text-slate-600">{{ promotion.title }}</span>
+              <div class="mt-2 flex flex-wrap gap-3">
+                <a class="font-semibold text-forest-800 hover:underline" href="{{ promotion.source_url }}" target="_blank" rel="noopener noreferrer">Source page</a>
+                <a class="font-semibold text-forest-800 hover:underline" href="{{ promotion.action_url }}" target="_blank" rel="noopener noreferrer">Action / claim link</a>
+              </div>
+            </td>
             <td class="px-3 py-3">{{ promotion.display_category }}</td>
             <td class="px-3 py-3"><span class="rounded px-2 py-1 text-[10px] font-bold {{ promotion.is_published ? 'bg-emerald-100 text-emerald-900' : 'bg-amber-100 text-amber-900' }}">{{ promotion.is_published ? 'Published' : 'Draft' }}</span></td>
             <td class="px-3 py-3"><span class="rounded px-2 py-1 text-[10px] font-bold {{ promotion.source_is_active ? 'bg-emerald-100 text-emerald-900' : 'bg-slate-100 text-slate-600' }}">{{ promotion.source_is_active ? 'Active at source' : 'Not found in latest scrape' }}</span></td>

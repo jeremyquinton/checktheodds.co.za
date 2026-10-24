@@ -95,6 +95,23 @@ CREATE TABLE IF NOT EXISTS premier_league_matches (
     FOREIGN KEY (away_team_id) REFERENCES premier_league_teams (id)
 ) ENGINE=InnoDB;
 
+CREATE TABLE IF NOT EXISTS premier_league_match_team_stats (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  premier_league_match_id BIGINT UNSIGNED NOT NULL,
+  team_id BIGINT UNSIGNED NOT NULL,
+  side ENUM('Home', 'Away') NOT NULL,
+  stats JSON NOT NULL,
+  scraped_at DATETIME(3) NOT NULL,
+  PRIMARY KEY (id),
+  UNIQUE KEY uq_pl_match_team_stats_side (premier_league_match_id, side),
+  KEY ix_pl_match_team_stats_team (team_id, scraped_at),
+  CONSTRAINT fk_pl_match_team_stats_match
+    FOREIGN KEY (premier_league_match_id) REFERENCES premier_league_matches (id)
+    ON DELETE CASCADE,
+  CONSTRAINT fk_pl_match_team_stats_team
+    FOREIGN KEY (team_id) REFERENCES premier_league_teams (id)
+) ENGINE=InnoDB;
+
 CREATE TABLE IF NOT EXISTS premier_league_odds_snapshots (
   id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   premier_league_match_id BIGINT UNSIGNED NOT NULL,

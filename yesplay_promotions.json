@@ -2,7 +2,7 @@
   "bookmaker": "YesPlay",
   "bookmakerSlug": "yesplay",
   "sourceUrl": "https://yesplay.bet/promotions",
-  "scrapedAt": "2026-10-16T14:44:12.956Z",
+  "scrapedAt": "2026-10-16T16:33:11.832Z",
   "promotions": [
     {
       "offerKey": "yesplay-all-products-100-deposit-bonus",
@@ -47,7 +47,7 @@
         },
         {
           "label": "Expiry",
-          "value": "10 hours"
+          "value": "8 hours"
         }
       ],
       "imageUrl": "https://cdn.yesplay.bet/uploads/Promo2_Golden_Cryptex_480x220_21cafb4b93.png",
